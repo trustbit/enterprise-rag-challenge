@@ -19,6 +19,8 @@ When the competition comes:
 2. List of questions for these files is generated. Within a few minutes (to avoid manual processing) participants will need to produce answers and upload them.
 3. Afterwards the answers are checked in public and compiled into a public dataset.
 
+**Make sure to read FAQ at the end of the page!**
+
 
 
 ## Explanation
@@ -51,7 +53,7 @@ We want to make the competition open and fair to everyone, so we invested extra 
 
 All participants, even TimeToAct will be in the same conditions:
 
-1. We share a list of all annual reports (7496 files and ~46GB) along with company names and file sha1 hashes in [dataset.csv](dataset.csv). These annual reports are public information. We don't share all these PDFs upfront, but if you really want, you can find them on the Internet.
+1. We share a list of all annual reports (7496 files and ~46GB) along with company names and file sha1 hashes in [dataset.csv](dataset.csv). These annual reports are public information. **We don't share all 46GBs of these PDFs upfront, but if you really want, you can find them on the Internet.**
 2. We share a code that will generate next unpredictable random seed for the competition. It uses public blockchain API. See [gen_seed.py](gen_seed.py) for the implementation details.
 3. We share the question generator that will randomly pick a subset of files for the competition. It will also generate random questions for these files. See [main.py](main.py).
 4. Question generator uses a deterministic RNG that will work similarly for everybody.
@@ -147,3 +149,28 @@ Note the schema specified for each question:
 * boolean - only `yes` or `no`
 
 Important! Each schema also allows `N/A` ("Not Applicable") as an answer.
+
+
+
+## Frequently Asked Questions
+
+**Will you share all 46GB of Annual Report PDFs?**
+
+No, we'll share only the competition subset as soon as it is known. These annual reports are public. If you really want, you can gather them on the internet.
+
+**Why do questions include company names that are not included in PDFs?**
+
+The purprose here is to detect hallucinations. If company data is not available in competition PDFs, then the RAG system must respond with `N/A` for the question.
+
+
+**Why do some questions don't make sense?**
+
+You will see questions that don't make sense, for example: 
+
+* number: How many stores did "Strike Energy Limited" have in the end of fiscal year 2021?
+
+Just like in the real world, not all questions make sense. If "Strike Energy Limited" didn't have any stores, the answer should be 0.
+
+**How do we verify correct answers?**
+
+Trustbit will collect all answers first. We will then take time to review questions and manually come up with the correct answers. Correct answers will be published, along with the graded answers.
