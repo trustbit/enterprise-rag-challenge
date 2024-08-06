@@ -21,6 +21,10 @@ When the competition comes:
 2. List of questions for these files is generated. Within a few minutes (to avoid manual processing) participants will need to produce answers and upload them.
 3. Afterwards the answers are checked in public and compiled into a public dataset.
 
+
+All answers and data will be compiled into a public dataset. You will be able to compare performance of different teams and technologies (if team decided to answer a few questions) within a single table. We will also compile and publish a report at the end of the challenge.
+
+
 **Make sure to read FAQ at the end of the page!**
 
 
