@@ -169,7 +169,9 @@ You will see questions that don't make sense, for example:
 
 * number: How many stores did "Strike Energy Limited" have in the end of fiscal year 2021?
 
-Just like in the real world, not all questions make sense. If "Strike Energy Limited" didn't have any stores, the answer should be 0.
+Just like in the real world, not all questions make sense. If "Strike Energy Limited" didn't have any stores, the answer should be "N/A".
+
+It is OK for many questions to ask about things that make sense on the surface, but be meaningless for the specific company or a document. A bad RAG system will hallucinate a plausible answer, a good RAG system will respond with "N/A".
 
 **How do we verify correct answers?**
 
