@@ -143,8 +143,10 @@ It generated questions like the ones below (full list is in [samples/_questions.
 * number: How much did "Accuray Incorporated" spend on customer acquisition in Q2 2021?
 * name: Who is the CEO in the company "Accuray Incorporated"?
 
-Note the schema:
+Note the schema specified for each question:
 
 * number - only a metric number is expected as an answer. No decimal commas or separators. Correct: `122333`, incorrect: `122k`, `122 233`
 * name - only name of the company is expected as an answer. It must be exactly as the name of the company in a dataset
 * boolean - only `yes` or `no`
+
+Important! Each schema also allows `N/A` ("Not Applicable") as an answer.

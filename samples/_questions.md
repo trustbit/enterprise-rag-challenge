@@ -4,6 +4,7 @@ Note the schema:
 * name - only name of the company is expected as an answer. It must be exactly as the name of the company in a dataset
 * boolean - only `yes` or `no`
 
+Important! Each schema also allows `N/A` ("Not Applicable") as an answer.
 
 ## Questions
 
