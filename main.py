@@ -50,7 +50,6 @@ templates = [
     ('How much did "{company}" spend on {focus_area} in {time_frame}?', "number"),
     ('What was the {ratio_or_metric} of "{company}" in {time_frame}?', "number"),
     ('How many {count_metric} did "{company}" have in {time_frame}?', "number"),
-    ('What percentage of {percentage_base} for "{company}" came from {segment_or_region} in {time_frame}?', "percent"),
     ('Which company had a higher {fin_metric}: "{company1}", "{company2}" or "{company3}", in {time_frame}?', "name"),
     ('Did "{company1}" have a greater {ratio_or_metric} than "{company2}" in {time_frame}?', "boolean"),
     ('How much more did "{company1}" spend on {focus_area} compared to "{company2}" in {time_frame}?', "number"),
@@ -59,7 +58,7 @@ templates = [
 
 # Define possible values for variables
 parameters = {
-    "year": ["2020", "2021", "2022", "2023"],
+    "year": ["2021", "2022", "2023"],
 
     "quarter": [1, 2, 3, 4],
     "region": ["North America", "Europe", "Asia Pacific", "Latin America", "Middle East and Africa"],
@@ -85,8 +84,7 @@ parameters = {
     "date": ["December 31, {year}", "June 30, {year}"],
     "sustainability_metric": ["carbon emissions (in metric tons)", "water consumption (in cubic meters)",
                               "renewable energy usage (in percentage)", "waste reduction (in tons)"],
-    "role": ["CEO", "CFO", "CTO", "COO", "CMO", "Board Chairman", "Chief Legal Officer",
-             "Chief Human Resources Officer", "Chief Strategy Officer"]
+    "role": ["CEO", "CFO", "CTO", "COO", "CMO", "Board Chairman", "Chief Legal Officer"]
 }
 
 
@@ -115,8 +113,11 @@ def step1(count: int = 10, seed: int = 42, subset: str = "subset.json"):
 
     files = rand.sample(dataset, count)
 
+    # sort by hash
+    files.sort(key=lambda x: x['sha1'])
+
     for i, row in enumerate(files):
-        print(row)
+        print(f"# {row['sha1']} {row['name']}")
 
     with Path(subset).open("w") as file:
         json.dump(files, file, indent=2, ensure_ascii=False)
@@ -157,7 +158,7 @@ def step2(count: int = 10, seed: int = 42, subset: str = "subset.json"):
         while "{" in template:
             template = template.format(**args)
 
-        print(f"{schema:8}: {template}")
+        print(f"* {schema}: {template}")
 
         selected.append({"question": template, "schema": schema})
 

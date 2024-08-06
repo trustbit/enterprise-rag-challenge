@@ -36,12 +36,12 @@ if __name__ == "__main__":
 
     cur = get_latest_block()
 
-    print(f"Current block: {cur['index']} at {cur['time']}. Waiting for new block...")
+    print(f"# Current block: {cur['index']} at {cur['time']}. Waiting for new block...", flush=True, end="")
     while True:
         print(".", end="", flush=True)
         time.sleep(10)  # Check every 10 seconds
         new = get_latest_block()
         if new['index'] > cur['index']:
-            print(f"New block found! {new['index']} at {new['time']}")
-            print(f"Deterministic seed: {new['seed']}")
+            print(f"# New block found! {new['index']} at {new['time']}")
+            print(f"# Deterministic seed: {new['seed']}")
             break
