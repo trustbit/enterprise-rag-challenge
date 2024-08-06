@@ -2,7 +2,7 @@
 
 by [Trustbit](https://www.trustbit.tech) (now a part of TIMETOACT GROUP as [TimeToAct Austria](https://www.timetoact-group.at))
 
-> If you came here for the test run, just go to the [samples](samples) folder. It has PDFs and list of questions.
+> If you came here for the test run, just go to the [samples](samples) folder. It has PDFs and list of questions to be filled (in JSON format).
 
 
 **This is a friendly competition to test accuracy of different RAG systems in business workloads.**
@@ -130,18 +130,15 @@ Then we generated a list of questions using command:
 python3 main.py step2 --seed=3031428637 --count=40
 ```
 
-It generated questions like the ones below (full list is in [samples/_questions.md](samples/_questions.md)):
+It generated questions like the ones below (full list is in [samples/questions.json](samples/questions.json)):
 
-* number: How much did "Accuray Incorporated" spend on risk management in Q2 2022?
-* name: Who is the CEO in the company "Zegona Communications plc"?
-* boolean: Did "Global Medical REIT Inc." have a greater Debt-to-Equity ratio than "Zegona Communications plc" in Q2 2021?
-* number: How many stores did "Accuray Incorporated" have in the end of fiscal year 2021?
-* number: How much did "Sandwell Aquatics Centre" spend on R&D in Q2 2023?
-* name: Who is the CFO in the company "EMT"?
-* boolean: Did "Calyxt, Inc." have a greater Return on Assets (ROA) than "Global Medical REIT Inc." in Q2 2023?
-* number: How many stores did "OTC_UNCIF" have in the end of fiscal year 2022?
-* number: How much did "Accuray Incorporated" spend on customer acquisition in Q2 2021?
-* name: Who is the CEO in the company "Accuray Incorporated"?
+1. number: How much did "Accuray Incorporated" spend on risk management in Q2 2022?
+2. name: Who is the CEO in the company "Zegona Communications plc"?
+3. boolean: Did "Global Medical REIT Inc." have a greater Debt-to-Equity ratio than "Zegona Communications plc" in Q2 2021?
+4. number: How many stores did "Accuray Incorporated" have in the end of fiscal year 2021?
+5. number: How much did "Sandwell Aquatics Centre" spend on R&D in Q2 2023?
+6. name: Who is the CFO in the company "EMT"?
+7. boolean: Did "Calyxt, Inc." have a greater Return on Assets (ROA) than "Global Medical REIT Inc." in Q2 2023?
 
 Note the schema specified for each question:
 

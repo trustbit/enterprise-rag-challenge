@@ -127,7 +127,8 @@ def step1(count: int = 10, seed: int = 42, subset: str = "subset.json"):
 @click.option("--count", default=10, help="Number of questions to generate")
 @click.option("--seed", default=42, help="Seed for random number generation")
 @click.option("--subset", default="subset.json", help="Subset of files")
-def step2(count: int = 10, seed: int = 42, subset: str = "subset.json"):
+@click.option("--questions", default="questions.json", help="Output file")
+def step2(count: int = 10, seed: int = 42, subset: str = "subset.json", questions: str = "questions.json"):
     rand = DeterministicRNG(seed)
 
     with Path(subset).open("r") as file:
@@ -158,9 +159,12 @@ def step2(count: int = 10, seed: int = 42, subset: str = "subset.json"):
         while "{" in template:
             template = template.format(**args)
 
-        print(f"* {schema}: {template}")
+        print(f"{i+1}. {schema}: {template}")
 
-        selected.append({"question": template, "schema": schema})
+        selected.append({"question": template, "schema": schema, "answer": None})
+
+    with Path(questions).open("w") as file:
+        json.dump(selected, file, indent=2, ensure_ascii=False)
 
 
 if __name__ == "__main__":
