@@ -176,3 +176,13 @@ It is OK for many questions to ask about things that make sense on the surface, 
 **How do we verify correct answers?**
 
 Trustbit will collect all answers first. We will then take time to review questions and manually come up with the correct answers. Correct answers will be published, along with the graded answers.
+
+**I want to run a different challenge with tables, my language or industry. How I can do that?**
+
+This repository is available publicly under the Apache 2.0 license, it can be used without restrictions. You can fork it, then:
+
+1. Collect your own dataset of source files.
+2. Adjust question generator to make sense for your domain.
+3. Follow the overall process.
+
+We only kindly ask to follow the rules of Apache 2.0 license in the process.
