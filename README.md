@@ -2,6 +2,8 @@
 
 by [Trustbit](https://www.trustbit.tech) (now a part of TIMETOACT GROUP as [TimeToAct Austria](https://www.timetoact-group.at))
 
+Copyright 2024 TimeToAct Austria, licensed under Apache 2.0 license
+
 > If you came here for the test run, just go to the [samples](samples) folder. It has PDFs and list of questions to be filled (in JSON format).
 
 
