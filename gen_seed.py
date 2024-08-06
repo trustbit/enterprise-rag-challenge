@@ -21,26 +21,27 @@ def get_latest_block():
     response.raise_for_status()
     block = response.json()
 
+    # convert last 8 characters of the hash to int. This will be our random seed
+    seed = int(block["hash"][-8:], 16)
+
     return {
-        "hash": block["hash"],
         "time": datetime.utcfromtimestamp(block["time"]),
-        "index": block["block_index"]
+        "index": block["block_index"],
+        "hash": block["hash"],
+        "seed": seed
     }
 
 
 if __name__ == "__main__":
 
-    current = get_latest_block()
+    cur = get_latest_block()
 
-    print(f"Current block: {current['index']} at {current['time']}. Waiting for new block...")
+    print(f"Current block: {cur['index']} at {cur['time']}. Waiting for new block...")
     while True:
         print(".", end="", flush=True)
         time.sleep(10)  # Check every 10 seconds
-        new_block = get_latest_block()
-        if new_block['index'] > current['index']:
-            print(f"New block found! {new_block['index']} at {new_block['time']}")
-
-            hash = new_block["hash"]
-            # grab last 8 characters of the hash and convert to int
-            last_six = int(hash[-8:], 16)
-            print(f"Deterministic seed: {last_six}")
+        new = get_latest_block()
+        if new['index'] > cur['index']:
+            print(f"New block found! {new['index']} at {new['time']}")
+            print(f"Deterministic seed: {new['seed']}")
+            break
