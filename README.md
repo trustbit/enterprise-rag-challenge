@@ -1,11 +1,11 @@
 # Enterprise RAG Challenge with Annual Reports
 
-by TimeToAct Austria (Trustbit)
+by [Trustbit](https://www.trustbit.tech) (now a part of TIMETOACT GROUP as [TimeToAct Austria](https://www.timetoact-group.at))
+
+> If you came here for the test run, just go to the [samples](samples) folder. It has PDFs and list of questions.
 
 
-## Essence
-
-This is a friendly competition to test accuracy of different RAG systems in business workloads.
+**This is a friendly competition to test accuracy of different RAG systems in business workloads.**
 
 We will start with question answering challenge.
 
