@@ -156,7 +156,7 @@ Note the schema specified for each question:
 * name - only name of the company is expected as an answer. It must be exactly as the name of the company in a dataset
 * boolean - only `yes` or `no` (or `true`, `false`). Case doesn't matter.
 
-Important! Each schema also allows `N/A` ("Not Applicable") as an answer. Case doesn't matter here.
+Important! Each schema also allows `N/A` or `n/a` which means "Not Applicable" or "There is not enough information even for a human to answer this question".
 
 
 
