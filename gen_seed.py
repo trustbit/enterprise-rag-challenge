@@ -22,26 +22,31 @@ def get_latest_block():
     block = response.json()
 
     # convert last 8 characters of the hash to int. This will be our random seed
-    seed = int(block["hash"][-8:], 16)
+    chunk = block["hash"][-8:]
+    seed = int(chunk, 16)
+
+
 
     return {
         "time": datetime.utcfromtimestamp(block["time"]),
         "index": block["block_index"],
         "hash": block["hash"],
-        "seed": seed
+        "seed": seed,
+        "tail": chunk,
     }
+
 
 
 if __name__ == "__main__":
 
     cur = get_latest_block()
 
-    print(f"# Current block: {cur['index']} at {cur['time']}. Waiting for new block...", flush=True, end="")
+    print(f"# Current block: {cur['index']} at {cur['time']} (...{cur['tail']}). Waiting for new block...", flush=True, end="")
     while True:
         print(".", end="", flush=True)
         time.sleep(10)  # Check every 10 seconds
         new = get_latest_block()
         if new['index'] > cur['index']:
-            print(f"# New block found! {new['index']} at {new['time']}")
+            print(f"# New block found! {new['index']} at {new['time']} (...{new['tail']})")
             print(f"# Deterministic seed: {new['seed']}")
             break
