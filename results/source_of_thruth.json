@@ -92,111 +92,111 @@
   {
     "question": "Did \"Eurocell PLC\" have a greater Return on Equity (ROE) than \"Strike Energy Limited\" in Q2 2022?",
     "schema": "boolean",
-    "answer": null
+    "answer": "N/A"
   },
   {
     "question": "How many stores did \"OTC_UNCIF\" have in the end of fiscal year 2023?",
     "schema": "number",
-    "answer": null
+    "answer": "N/A"
   },
   {
     "question": "How much did \"EMT\" spend on customer acquisition in Q2 2023?",
     "schema": "number",
-    "answer": null
+    "answer": 1147176
   },
   {
     "question": "Who is the Board Chairman in the company \"Motus GI Holdings, Inc.\"?",
     "schema": "name",
-    "answer": null
+    "answer": "David Hochman"
   },
   {
     "question": "Did \"Calyxt, Inc.\" have a greater Operating Margin than \"Banque Cantonale Vaudoise\" in Q2 2023?",
     "schema": "boolean",
-    "answer": null
+    "answer": "N/A"
   },
   {
     "question": "How many stores did \"EMT\" have in the end of fiscal year 2023?",
     "schema": "number",
-    "answer": null
+    "answer": "N/A"
   },
   {
     "question": "How much did \"Ethernity Networks Ltd\" spend on customer acquisition in Q2 2023?",
     "schema": "number",
-    "answer": null
+    "answer": 258094
   },
   {
     "question": "Who is the CFO in the company \"Ethernity Networks Ltd\"?",
     "schema": "name",
-    "answer": null
+    "answer": "Mark Reichenberg"
   },
   {
     "question": "Did \"Canadian Banc Corp.\" have a greater Return on Assets (ROA) than \"VENUS METALS CORPORATION LIMITED\" in Q2 2021?",
     "schema": "boolean",
-    "answer": null
+    "answer": "N/A"
   },
   {
     "question": "How many stores did \"VENUS METALS CORPORATION LIMITED\" have in the end of fiscal year 2023?",
     "schema": "number",
-    "answer": null
+    "answer": "N/A"
   },
   {
     "question": "How much did \"Motus GI Holdings, Inc.\" spend on sustainability initiatives in Q2 2023?",
     "schema": "number",
-    "answer": null
+    "answer": "N/A"
   },
   {
     "question": "Who is the Board Chairman in the company \"Renishaw plc\"?",
     "schema": "name",
-    "answer": null
+    "answer": "David Grant"
   },
   {
     "question": "Did \"Canadian Banc Corp.\" have a greater Gross Profit Margin than \"Motus GI Holdings, Inc.\" in Q2 2022?",
     "schema": "boolean",
-    "answer": null
+    "answer": "false"
   },
   {
     "question": "How many stores did \"VENUS METALS CORPORATION LIMITED\" have in the end of fiscal year 2021?",
     "schema": "number",
-    "answer": null
+    "answer": "N/A"
   },
   {
     "question": "How much did \"Renishaw plc\" spend on risk management in Q2 2022?",
     "schema": "number",
-    "answer": null
+    "answer": "N/A"
   },
   {
     "question": "Who is the Board Chairman in the company \"TD SYNNEX\"?",
     "schema": "name",
-    "answer": null
+    "answer": "Dennis Polk"
   },
   {
     "question": "Did \"Banque Cantonale Vaudoise\" have a greater Operating Margin than \"Zegona Communications plc\" in Q2 2021?",
     "schema": "boolean",
-    "answer": null
+    "answer": "N/A"
   },
   {
     "question": "How many stores did \"Strike Energy Limited\" have in the end of fiscal year 2021?",
     "schema": "number",
-    "answer": null
+    "answer": "N/A"
   },
   {
     "question": "How much did \"Ethernity Networks Ltd\" spend on customer acquisition in Q2 2023?",
     "schema": "number",
-    "answer": null
+    "answer": "N/A"
   },
   {
     "question": "Who is the Chief Legal Officer in the company \"Nykredit\"?",
     "schema": "name",
-    "answer": null
+    "answer": "David Hellemann"
   },
   {
     "question": "Did \"Comet Holding AG\" have a greater Operating Margin than \"Calyxt, Inc.\" in Q2 2021?",
     "schema": "boolean",
-    "answer": null
+    "answer": true
   },
   {
     "question": "How many stores did \"EMT\" have in the end of fiscal year 2022?",
     "schema": "number",
-    "answer": null
+    "answer": "N/A"
   }
 ]
