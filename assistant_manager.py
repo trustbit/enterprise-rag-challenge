@@ -1,8 +1,6 @@
 from openai import OpenAI
 import time
 import logging
-from langfuse.decorators import langfuse_context
-from langfuse.decorators import observe
 
 class AssistantManager:
     """
@@ -101,7 +99,6 @@ class AssistantManager:
     def _message_list(self):
         return self.client.beta.threads.messages.list(thread_id=self.thread_id, order="asc")
 
-    @observe()
     def assistant_response(self, message, thread_id=None):
         logging.info(f"!!! Assistant run with message: {message}")
         self.thread_id = thread_id
@@ -119,17 +116,5 @@ class AssistantManager:
 
         input_messages = [{"role": message.role, "content": message.content[0].text.value} for message in message_log.data[::-1][:-1]]
 
-        # log internal generation within the openai assistant as a separate child generation to langfuse
-        # get langfuse client used by the decorator, uses the low-level Python SDK
-        langfuse_client = langfuse_context._get_langfuse()
-        # pass trace_id and current observation ids to the newly created child generation
-        langfuse_client.generation(
-            trace_id=langfuse_context.get_current_trace_id(),
-            parent_observation_id=langfuse_context.get_current_observation_id(),
-            model=run.model,
-            usage=run.usage,
-            input=input_messages,
-            output=assistant_response
-        )
         logging.info(f"!!! Assistant response message: {assistant_response}")
         return assistant_response
