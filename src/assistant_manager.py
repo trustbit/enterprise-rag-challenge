@@ -34,7 +34,6 @@ Important! Each schema also allows N/A or n/a which means "Not Applicable" or "T
         """
         self.client = OpenAI(api_key=api_key)
         self.assistant_id = assistant_id
-        # self.last_message_id = None
         self.thread_id = None
 
 
@@ -59,12 +58,12 @@ Important! Each schema also allows N/A or n/a which means "Not Applicable" or "T
         Returns:
             dict: The message object returned by the API.
         """
-        logging.info(f"Adding message to thread {thread_id}: {message}")
+        logging.debug(f"Adding message to thread {thread_id}: {message}")
         message = self.client.beta.threads.messages.create(
             thread_id=thread_id,
             role="user",
             content=message)
-        logging.info(f"Message added to thread {thread_id} with ID: {message.id}")
+        logging.debug(f"Message added to thread {thread_id} with ID: {message.id}")
         self.last_message_id = message.id
 
         return message
@@ -82,13 +81,13 @@ Important! Each schema also allows N/A or n/a which means "Not Applicable" or "T
         """
         logging.info(f"Waiting for run {run.id} to complete...")
         while run.status == "queued" or run.status == "in_progress":
-            logging.info(f"Run {run.id} status: {run.status}")
+            logging.debug(f"Run {run.id} status: {run.status}")
             run = self.client.beta.threads.runs.retrieve(
                 thread_id=thread_id,
                 run_id=run.id,
             )
             time.sleep(1)
-        logging.info(f"Run {run.id} completed with status: {run.status}")
+        logging.debug(f"Run {run.id} completed with status: {run.status}")
         return run
 
     def _run_thread(self):
@@ -121,33 +120,29 @@ Important! Each schema also allows N/A or n/a which means "Not Applicable" or "T
         Returns:
             str: The assistant's response message.
         """
-        logging.info(f"!!! Assistant run with message: {message}")
+        logging.debug(f"!!! Assistant run with message: {message}")
         self.thread_id = thread_id
 
         if thread_id is None:
             self.thread_id = self.create_thread()
 
         self._add_message_to_thread(self.thread_id, message)
-        run = self._run_thread()
+        self._run_thread()
 
         messages = self._message_list()
         assistant_response = messages.data[-1].content[0].text.value
 
-        message_log = self.client.beta.threads.messages.list(thread_id=self.thread_id)
-
-        input_messages = [{"role": message.role, "content": message.content[0].text.value} for message in message_log.data[::-1][:-1]]
-
-        logging.info(f"!!! Assistant response message: {assistant_response}")
+        logging.debug(f"!!! Assistant response message: {assistant_response}")
         return assistant_response
 
     def format_response(self, schema, question):
-        completion = self.client.beta.chat.completions.parse(
-        model="gpt-4o",
-        messages=[
-        {"role": "system", "content": self.SCHEMA_SYSTEM_PROMPT},
-        {"role": "user", "content": "Convert [input] to [schema]"
-            "[schema]: {schema}"
-            "[input]: {question}"},
-        ])
+        logging.debug(f"Convert to schema: {schema}")
+        completion = self.client.chat.completions.create(
+            model="gpt-4o",
+            temperature=0,
+            messages=[
+            {"role": "system", "content": self.SCHEMA_SYSTEM_PROMPT},
+            {"role": "user", "content": f"Convert {question} to {schema}"},
+            ])
 
-        return completion.choices[0].message
+        return completion.choices[0].message.content

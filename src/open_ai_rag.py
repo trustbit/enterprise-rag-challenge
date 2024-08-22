@@ -6,7 +6,7 @@ from typing import Optional
 import json
 import argparse
 from datetime import datetime
-from .assistant_manager import AssistantManager
+from assistant_manager import AssistantManager
 
 # Set up logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
@@ -32,13 +32,6 @@ class Answer(BaseModel):
         description="The answer to the question, if schema is 'name' - this should be name of company, if it number it shoulbe be number or N/A",
     )
 
-class Response(BaseModel):
-    """Schema converter response"""
-    result: str = Field(description="Conversion result")
-
-
-llm_waek = ChatOpenAI(temperature=0, model="gpt-4o-mini")
-
 
 def process_questions(input_file: str, output_file: str):
     logger.info(f"Reading questions from {input_file}")
@@ -54,11 +47,13 @@ def process_questions(input_file: str, output_file: str):
     for answer in answers:
         logger.info(f"--------- Invoking the chain with the question: {answer.question}")
         result = assistant.assistant_response(message=answer.question)
-        logger.info(f"########### Result: {result}")
-        converted_result = assistant.format_response(answer.schema_, result)
-        logger.info(f"########### Result Converted: {converted_result.result}")
+        converted_result = assistant.format_response(schema=answer.schema_, question=result)
         logger.info("-------------------------------------------------------------------")
-        answer.answer = converted_result.result
+        logger.info(f"########### Question: {answer.question}")
+        logger.info(f"########### Result: {result}")
+        logger.info(f"########### Result Converted: {converted_result}")
+        logger.info("-------------------------------------------------------------------")
+        answer.answer = converted_result
 
     logger.info(f"Saving answers to {output_file}")
     with open(output_file, 'w') as f:
