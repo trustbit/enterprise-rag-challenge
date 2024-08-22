@@ -100,6 +100,16 @@ class AssistantManager:
         return self.client.beta.threads.messages.list(thread_id=self.thread_id, order="asc")
 
     def assistant_response(self, message, thread_id=None):
+        """
+        Process a message and get a response from the assistant.
+
+        Args:
+            message (str): The message content to send to the assistant.
+            thread_id (str, optional): The ID of the thread. Defaults to None.
+
+        Returns:
+            str: The assistant's response message.
+        """
         logging.info(f"!!! Assistant run with message: {message}")
         self.thread_id = thread_id
 
