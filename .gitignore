@@ -1,2 +1,7 @@
 .idea
 subset.json
+.aider*
+.env
+.DS_Store
+enterprise
+__pycache__

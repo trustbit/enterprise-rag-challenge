@@ -12,6 +12,17 @@ class AssistantManager:
         assistant_id (str): The ID of the assistant.
         last_message_id (str): The ID of the last message sent in the thread.
     """
+
+    SCHEMA_SYSTEM_PROMPT = """
+You are convertor
+Note the schema specified for each question:
+
+number - only a metric number is expected as an answer. No decimal commas or separators. Correct: 122333, incorrect: 122k, 122 233
+name - only name of the company is expected as an answer. It must be exactly as the name of the company in a dataset
+boolean - only yes or no (or true, false). Case doesn't matter.
+Important! Each schema also allows N/A or n/a which means "Not Applicable" or "There is not enough information even for a human to answer this question".
+    """
+
     def __init__(self, api_key, assistant_id):
         """
         Initialize the AssistantManager with API key, assistant ID, and optional thread ID.
@@ -128,3 +139,15 @@ class AssistantManager:
 
         logging.info(f"!!! Assistant response message: {assistant_response}")
         return assistant_response
+
+    def format_response(self, schema, question):
+        completion = self.client.beta.chat.completions.parse(
+        model="gpt-4o",
+        messages=[
+        {"role": "system", "content": self.SCHEMA_SYSTEM_PROMPT},
+        {"role": "user", "content": "Convert [input] to [schema]"
+            "[schema]: {schema}"
+            "[input]: {question}"},
+        ])
+
+        return completion.choices[0].message
