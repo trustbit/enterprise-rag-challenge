@@ -22,7 +22,21 @@ def calculate_correct_answers(source_file: str, result_file: str) -> float:
     correct_count = 0
 
     for source, result in zip(source_data, result_data):
-        if source['answer'] == result['answer']:
+        source_answer = source['answer'].strip().lower()
+        result_answer = result['answer'].strip().lower()
+        schema = source.get('schema', 'text').lower()
+
+        if schema == 'number':
+            try:
+                source_answer = int(source_answer)
+                result_answer = int(result_answer)
+            except ValueError:
+                continue  # Skip if conversion to integer fails
+        elif schema == 'boolean':
+            source_answer = source_answer in ['yes', 'true']
+            result_answer = result_answer in ['yes', 'true']
+
+        if source_answer == result_answer:
             correct_count += 1
 
     total_questions = len(source_data)
