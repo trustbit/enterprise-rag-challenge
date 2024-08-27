@@ -1,5 +1,6 @@
 import json
 import matplotlib.pyplot as plt
+import os
 
 def calculate_correct_answers(source_file: str, result_file: str) -> float:
     """
@@ -38,14 +39,27 @@ def evaluate_all_results(source_file: str, result_files: list[str]):
     results = {}
     for result_file in result_files:
         percentage = calculate_correct_answers(source_file, result_file)
-        results[result_file] = percentage
+        system_name = os.path.splitext(os.path.basename(result_file))[0]
+        results[system_name] = percentage
 
     # Create a bar chart
     plt.figure(figsize=(10, 6))
     plt.bar(results.keys(), results.values(), color='skyblue')
-    plt.xlabel('Result Files')
+    plt.xlabel('System Names')
     plt.ylabel('Percentage of Correct Answers')
-    plt.title('Evaluation of Correct Answers Across Different Result Files')
+    plt.title('Evaluation of Correct Answers Across Different Systems')
     plt.xticks(rotation=45, ha='right')
     plt.tight_layout()
     plt.show()
+
+def main():
+    source_file = 'results/source_of_thruth.json'
+    result_files = [
+        'results/open_ai_a1.json',
+        'results/open_ai_a2.json',
+        # Add other result files here
+    ]
+    evaluate_all_results(source_file, result_files)
+
+if __name__ == "__main__":
+    main()
