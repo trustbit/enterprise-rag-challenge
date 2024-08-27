@@ -22,9 +22,14 @@ def calculate_correct_answers(source_file: str, result_file: str) -> float:
     correct_count = 0
 
     for source, result in zip(source_data, result_data):
-        source_answer = source['answer'].strip().lower()
-        result_answer = result['answer'].strip().lower()
+        source_answer = source['answer']
+        result_answer = result['answer']
         schema = source.get('schema', 'text').lower()
+
+        if isinstance(source_answer, str):
+            source_answer = source_answer.strip().lower()
+        if isinstance(result_answer, str):
+            result_answer = result_answer.strip().lower()
 
         if schema == 'number':
             try:
