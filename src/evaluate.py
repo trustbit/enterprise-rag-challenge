@@ -55,9 +55,8 @@ def evaluate_all_results(source_file: str, result_files: list[str]):
 def main():
     source_file = 'results/source_of_thruth.json'
     result_files = [
-        'results/open_ai_a1.json',
-        'results/open_ai_a2.json',
-        # Add other result files here
+        os.path.join('results', f) for f in os.listdir('results')
+        if f.endswith('.json') and f != 'source_of_thruth.json'
     ]
     evaluate_all_results(source_file, result_files)
 
