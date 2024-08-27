@@ -32,7 +32,7 @@
   {
     "question": "Did \"Calyxt, Inc.\" have a greater Return on Assets (ROA) than \"Global Medical REIT Inc.\" in Q2 2023?",
     "schema": "boolean",
-    "answer": false
+    "answer": "false"
   },
   {
     "question": "How many stores did \"OTC_UNCIF\" have in the end of fiscal year 2022?",
