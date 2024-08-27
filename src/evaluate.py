@@ -1,15 +1,15 @@
 import json
 
-def calculate_correct_answers(source_file: str, result_file: str) -> int:
+def calculate_correct_answers(source_file: str, result_file: str) -> float:
     """
-    Calculate the number of correct answers by comparing the result file with the source of truth file.
+    Calculate the percentage of correct answers by comparing the result file with the source of truth file.
 
     Args:
         source_file (str): Path to the source of truth JSON file.
         result_file (str): Path to the result JSON file.
 
     Returns:
-        int: The number of correct answers.
+        float: The percentage of correct answers.
     """
     with open(source_file, 'r') as f:
         source_data = json.load(f)
@@ -23,4 +23,5 @@ def calculate_correct_answers(source_file: str, result_file: str) -> int:
         if source['answer'] == result['answer']:
             correct_count += 1
 
-    return correct_count
+    total_questions = len(source_data)
+    return (correct_count / total_questions) * 100 if total_questions > 0 else 0.0
