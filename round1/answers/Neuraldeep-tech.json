@@ -1,0 +1,242 @@
+[
+    {
+        "index": 0,
+        "question": "What was the Net Profit Margin of \"Oesterreichische Kontrollbank\" in June 30, 2023?",
+        "schema": "number",
+        "answer": "N/A"
+    },
+    {
+        "index": 1,
+        "question": "What was the total liabilities of \"CrossFirst Bank\" in the fiscal year 2023?",
+        "schema": "number",
+        "answer": "N/A"
+    },
+    {
+        "index": 2,
+        "question": "How much more did \"Astral Resources NL\" spend on marketing compared to \"TSX_Y\" in June 30, 2021?",
+        "schema": "number",
+        "answer": "N/A"
+    },
+    {
+        "index": 3,
+        "question": "Which company had a higher free cash flow: \"TSX_ACQ\", \"QUIDELORTHO CORPORATION\" or \"PowerFleet, Inc.\", in the fiscal year 2022?",
+        "schema": "name",
+        "answer": "To determine which company had a higher free cash flow in the fiscal year 2022 among \"TSX_ACQ\", \"QUIDELORTHO CORPORATION\", and \"PowerFleet, Inc.\", we need to look at the free cash flow figures for each company. Free cash flow is typically calculated as:\n\n\\[ \\text{Free Cash Flow} = \\text{Operating Cash Flow} - \\text{Capital Expenditures} \\]\n\nBased on the provided context, we only have the cash flow information for PowerFleet, Inc. for the fiscal year 2022:\n\n- **PowerFleet, Inc.**: \n  - Net cash used in operating activities: $(7,003)$ thousand\n  - Capital expenditures: Not provided in the context\n\nFor \"TSX_ACQ\" and \"QUIDELORTHO CORPORATION\", the free cash flow figures are not provided in the context. Therefore, we cannot compare the free cash flow of these companies without additional data.\n\nGiven the available information, we can only state the free cash flow for PowerFleet, Inc., which is incomplete due to the missing capital expenditures figure. For a complete comparison, the free cash flow data for \"TSX_ACQ\" and \"QUIDELORTHO CORPORATION\" would be required.\n\nThus, the answer is:\n\nN/A"
+    },
+    {
+        "index": 4,
+        "question": "What was the earnings per share (EPS) of \"Holley Inc.\" in June 30, 2023?",
+        "schema": "number",
+        "answer": "N/A"
+    },
+    {
+        "index": 5,
+        "question": "What was the accounts receivable of \"Petra Diamonds\" in the fiscal year 2023?",
+        "schema": "number",
+        "answer": "N/A"
+    },
+    {
+        "index": 6,
+        "question": "How much more did \"Creative Media & Community Trust Corporation\" spend on sustainability initiatives compared to \"BAKER STEEL RESOURCES TRUST LIMITED\" in June 30, 2021?",
+        "schema": "number",
+        "answer": "N/A"
+    },
+    {
+        "index": 7,
+        "question": "Which company had a higher total liabilities: \"Creative Media & Community Trust Corporation\", \"Sleep Country Canada Holdings Inc.\" or \"Tradition\", in the fiscal year 2023?",
+        "schema": "name",
+        "answer": "N/A"
+    },
+    {
+        "index": 8,
+        "question": "What was the Net Profit Margin of \"QUIDELORTHO CORPORATION\" in June 30, 2023?",
+        "schema": "number",
+        "answer": "N/A"
+    },
+    {
+        "index": 9,
+        "question": "What was the acquisition costs of \"Safe & Green Holdings Corp.\" in the fiscal year 2021?",
+        "schema": "number",
+        "answer": "In the fiscal year 2021, Safe & Green Holdings Corp. did not report any acquisition costs. The provided financial statements and notes do not mention any acquisitions made during that year."
+    },
+    {
+        "index": 10,
+        "question": "How much more did \"Astral Resources NL\" spend on marketing compared to \"TSX_ACQ\" in June 30, 2023?",
+        "schema": "number",
+        "answer": "N/A"
+    },
+    {
+        "index": 11,
+        "question": "Which company had a higher shareholders' equity: \"MITSUI O.S.K. LINES\", \"TSX_Y\" or \"Tradition\", in the fiscal year 2022?",
+        "schema": "name",
+        "answer": "Based on the provided information, the shareholders' equity for each company in the fiscal year 2022 is as follows:\n\n1. **MITSUI O.S.K. LINES**: The specific shareholders' equity for MITSUI O.S.K. LINES in the fiscal year 2022 is not provided in the given context.\n\n2. **TSX_Y**: There is no information provided about a company named \"TSX_Y\" in the given context.\n\n3. **Tradition**: The shareholders' equity for Tradition at 31 December 2022 was CHF 19,136,000.\n\nGiven the available data, Tradition had a shareholders' equity of CHF 19,136,000 in the fiscal year 2022. There is no comparable data provided for MITSUI O.S.K. LINES or TSX_Y within the given context. Therefore, based on the provided information, Tradition had the higher shareholders' equity among the mentioned companies."
+    },
+    {
+        "index": 12,
+        "question": "What was the Gross Profit Margin of \"JOURNEY MEDICAL CORPORATION\" in June 30, 2022?",
+        "schema": "number",
+        "answer": "N/A"
+    },
+    {
+        "index": 13,
+        "question": "What was the operating cash flow of \"JOURNEY MEDICAL CORPORATION\" in the fiscal year 2023?",
+        "schema": "number",
+        "answer": "N/A"
+    },
+    {
+        "index": 14,
+        "question": "How much more did \"Astral Resources NL\" spend on risk management compared to \"Caixa Geral de Depósitos, S.A.\" in June 30, 2023?",
+        "schema": "number",
+        "answer": "N/A"
+    },
+    {
+        "index": 15,
+        "question": "Which company had a higher acquisition costs: \"PowerFleet, Inc.\", \"Oesterreichische Kontrollbank\" or \"Astral Resources NL\", in the fiscal year 2023?",
+        "schema": "name",
+        "answer": "N/A"
+    },
+    {
+        "index": 16,
+        "question": "What was the Quick Ratio of \"IMUNON, INC.\" in June 30, 2021?",
+        "schema": "number",
+        "answer": "N/A"
+    },
+    {
+        "index": 17,
+        "question": "What was the net income of \"Petra Diamonds\" in the fiscal year 2022?",
+        "schema": "number",
+        "answer": "The net income of Petra Diamonds in the fiscal year 2022 was US$88.1 million."
+    },
+    {
+        "index": 18,
+        "question": "How much more did \"Sensata\" spend on customer acquisition compared to \"Laserbond\" in June 30, 2022?",
+        "schema": "number",
+        "answer": "N/A"
+    },
+    {
+        "index": 19,
+        "question": "Which company had a higher free cash flow: \"Sensata\", \"TransUnion\" or \"First Mid Bancshares, Inc.\", in the fiscal year 2021?",
+        "schema": "name",
+        "answer": "Based on the provided information, Sensata had a free cash flow of $311 million in 2022. However, the free cash flow for Sensata in 2021 is not explicitly mentioned.\n\nFor First Mid Bancshares, Inc., the cash flow from operating activities in 2021 was $(155,585) thousand, and the cash flow from investing activities was $30,968 thousand. The net cash provided by financing activities was $30,875 thousand. The specific free cash flow figure is not directly provided.\n\nThere is no information provided about TransUnion's free cash flow for the fiscal year 2021.\n\nTherefore, based on the available data, it is not possible to determine which company had a higher free cash flow in the fiscal year 2021. \n\nN/A"
+    },
+    {
+        "index": 20,
+        "question": "What was the market capitalization of \"Holley Inc.\" in June 30, 2023?",
+        "schema": "number",
+        "answer": "N/A"
+    },
+    {
+        "index": 21,
+        "question": "What was the total assets of \"TransUnion\" in the fiscal year 2023?",
+        "schema": "number",
+        "answer": "N/A"
+    },
+    {
+        "index": 22,
+        "question": "How much more did \"BAKER STEEL RESOURCES TRUST LIMITED\" spend on customer acquisition compared to \"Sleep Country Canada Holdings Inc.\" in June 30, 2021?",
+        "schema": "number",
+        "answer": "N/A"
+    },
+    {
+        "index": 23,
+        "question": "Which company had a higher research and development expenses: \"MITSUI O.S.K. LINES\", \"Holley Inc.\" or \"First Mid Bancshares, Inc.\", in the fiscal year 2021?",
+        "schema": "name",
+        "answer": "Holley Inc. had higher research and development expenses in the fiscal year 2021 compared to Mitsui O.S.K. Lines and First Mid Bancshares, Inc. Specifically, Holley Inc. reported research and development costs of $28,280,000 in 2021. There is no mention of research and development expenses for Mitsui O.S.K. Lines or First Mid Bancshares, Inc. in the provided context."
+    },
+    {
+        "index": 24,
+        "question": "What was the Operating Margin of \"Sleep Country Canada Holdings Inc.\" in June 30, 2022?",
+        "schema": "number",
+        "answer": "The Operating EBITDA margin of Sleep Country Canada Holdings Inc. on June 30, 2022, was 26.1%."
+    },
+    {
+        "index": 25,
+        "question": "What was the intangible assets of \"TransUnion\" in the fiscal year 2021?",
+        "schema": "number",
+        "answer": "The intangible assets of TransUnion in the fiscal year 2021 were as follows:\n\n- **Gross Intangible Assets:** $5,679.5 million\n- **Accumulated Amortization:** $(1,908.9) million\n- **Net Intangible Assets:** $3,770.6 million"
+    },
+    {
+        "index": 26,
+        "question": "How much more did \"PowerFleet, Inc.\" spend on R&D compared to \"JOURNEY MEDICAL CORPORATION\" in June 30, 2022?",
+        "schema": "number",
+        "answer": "N/A"
+    },
+    {
+        "index": 27,
+        "question": "Which company had a higher inventories: \"TSX_Y\", \"Mercia Asset Management PLC\" or \"Tradition\", in the fiscal year 2022?",
+        "schema": "name",
+        "answer": "N/A"
+    },
+    {
+        "index": 28,
+        "question": "What was the Gross Profit Margin of \"Safe & Green Holdings Corp.\" in June 30, 2022?",
+        "schema": "number",
+        "answer": "N/A"
+    },
+    {
+        "index": 29,
+        "question": "What was the total revenue of \"Mercia Asset Management PLC\" in the fiscal year 2021?",
+        "schema": "number",
+        "answer": "The total revenue of Mercia Asset Management PLC in the fiscal year 2021 was £23,410,000."
+    },
+    {
+        "index": 30,
+        "question": "How much more did \"First Mid Bancshares, Inc.\" spend on risk management compared to \"QUIDELORTHO CORPORATION\" in June 30, 2022?",
+        "schema": "number",
+        "answer": "N/A"
+    },
+    {
+        "index": 31,
+        "question": "Which company had a higher total liabilities: \"DouYu International Holdings Limited\", \"CrossFirst Bank\" or \"First Mid Bancshares, Inc.\", in the fiscal year 2023?",
+        "schema": "name",
+        "answer": "N/A"
+    },
+    {
+        "index": 32,
+        "question": "What was the Return on Assets (ROA) of \"ENRG ELEMENTS LIMITED\" in June 30, 2022?",
+        "schema": "number",
+        "answer": "The Return on Assets (ROA) can be calculated using the formula:\n\n\\[ \\text{ROA} = \\left( \\frac{\\text{Net Income}}{\\text{Total Assets}} \\right) \\times 100 \\]\n\nFrom the provided data:\n\n- Net Income (Loss for the year) for the year ended June 30, 2022: \\(-4,867,541\\)\n- Total Assets as of June 30, 2022: \\(4,422,108\\)\n\nUsing these values:\n\n\\[ \\text{ROA} = \\left( \\frac{-4,867,541}{4,422,108} \\right) \\times 100 \\approx -110.1\\% \\]\n\nTherefore, the Return on Assets (ROA) of ENRG ELEMENTS LIMITED for the year ended June 30, 2022, was approximately \\(-110.1\\%\\)."
+    },
+    {
+        "index": 33,
+        "question": "What was the free cash flow of \"Oesterreichische Kontrollbank\" in the fiscal year 2023?",
+        "schema": "number",
+        "answer": "N/A"
+    },
+    {
+        "index": 34,
+        "question": "How much more did \"Sensata\" spend on risk management compared to \"Holley Inc.\" in June 30, 2022?",
+        "schema": "number",
+        "answer": "N/A"
+    },
+    {
+        "index": 35,
+        "question": "Which company had a higher free cash flow: \"BAKER STEEL RESOURCES TRUST LIMITED\", \"Safe & Green Holdings Corp.\" or \"PowerFleet, Inc.\", in the fiscal year 2021?",
+        "schema": "name",
+        "answer": "N/A"
+    },
+    {
+        "index": 36,
+        "question": "What was the Operating Margin of \"Mercia Asset Management PLC\" in June 30, 2021?",
+        "schema": "number",
+        "answer": "N/A"
+    },
+    {
+        "index": 37,
+        "question": "What was the free cash flow of \"JOURNEY MEDICAL CORPORATION\" in the fiscal year 2023?",
+        "schema": "number",
+        "answer": "N/A"
+    },
+    {
+        "index": 38,
+        "question": "How much more did \"Laserbond\" spend on R&D compared to \"PowerFleet, Inc.\" in June 30, 2021?",
+        "schema": "number",
+        "answer": "N/A"
+    },
+    {
+        "index": 39,
+        "question": "Which company had a higher total assets: \"MITSUI O.S.K. LINES\", \"ENRG ELEMENTS LIMITED\" or \"First Mid Bancshares, Inc.\", in the fiscal year 2021?",
+        "schema": "name",
+        "answer": "N/A"
+    }
+]

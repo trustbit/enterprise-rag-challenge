@@ -1,0 +1,202 @@
+[
+    {
+        "question": "What was the Net Profit Margin of \"Oesterreichische Kontrollbank\" in June 30, 2023?",
+        "schema": "number",
+        "answer": "N/A"
+    },
+    {
+        "question": "What was the total liabilities of \"CrossFirst Bank\" in the fiscal year 2023?",
+        "schema": "number",
+        "answer": 5992487
+    },
+    {
+        "question": "How much more did \"Astral Resources NL\" spend on marketing compared to \"TSX_Y\" in June 30, 2021?",
+        "schema": "number",
+        "answer": "N/A"
+    },
+    {
+        "question": "Which company had a higher free cash flow: \"TSX_ACQ\", \"QUIDELORTHO CORPORATION\" or \"PowerFleet, Inc.\", in the fiscal year 2022?",
+        "schema": "name",
+        "answer": "PowerFleet, Inc."
+    },
+    {
+        "question": "What was the earnings per share (EPS) of \"Holley Inc.\" in June 30, 2023?",
+        "schema": "number",
+        "answer": "N/A"
+    },
+    {
+        "question": "What was the accounts receivable of \"Petra Diamonds\" in the fiscal year 2023?",
+        "schema": "number",
+        "answer": "N/A"
+    },
+    {
+        "question": "How much more did \"Creative Media & Community Trust Corporation\" spend on sustainability initiatives compared to \"BAKER STEEL RESOURCES TRUST LIMITED\" in June 30, 2021?",
+        "schema": "number",
+        "answer": "N/A"
+    },
+    {
+        "question": "Which company had a higher total liabilities: \"Creative Media & Community Trust Corporation\", \"Sleep Country Canada Holdings Inc.\" or \"Tradition\", in the fiscal year 2023?",
+        "schema": "name",
+        "answer": "Creative Media & Community Trust Corporation"
+    },
+    {
+        "question": "What was the Net Profit Margin of \"QUIDELORTHO CORPORATION\" in June 30, 2023?",
+        "schema": "number",
+        "answer": "N/A"
+    },
+    {
+        "question": "What was the acquisition costs of \"Safe & Green Holdings Corp.\" in the fiscal year 2021?",
+        "schema": "number",
+        "answer": "N/A"
+    },
+    {
+        "question": "How much more did \"Astral Resources NL\" spend on marketing compared to \"TSX_ACQ\" in June 30, 2023?",
+        "schema": "number",
+        "answer": "N/A"
+    },
+    {
+        "question": "Which company had a higher shareholders' equity: \"MITSUI O.S.K. LINES\", \"TSX_Y\" or \"Tradition\", in the fiscal year 2022?",
+        "schema": "name",
+        "answer": "Tradition"
+    },
+    {
+        "question": "What was the Gross Profit Margin of \"JOURNEY MEDICAL CORPORATION\" in June 30, 2022?",
+        "schema": "number",
+        "answer": "N/A"
+    },
+    {
+        "question": "What was the operating cash flow of \"JOURNEY MEDICAL CORPORATION\" in the fiscal year 2023?",
+        "schema": "number",
+        "answer": "N/A"
+    },
+    {
+        "question": "How much more did \"Astral Resources NL\" spend on risk management compared to \"Caixa Geral de Dep\u00f3sitos, S.A.\" in June 30, 2023?",
+        "schema": "number",
+        "answer": "N/A"
+    },
+    {
+        "question": "Which company had a higher acquisition costs: \"PowerFleet, Inc.\", \"Oesterreichische Kontrollbank\" or \"Astral Resources NL\", in the fiscal year 2023?",
+        "schema": "name",
+        "answer": "The information provided does not contain any data regarding acquisition costs for the fiscal year 2023 for any of the companies. Therefore, it is not possible to determine which company had a higher acquisition cost during that time."
+    },
+    {
+        "question": "What was the Quick Ratio of \"IMUNON, INC.\" in June 30, 2021?",
+        "schema": "number",
+        "answer": "N/A"
+    },
+    {
+        "question": "What was the net income of \"Petra Diamonds\" in the fiscal year 2022?",
+        "schema": "number",
+        "answer": 88.1
+    },
+    {
+        "question": "How much more did \"Sensata\" spend on customer acquisition compared to \"Laserbond\" in June 30, 2022?",
+        "schema": "number",
+        "answer": "N/A"
+    },
+    {
+        "question": "Which company had a higher free cash flow: \"Sensata\", \"TransUnion\" or \"First Mid Bancshares, Inc.\", in the fiscal year 2021?",
+        "schema": "name",
+        "answer": "TransUnion"
+    },
+    {
+        "question": "What was the market capitalization of \"Holley Inc.\" in June 30, 2023?",
+        "schema": "number",
+        "answer": "N/A"
+    },
+    {
+        "question": "What was the total assets of \"TransUnion\" in the fiscal year 2023?",
+        "schema": "number",
+        "answer": 116663
+    },
+    {
+        "question": "How much more did \"BAKER STEEL RESOURCES TRUST LIMITED\" spend on customer acquisition compared to \"Sleep Country Canada Holdings Inc.\" in June 30, 2021?",
+        "schema": "number",
+        "answer": "N/A"
+    },
+    {
+        "question": "Which company had a higher research and development expenses: \"MITSUI O.S.K. LINES\", \"Holley Inc.\" or \"First Mid Bancshares, Inc.\", in the fiscal year 2021?",
+        "schema": "name",
+        "answer": "Holley Inc."
+    },
+    {
+        "question": "What was the Operating Margin of \"Sleep Country Canada Holdings Inc.\" in June 30, 2022?",
+        "schema": "number",
+        "answer": "N/A"
+    },
+    {
+        "question": "What was the intangible assets of \"TransUnion\" in the fiscal year 2021?",
+        "schema": "number",
+        "answer": 19181
+    },
+    {
+        "question": "How much more did \"PowerFleet, Inc.\" spend on R&D compared to \"JOURNEY MEDICAL CORPORATION\" in June 30, 2022?",
+        "schema": "number",
+        "answer": "N/A"
+    },
+    {
+        "question": "Which company had a higher inventories: \"TSX_Y\", \"Mercia Asset Management PLC\" or \"Tradition\", in the fiscal year 2022?",
+        "schema": "name",
+        "answer": "Mercia Asset Management PLC"
+    },
+    {
+        "question": "What was the Gross Profit Margin of \"Safe & Green Holdings Corp.\" in June 30, 2022?",
+        "schema": "number",
+        "answer": "N/A"
+    },
+    {
+        "question": "What was the total revenue of \"Mercia Asset Management PLC\" in the fiscal year 2021?",
+        "schema": "number",
+        "answer": 19.2
+    },
+    {
+        "question": "How much more did \"First Mid Bancshares, Inc.\" spend on risk management compared to \"QUIDELORTHO CORPORATION\" in June 30, 2022?",
+        "schema": "number",
+        "answer": "N/A"
+    },
+    {
+        "question": "Which company had a higher total liabilities: \"DouYu International Holdings Limited\", \"CrossFirst Bank\" or \"First Mid Bancshares, Inc.\", in the fiscal year 2023?",
+        "schema": "name",
+        "answer": "CrossFirst Bank"
+    },
+    {
+        "question": "What was the Return on Assets (ROA) of \"ENRG ELEMENTS LIMITED\" in June 30, 2022?",
+        "schema": "number",
+        "answer": "N/A"
+    },
+    {
+        "question": "What was the free cash flow of \"Oesterreichische Kontrollbank\" in the fiscal year 2023?",
+        "schema": "number",
+        "answer": "N/A"
+    },
+    {
+        "question": "How much more did \"Sensata\" spend on risk management compared to \"Holley Inc.\" in June 30, 2022?",
+        "schema": "number",
+        "answer": "N/A"
+    },
+    {
+        "question": "Which company had a higher free cash flow: \"BAKER STEEL RESOURCES TRUST LIMITED\", \"Safe & Green Holdings Corp.\" or \"PowerFleet, Inc.\", in the fiscal year 2021?",
+        "schema": "name",
+        "answer": "N/A"
+    },
+    {
+        "question": "What was the Operating Margin of \"Mercia Asset Management PLC\" in June 30, 2021?",
+        "schema": "number",
+        "answer": "N/A"
+    },
+    {
+        "question": "What was the free cash flow of \"JOURNEY MEDICAL CORPORATION\" in the fiscal year 2023?",
+        "schema": "number",
+        "answer": "N/A"
+    },
+    {
+        "question": "How much more did \"Laserbond\" spend on R&D compared to \"PowerFleet, Inc.\" in June 30, 2021?",
+        "schema": "number",
+        "answer": "N/A"
+    },
+    {
+        "question": "Which company had a higher total assets: \"MITSUI O.S.K. LINES\", \"ENRG ELEMENTS LIMITED\" or \"First Mid Bancshares, Inc.\", in the fiscal year 2021?",
+        "schema": "name",
+        "answer": "First Mid Bancshares, Inc."
+    }
+]
