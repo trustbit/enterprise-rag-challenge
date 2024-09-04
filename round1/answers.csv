@@ -1,8 +1,8 @@
-real,A_Ovsov_M_Startseva_JustAI_2,AlBo,F-team,Ilya_Rice,N_A,Neuraldeep-tech,Ox1d,TTA_Felix,TTA_Maria_filtered_source_threads_test_set,TTA_Maria_results_all_files_merged_test_set,TTA_Pedro,TTA_daniel,aimpresario_team,anonymous1256,anonymous1337,anonymous1447,anonymous1652
-"[['N/A', 1]]",n/a,n/a,N/A,N/A,N/A,N/A,0.06504494976203068,0.1243,n/a,n/a,N/A,n/a,N/A,N/A,N/A,0.117,0
-"[['N/A', 1]]",n/a,n/a,5992487,N/A,N/A,N/A,5992487,5992487000,5992487,5992487,5992487,n/a,N/A,N/A,N/A,"5,992,487",1
-"[['N/A', 1]]",n/a,n/a,N/A,N/A,N/A,N/A,145.2,n/a,n/a,n/a,N/A,n/a,N/A,N/A,N/A,N/A,2
-"[['N/A', 1], ['PowerFleet, Inc.', 2]]",Answer: AutoCanada,"PowerFleet, Inc.","PowerFleet, Inc.",N/A,N/A,"To determine which company had a higher free cash flow in the fiscal year 2022 among ""TSX_ACQ"", ""QUIDELORTHO CORPORATION"", and ""PowerFleet, Inc."", we need to look at the free cash flow figures for each company. Free cash flow is typically calculated as:
+real,A Ovsov M Startseva JustAI 2,AlBo,Artem checklist plus,Artem multi stage checklist,F-team,Ilya Rice,Neuraldeep-tech,Ox1d,TTA Daniel,TTA Felix,TTA Maria,TTA Pedro,aimpresario team,anonymous 1256,anonymous 1337,anonymous 1447,anonymous 1652
+['N/A'],n/a,n/a,N/A,N/A,N/A,N/A,N/A,0.06504494976203068,n/a,0.1243,n/a,N/A,N/A,N/A,N/A,0.117,n/a
+['N/A'],n/a,n/a,N/A,N/A,5992487,N/A,N/A,5992487,n/a,5992487000,5992487,5992487,N/A,N/A,N/A,"5,992,487",9371032
+['N/A'],n/a,n/a,N/A,N/A,N/A,N/A,N/A,145.2,n/a,n/a,n/a,N/A,N/A,N/A,N/A,N/A,401900000
+"['N/A', 'PowerFleet, Inc.']",Answer: AutoCanada,"PowerFleet, Inc.",N/A,N/A,"PowerFleet, Inc.",N/A,"To determine which company had a higher free cash flow in the fiscal year 2022 among ""TSX_ACQ"", ""QUIDELORTHO CORPORATION"", and ""PowerFleet, Inc."", we need to look at the free cash flow figures for each company. Free cash flow is typically calculated as:
 
 \[ \text{Free Cash Flow} = \text{Operating Cash Flow} - \text{Capital Expenditures} \]
 
@@ -18,15 +18,15 @@ Given the available information, we can only state the free cash flow for PowerF
 
 Thus, the answer is:
 
-N/A","PowerFleet, Inc.",TSX_ACQ,"PowerFleet, Inc.",QUIDELORTHO CORPORATION,"PowerFleet, Inc.",n/a,N/A,N/A,N/A,N/A,3
-"[['N/A', 1]]",n/a,n/a,N/A,N/A,N/A,N/A,0.14,n/a,0.14,014,N/A,n/a,N/A,N/A,N/A,N/A,4
-"[['N/A', 1]]",49800000,n/a,N/A,N/A,N/A,N/A,408.6,n/a,n/a,26895000,N/A,n/a,N/A,N/A,N/A,N/A,5
-"[['N/A', 1]]",n/a,n/a,N/A,N/A,N/A,N/A,0,n/a,n/a,n/a,N/A,n/a,N/A,N/A,N/A,N/A,6
-"[['N/A', 1]]",Compagnie Financière Tradition,Sleep Country Canada Holdings Inc.,Sleep Country Canada Holdings Inc.,N/A,N/A,N/A,Creative Media & Community Trust Corporation,n/a,Tradition,Sleep Country Canada Holdings Inc.,Creative Media & Community Trust Corporation,n/a,N/A,N/A,N/A,Sleep Country Canada Holdings Inc.,7
-"[['N/A', 1]]",n/a,n/a,N/A,N/A,N/A,N/A,7.7,n/a,n/a,09,N/A,n/a,N/A,N/A,N/A,N/A,8
-"[['N/A', 1]]",n/a,4824756,N/A,N/A,N/A,"In the fiscal year 2021, Safe & Green Holdings Corp. did not report any acquisition costs. The provided financial statements and notes do not mention any acquisitions made during that year.","379,816",n/a,n/a,n/a,N/A,n/a,N/A,N/A,N/A,"$4,824,756",9
-"[['N/A', 1]]",n/a,n/a,N/A,N/A,N/A,N/A,145.2,n/a,n/a,n/a,N/A,n/a,N/A,N/A,N/A,N/A,10
-"[['MITSUI O.S.K. LINES', 2]]",Compagnie Financière Tradition,n/a,N/A,N/A,N/A,"Based on the provided information, the shareholders' equity for each company in the fiscal year 2022 is as follows:
+N/A","PowerFleet, Inc.",n/a,TSX_ACQ,"PowerFleet, Inc.","PowerFleet, Inc.",N/A,N/A,N/A,N/A,"PowerFleet, Inc."
+['N/A'],n/a,n/a,N/A,N/A,N/A,N/A,N/A,0.14,n/a,n/a,0.14,N/A,N/A,N/A,N/A,N/A,2.81
+['N/A'],49800000,n/a,N/A,N/A,N/A,N/A,N/A,408.6,n/a,n/a,n/a,N/A,N/A,N/A,N/A,N/A,49.8
+['N/A'],n/a,n/a,N/A,N/A,N/A,N/A,N/A,0,n/a,n/a,n/a,N/A,N/A,N/A,N/A,N/A,N/A
+['N/A'],Compagnie Financière Tradition,Sleep Country Canada Holdings Inc.,Creative Media & Community Trust Corporation,N/A,Sleep Country Canada Holdings Inc.,N/A,N/A,Creative Media & Community Trust Corporation,n/a,n/a,Tradition,Creative Media & Community Trust Corporation,N/A,N/A,N/A,Sleep Country Canada Holdings Inc.,N/A
+['N/A'],n/a,n/a,N/A,N/A,N/A,N/A,N/A,7.7,n/a,n/a,n/a,N/A,N/A,N/A,N/A,N/A,9.9
+['N/A'],n/a,4824756,N/A,N/A,N/A,N/A,"In the fiscal year 2021, Safe & Green Holdings Corp. did not report any acquisition costs. The provided financial statements and notes do not mention any acquisitions made during that year.","379,816",n/a,n/a,n/a,N/A,N/A,N/A,N/A,"$4,824,756",N/A
+['N/A'],n/a,n/a,N/A,N/A,N/A,N/A,N/A,145.2,n/a,n/a,n/a,N/A,N/A,N/A,N/A,N/A,N/A
+['MITSUI O.S.K. LINES'],Compagnie Financière Tradition,n/a,N/A,N/A,N/A,N/A,"Based on the provided information, the shareholders' equity for each company in the fiscal year 2022 is as follows:
 
 1. **MITSUI O.S.K. LINES**: The specific shareholders' equity for MITSUI O.S.K. LINES in the fiscal year 2022 is not provided in the given context.
 
@@ -34,15 +34,15 @@ N/A","PowerFleet, Inc.",TSX_ACQ,"PowerFleet, Inc.",QUIDELORTHO CORPORATION,"Powe
 
 3. **Tradition**: The shareholders' equity for Tradition at 31 December 2022 was CHF 19,136,000.
 
-Given the available data, Tradition had a shareholders' equity of CHF 19,136,000 in the fiscal year 2022. There is no comparable data provided for MITSUI O.S.K. LINES or TSX_Y within the given context. Therefore, based on the provided information, Tradition had the higher shareholders' equity among the mentioned companies.",MITSUI O.S.K. LINES,Tradition,MITSUI O.S.K. LINES,Tradition,Tradition,MITSUI O.S.K. LINES,N/A,N/A,N/A,MITSUI O.S.K. LINES,11
-"[['N/A', 1]]",n/a,n/a,N/A,N/A,N/A,N/A,36.8,n/a,n/a,367,N/A,n/a,N/A,N/A,N/A,0.368,12
-"[['N/A', 1]]",n/a,n/a,N/A,N/A,N/A,N/A,12.3,n/a,n/a,n/a,N/A,n/a,N/A,N/A,N/A,N/A,13
-"[['N/A', 1]]",n/a,n/a,N/A,N/A,N/A,N/A,284330,n/a,n/a,n/a,N/A,n/a,N/A,N/A,N/A,N/A,14
-"[['N/A', 1]]","PowerFleet, Inc.",n/a,N/A,N/A,N/A,N/A,"PowerFleet, Inc.",n/a,"PowerFleet, Inc.",n/a,"The information provided does not contain any data regarding acquisition costs for the fiscal year 2023 for any of the companies. Therefore, it is not possible to determine which company had a higher acquisition cost during that time.",n/a,N/A,N/A,N/A,"PowerFleet, Inc.",15
-"[['N/A', 1]]",n/a,n/a,N/A,N/A,N/A,N/A,0.01639344262295082,n/a,n/a,n/a,N/A,n/a,N/A,N/A,N/A,0.92,16
-"[[88100000, 2]]",88100000,88100000,102000000,88100000,N/A,The net income of Petra Diamonds in the fiscal year 2022 was US$88.1 million.,102.0,88.1,n/a,88000000,88.1,100000000.0,88.1,N/A,88.1,88.1,17
-"[['N/A', 1]]",n/a,n/a,N/A,N/A,N/A,N/A,631516,n/a,n/a,n/a,N/A,n/a,N/A,N/A,N/A,N/A,18
-"[['TransUnion', 3], ['N/A', 1]]",TransUnion,Sensata,"First Mid Bancshares, Inc.",N/A,N/A,"Based on the provided information, Sensata had a free cash flow of $311 million in 2022. However, the free cash flow for Sensata in 2021 is not explicitly mentioned.
+Given the available data, Tradition had a shareholders' equity of CHF 19,136,000 in the fiscal year 2022. There is no comparable data provided for MITSUI O.S.K. LINES or TSX_Y within the given context. Therefore, based on the provided information, Tradition had the higher shareholders' equity among the mentioned companies.",MITSUI O.S.K. LINES,MITSUI O.S.K. LINES,Tradition,MITSUI O.S.K. LINES,Tradition,N/A,N/A,N/A,MITSUI O.S.K. LINES,MITSUI O.S.K. LINES
+['N/A'],n/a,n/a,N/A,N/A,N/A,N/A,N/A,36.8,n/a,n/a,n/a,N/A,N/A,N/A,N/A,0.368,47.5
+['N/A'],n/a,n/a,N/A,N/A,N/A,N/A,N/A,12.3,n/a,n/a,n/a,N/A,N/A,N/A,N/A,N/A,460600000
+['N/A'],n/a,n/a,N/A,N/A,N/A,N/A,N/A,284330,n/a,n/a,n/a,N/A,N/A,N/A,N/A,N/A,N/A
+['N/A'],"PowerFleet, Inc.",n/a,"PowerFleet, Inc.",N/A,N/A,N/A,N/A,"PowerFleet, Inc.",n/a,n/a,"PowerFleet, Inc.","The information provided does not contain any data regarding acquisition costs for the fiscal year 2023 for any of the companies. Therefore, it is not possible to determine which company had a higher acquisition cost during that time.",N/A,N/A,N/A,"PowerFleet, Inc.",N/A
+['N/A'],n/a,n/a,N/A,N/A,N/A,N/A,N/A,0.01639344262295082,n/a,n/a,n/a,N/A,N/A,N/A,N/A,0.92,-191
+[88100000],88100000,88100000,N/A,102000000,102000000,88100000,The net income of Petra Diamonds in the fiscal year 2022 was US$88.1 million.,102.0,100000000.0,88.1,n/a,88.1,88.1,N/A,88.1,88.1,88
+['N/A'],n/a,n/a,N/A,N/A,N/A,N/A,N/A,631516,n/a,n/a,n/a,N/A,N/A,N/A,N/A,N/A,0
+"['TransUnion', 'N/A']",TransUnion,Sensata,Sensata,N/A,"First Mid Bancshares, Inc.",N/A,"Based on the provided information, Sensata had a free cash flow of $311 million in 2022. However, the free cash flow for Sensata in 2021 is not explicitly mentioned.
 
 For First Mid Bancshares, Inc., the cash flow from operating activities in 2021 was $(155,585) thousand, and the cash flow from investing activities was $30,968 thousand. The net cash provided by financing activities was $30,875 thousand. The specific free cash flow figure is not directly provided.
 
@@ -50,24 +50,24 @@ There is no information provided about TransUnion's free cash flow for the fisca
 
 Therefore, based on the available data, it is not possible to determine which company had a higher free cash flow in the fiscal year 2021. 
 
-N/A",Sensata,TransUnion,TransUnion,"First Mid Bancshares, Inc.",TransUnion,Sensata,TransUnion,N/A,N/A,Sensata,19
-"[['N/A', 1]]",n/a,598256894,N/A,N/A,N/A,N/A,"415,990",n/a,n/a,n/a,N/A,560000000.0,N/A,N/A,N/A,N/A,20
-"[['N/A', 1]]",11666300,n/a,N/A,N/A,N/A,N/A,11666.3,n/a,11666300,n/a,116663,n/a,N/A,N/A,N/A,11666.3,21
-"[['N/A', 1]]",n/a,n/a,N/A,N/A,N/A,N/A,0,n/a,n/a,n/a,N/A,n/a,N/A,N/A,N/A,N/A,22
-"[['Holley Inc.', 2]]",Holley Inc.,n/a,N/A,N/A,N/A,"Holley Inc. had higher research and development expenses in the fiscal year 2021 compared to Mitsui O.S.K. Lines and First Mid Bancshares, Inc. Specifically, Holley Inc. reported research and development costs of $28,280,000 in 2021. There is no mention of research and development expenses for Mitsui O.S.K. Lines or First Mid Bancshares, Inc. in the provided context.",MITSUI O.S.K. LINES,n/a,Holley Inc.,MITSUI O.S.K. LINES,Holley Inc.,Holley Inc.,,N/A,N/A,Holley Inc.,23
-"[['N/A', 1], [15.63, 3]]",23.5,n/a,N/A,21.8,N/A,"The Operating EBITDA margin of Sleep Country Canada Holdings Inc. on June 30, 2022, was 26.1%.",23.5,n/a,23,n/a,N/A,n/a,23.5,N/A,26.1,23.5,24
-"[[3770600000, 2], [5679500000, 2]]",3770600,n/a,N/A,3770600000,N/A,"The intangible assets of TransUnion in the fiscal year 2021 were as follows:
+N/A",Sensata,Sensata,TransUnion,TransUnion,TransUnion,TransUnion,N/A,N/A,Sensata,Sensata
+['N/A'],n/a,598256894,N/A,N/A,N/A,N/A,N/A,"415,990",560000000.0,n/a,n/a,N/A,N/A,N/A,N/A,N/A,N/A
+['N/A'],11666300,n/a,"11,666.3",N/A,N/A,N/A,N/A,11666.3,n/a,n/a,11666300,116663,N/A,N/A,N/A,11666.3,4587
+"['N/A', -11150000]",n/a,n/a,N/A,N/A,N/A,N/A,N/A,0,n/a,n/a,n/a,N/A,N/A,N/A,N/A,N/A,N/A
+['Holley Inc.'],Holley Inc.,n/a,Holley Inc.,N/A,N/A,N/A,"Holley Inc. had higher research and development expenses in the fiscal year 2021 compared to Mitsui O.S.K. Lines and First Mid Bancshares, Inc. Specifically, Holley Inc. reported research and development costs of $28,280,000 in 2021. There is no mention of research and development expenses for Mitsui O.S.K. Lines or First Mid Bancshares, Inc. in the provided context.",MITSUI O.S.K. LINES,Holley Inc.,n/a,Holley Inc.,Holley Inc.,,N/A,N/A,Holley Inc.,MITSUI O.S.K. LINES
+"['N/A', 15.63]",23.5,n/a,N/A,N/A,N/A,21.8,"The Operating EBITDA margin of Sleep Country Canada Holdings Inc. on June 30, 2022, was 26.1%.",23.5,n/a,n/a,23,N/A,23.5,N/A,26.1,23.5,N/A
+"[3770600000, 5679500000]",3770600,n/a,"3,770.6",N/A,N/A,3770600000,"The intangible assets of TransUnion in the fiscal year 2021 were as follows:
 
 - **Gross Intangible Assets:** $5,679.5 million
 - **Accumulated Amortization:** $(1,908.9) million
-- **Net Intangible Assets:** $3,770.6 million","3,770.6",n/a,5944100000,263027,19181,n/a,0.98,N/A,3770.6,"$5,679.5 million",25
-"[['N/A', 1]]",n/a,n/a,N/A,N/A,N/A,N/A,"$8,964",n/a,1035000,n/a,N/A,n/a,,N/A,N/A,N/A,26
-"[['N/A', 1]]",Answer: n/a,n/a,N/A,N/A,N/A,N/A,Mercia Asset Management PLC,n/a,Tradition,Tradition,Mercia Asset Management PLC,n/a,,N/A,N/A,TSX_Y,27
-"[['N/A', 1]]",n/a,1334,N/A,N/A,N/A,N/A,0.1335,n/a,n/a,367,N/A,n/a,N/A,N/A,N/A,13.34,28
-"[[23410000, 2]]",23410000,23410000,19200000,19186,N/A,"The total revenue of Mercia Asset Management PLC in the fiscal year 2021 was £23,410,000.",19186,19186000,23410,29260000,19.2,23410000.0,19186000,20600000.0,23410,"23,410,000",29
-"[['N/A', 1]]",n/a,n/a,N/A,N/A,N/A,N/A,"$358,470",n/a,n/a,n/a,N/A,n/a,,N/A,N/A,N/A,30
-"[['N/A', 1]]",CrossFirst Bank,n/a,"CrossFirst Bankshares, Inc.",N/A,N/A,N/A,CrossFirst Bank,n/a,"First Mid Bancshares, Inc.",CrossFirst Bank,CrossFirst Bank,n/a,,N/A,N/A,"First Mid Bancshares, Inc.",31
-"[[-45.42, 3], ['N/A', 1]]",n/a,n/a,N/A,-9492,N/A,"The Return on Assets (ROA) can be calculated using the formula:
+- **Net Intangible Assets:** $3,770.6 million","3,770.6",n/a,n/a,5944100000,19181,0.98,N/A,3770.6,"$5,679.5 million",4387
+['N/A'],n/a,n/a,N/A,N/A,N/A,N/A,N/A,"$8,964",n/a,n/a,1035000,N/A,,N/A,N/A,N/A,12900000
+['N/A'],Answer: n/a,n/a,N/A,N/A,N/A,N/A,N/A,Mercia Asset Management PLC,n/a,n/a,Tradition,Mercia Asset Management PLC,,N/A,N/A,TSX_Y,Mercia Asset Management PLC
+['N/A'],n/a,1334,N/A,N/A,N/A,N/A,N/A,0.1335,n/a,n/a,n/a,N/A,N/A,N/A,N/A,13.34,47.5
+[23410000],23410000,23410000,N/A,N/A,19200000,19186,"The total revenue of Mercia Asset Management PLC in the fiscal year 2021 was £23,410,000.",19186,23410000.0,19186000,23410,19.2,19186000,20600000.0,23410,"23,410,000",23410
+['N/A'],n/a,n/a,N/A,N/A,N/A,N/A,N/A,"$358,470",n/a,n/a,n/a,N/A,,N/A,N/A,N/A,N/A
+['N/A'],CrossFirst Bank,n/a,N/A,N/A,"CrossFirst Bankshares, Inc.",N/A,N/A,CrossFirst Bank,n/a,n/a,"First Mid Bancshares, Inc.",CrossFirst Bank,,N/A,N/A,"First Mid Bancshares, Inc.","""CrossFirst Bank"""
+"[-45.42, 'N/A']",n/a,n/a,N/A,N/A,N/A,-9492,"The Return on Assets (ROA) can be calculated using the formula:
 
 \[ \text{ROA} = \left( \frac{\text{Net Income}}{\text{Total Assets}} \right) \times 100 \]
 
@@ -80,11 +80,11 @@ Using these values:
 
 \[ \text{ROA} = \left( \frac{-4,867,541}{4,422,108} \right) \times 100 \approx -110.1\% \]
 
-Therefore, the Return on Assets (ROA) of ENRG ELEMENTS LIMITED for the year ended June 30, 2022, was approximately \(-110.1\%\).","2,320,689",-0.887,n/a,n/a,N/A,7.9,N/A,-0.5767,N/A,-0.887,32
-"[['N/A', 1]]",n/a,n/a,N/A,-892000,N/A,N/A,0,n/a,305885,n/a,N/A,n/a,N/A,N/A,N/A,"-925,548",33
-"[['N/A', 1]]",n/a,n/a,N/A,N/A,N/A,N/A,156.6,n/a,n/a,n/a,N/A,n/a,,N/A,N/A,N/A,34
-"[['BAKER STEEL RESOURCES TRUST LIMITED', 3], ['N/A', 1]]",BAKER STEEL RESOURCES TRUST LIMITED,n/a,N/A,N/A,N/A,N/A,Safe & Green Holdings Corp.,BAKER STEEL RESOURCES TRUST LIMITED,"PowerFleet, Inc.",n/a,N/A,n/a,,N/A,N/A,N/A,35
-"[[177.06, 3], ['N/A', 1]]",n/a,n/a,N/A,N/A,N/A,N/A,"3,337",1.45,229354,n/a,N/A,n/a,N/A,0.4078,N/A,N/A,36
-"[['N/A', 1]]",n/a,n/a,N/A,N/A,N/A,N/A,0,n/a,n/a,n/a,N/A,n/a,N/A,N/A,N/A,N/A,37
-"[['N/A', 1]]",n/a,n/a,N/A,N/A,N/A,N/A,26.3,n/a,2138399,n/a,N/A,n/a,,N/A,N/A,"2,094",38
-"[['MITSUI O.S.K. LINES', 2]]","First Mid Bancshares, Inc.","First Mid Bancshares, Inc.","First Mid Bancshares, Inc.",N/A,N/A,N/A,MITSUI O.S.K. LINES,"First Mid Bancshares, Inc.",MITSUI O.S.K. LINES,MITSUI O.S.K. LINES,"First Mid Bancshares, Inc.",MITSUI O.S.K. LINES,,N/A,"First Mid Bancshares, Inc.","First Mid Bancshares, Inc.",39
+Therefore, the Return on Assets (ROA) of ENRG ELEMENTS LIMITED for the year ended June 30, 2022, was approximately \(-110.1\%\).","2,320,689",7.9,-0.887,n/a,N/A,N/A,-0.5767,N/A,-0.887,N/A
+['N/A'],n/a,n/a,N/A,N/A,N/A,-892000,N/A,0,n/a,n/a,305885,N/A,N/A,N/A,N/A,"-925,548",N/A
+"['N/A', 0]",n/a,n/a,N/A,N/A,N/A,N/A,N/A,156.6,n/a,n/a,n/a,N/A,,N/A,N/A,N/A,N/A
+"['BAKER STEEL RESOURCES TRUST LIMITED', 'N/A']",BAKER STEEL RESOURCES TRUST LIMITED,n/a,N/A,N/A,N/A,N/A,N/A,Safe & Green Holdings Corp.,n/a,BAKER STEEL RESOURCES TRUST LIMITED,"PowerFleet, Inc.",N/A,,N/A,N/A,N/A,N/A
+"[177.06, 'N/A']",n/a,n/a,N/A,N/A,N/A,N/A,N/A,"3,337",n/a,1.45,229354,N/A,N/A,0.4078,N/A,N/A,N/A
+['N/A'],n/a,n/a,N/A,N/A,N/A,N/A,N/A,0,n/a,n/a,n/a,N/A,N/A,N/A,N/A,N/A,N/A
+['N/A'],n/a,n/a,N/A,N/A,N/A,N/A,N/A,26.3,n/a,n/a,2138399,N/A,,N/A,N/A,"2,094",145000
+['MITSUI O.S.K. LINES'],"First Mid Bancshares, Inc.","First Mid Bancshares, Inc.",N/A,N/A,"First Mid Bancshares, Inc.",N/A,N/A,MITSUI O.S.K. LINES,MITSUI O.S.K. LINES,"First Mid Bancshares, Inc.",MITSUI O.S.K. LINES,"First Mid Bancshares, Inc.",,N/A,"First Mid Bancshares, Inc.","First Mid Bancshares, Inc.","First Mid Bancshares, Inc."
