@@ -178,15 +178,18 @@ def run(folder: str):
             print(f"{team_name}: {team.score}")
 
             learned_from_ai_research = team_obj['learned_from_ai_research']
+            affiliated = "TimeToAct" in team_obj['affiliation']
 
             records.append({
-                'Team': team_name,
+                'Team': team_obj['team_name'],
                 'Score': team.score,
-                'Local': "Yes" if team_obj['is_local_model'] else "",
                 'Model': team_obj['model_name'],
-                'AIR': "Yes" if learned_from_ai_research else "",
+                'Local': "⭐" if team_obj['is_local_model'] else "",
+                'Design': team_obj['architecture_short'] or "",
                 'Cost': team_obj['total_prefill_and_answer_costs'] or "",
                 'Source': team_obj['source_code'] or "",
+                'AIR': "Yes" if learned_from_ai_research else "",
+                'TTA': "Yes" if affiliated else "",
             })
 
         except Exception as e:

@@ -36,6 +36,7 @@ class TeamInfo:
     affiliation: Optional[str] = None
 
     learned_from_ai_research: bool = False
+    architecture_short: Optional[str] = None
 
 
 
@@ -47,9 +48,11 @@ TEAMS  = [
         team_name="Aleksandr Bobrov",
         model_name="GPT-4o",
         is_local_model=False,
+
         architecture="""
         Created a Knowledge Graph with Neo4j and Vector Index. Used Langchain
         """,
+        architecture_short="Knowledge Graph with Neo4j & Vectors",
         research_notes="""
         Can probably improve by having separate table parsing. 
         
@@ -82,6 +85,7 @@ TEAMS  = [
 
         total_prefill_and_answer_costs="Free",
         architecture="Run all files at once against the checklist (one file and all questions). Then took the matrix and all files to run everything again.",
+        architecture_short="Checklist + Gemini Flash 4M",
         research_notes="Tried more expensive models, but they didn't give much boost at this scale. Gemini Flash Exp with 4M is currently free on Open Router.",
 
         links = [
@@ -96,6 +100,7 @@ TEAMS  = [
         file_name="Artem_multi_stage_checklist",
         team_name="Artem Multi Stage Checklist",
         model_name="Gemini Flash Exp",
+        architecture_short="Multi-stage checklist + Gemini Flash",
         is_local_model=False,
         architecture="Converted questions to the checklist. Run each item with Gemini Flash to build the matrix - 800 runs. Reduce by running the same checklist on the matrix of all anwers. Last stage - format fixing accordint to schema.",
         total_prefill_and_answer_costs="$4",
@@ -122,6 +127,7 @@ TEAMS  = [
         answer_completion_tokens=None,
 
         architecture="ReAct + RAG, table data was converted to XML, chunking with RecursiveCharacterTextSplitter",
+        architecture_short="ReAct + RAG",
         research_notes="",
 
         affiliation="Independent Consultant",
@@ -144,6 +150,7 @@ TEAMS  = [
 
 
         architecture="Structured output; 2-3 query requests; standard semantic chunking for RAG",
+        architecture_short="Structured output, semantic RAG",
         research_notes="",
 
         affiliation="",
@@ -162,6 +169,7 @@ TEAMS  = [
         is_local_model=False,
         architecture="Langchain RAG with GPT-4o, Text-embedding-3-large and custom chain of thought prompts. Used fitz for text parsing, simple chunking by character count.",
         research_notes="Can improve quality by parsing tables better. Used GPT-4o-2024-05-13",
+        architecture_short="Langchain RAG with GPT-4o",
 
         total_prefill_and_answer_costs=None,
         prefill_prompt_tokens=None,
@@ -185,10 +193,11 @@ TEAMS  = [
     TeamInfo(
         file_name="Neuraldeep-tech",
         team_name="Neuraldeep Tech",
-        model_name="LLAMA-3.1-8B-instruct",
+        model_name="Llama-3.1-8B-instruct",
         is_local_model=True,
-        architecture="This is an existing product using AutoRAG arpproach. All documents are parsed with a predefined code. Text is then sent to AutoTagger agent. Consistency of chunks is checked. AutoQA test is run on the QA dataset (RAGAS approach). Diagrams and reports are generated afterwards.",
+        architecture="This is an existing product using AutoRAG aproach. All documents are parsed with a predefined code. Text is then sent to AutoTagger agent. Consistency of chunks is checked. AutoQA test is run on the QA dataset (RAGAS approach). Diagrams and reports are generated afterwards.",
         research_notes="Using own LLM fine-tune",
+        architecture_short="AutoRAG with agents and tuned LLama-3.1-8B",
 
 
         total_prefill_and_answer_costs=None,
@@ -212,6 +221,7 @@ TEAMS  = [
         model_name="GPT-4o",
         is_local_model=False,
         architecture="Used RAG approach with OpenAIEmbeddings, Chroma",
+        architecture_short="RAG + OpenAI Embeddings + Chroma",
         research_notes="",
 
         total_prefill_and_answer_costs=None,
@@ -233,6 +243,7 @@ TEAMS  = [
         is_local_model=False,
         architecture="Multi-agent RAG system with CoT and tools. Built a knowledge graph with recursive retriever.",
         research_notes="A lot of cofee and little sleep. Used RBAAI/bge-reranker-large and models from VikParuchuri/marker. Main PDF parsing to Markdown with LlamaParse, backup parsing with VikParuchuri/marker.",
+        architecture_short="Multi-agent RAG with CoT and tools",
 
         total_prefill_and_answer_costs=None,
         prefill_prompt_tokens=None,
@@ -253,6 +264,7 @@ TEAMS  = [
         is_local_model=False,
         architecture="Used GPT-4o agent RAG",
         research_notes="",
+        architecture_short="GPT-4o agent RAG",
 
         total_prefill_and_answer_costs=None,
         prefill_prompt_tokens=None,
@@ -275,6 +287,7 @@ TEAMS  = [
         model_name="",
         is_local_model=False,
         architecture="Used RAG with chunk vectorizer and LLM",
+        architecture_short="Vector-based RAG",
         research_notes="",
 
         total_prefill_and_answer_costs=None,
@@ -298,6 +311,7 @@ TEAMS  = [
         is_local_model=False,
         architecture="RAG using using hybrid search (bm25 and local vector-based embedder) with graph-based knowledge representation. Final answer synthesis is done with LLM",
         research_notes="",
+        architecture_short="RAG with hybrid search and knowledge graphs",
 
         total_prefill_and_answer_costs=None,
         prefill_prompt_tokens=None,
@@ -320,6 +334,7 @@ TEAMS  = [
         is_local_model=False,
         architecture="RAG with reciprocal rank fusion",
         research_notes="",
+        architecture_short="RAG with reciprocal rank fusion",
 
         total_prefill_and_answer_costs=None,
         prefill_prompt_tokens=None,
@@ -346,6 +361,7 @@ TEAMS  = [
         research_notes="""
 This solution is based on three specialized agents using ChatGPT 4o, each with a specific role in the decision making process. A delegation manager is responsible for delegating simple tasks to company experts. It enhances the user queries to allow for a better understanding of the context and the question. The company experts are specialized in answering questions about a specific company report. They are responsible for extracting the relevant information from the context, which contains the results of a basic vector database with chunk size 3000. Based on this they will provide an answer according to the guidelines and also a concise explanation of their decision process. The execution manager is then responsible for deciding on the final answer based on the answers and chains of thought of the company experts. While the company experts might be very strict in providing answers based on the query, the execution manager tries to capture the whole picture and might deviate from the answers of the company experts.
         """,
+        architecture_short="Multiagent GPT-4o with vector DB",
 
         total_prefill_and_answer_costs=None,
         prefill_prompt_tokens=None,
@@ -372,6 +388,7 @@ This solution is based on three specialized agents using ChatGPT 4o, each with a
         model_name="GPT-4o",
         is_local_model=False,
         architecture="ChatGPT Assistants API",
+        architecture_short="OpenAI Assistants API with GPT-4o",
         research_notes="Find relevant files via text matching. Then upload all relevant files with a question to the Assistants API",
         total_prefill_and_answer_costs=None,
         prefill_prompt_tokens=None,
@@ -397,6 +414,7 @@ This solution is based on three specialized agents using ChatGPT 4o, each with a
         model_name="OpenChat-3.5-0106",
         is_local_model=True,
         architecture="RAG with vector embeddings and local OpenChat-3.5-0106",
+        architecture_short="Local RAG with embeddings",
         research_notes="",
         total_prefill_and_answer_costs=None,
         prefill_prompt_tokens=None,
@@ -424,7 +442,7 @@ This solution is based on three specialized agents using ChatGPT 4o, each with a
         answer_prompt_tokens=975723,
         answer_completion_tokens=250,
         architecture="Used gpt-4o with structured outputs to extract all interesting data from PDFs in bulk. Full checklist run per file. Then run each question against the filled data using structured outputs according to the desired schema.",
-
+        architecture_short="Bulk checklists with structured outputs",
         links=[
             ("LinkedIn", "https://www.linkedin.com/in/daniel-weller-9bb3564b/"),
             ("Company", "https://www.trustbit.tech/en/"),

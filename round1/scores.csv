@@ -1,18 +1,18 @@
-Team,Score,Local,Model,AIR,Cost,Source
-TTA Daniel,84,,GPT-4o,Yes,$5.96+$2.44,pending
-Ilya Rice,76,,GPT-4o,,,
-Artem multi stage checklist,73,,Gemini Flash Exp,Yes,$4,
-AlBo,71,,GPT-4o,,"$2,46 / ?",
-anonymous 1337,71,,,,,
-anonymous 1256,69,Yes,qwen72b,,,
-A Ovsov M Startseva JustAI 2,69,,GPT-4o,,,
-Artem checklist plus,69,,Gemini Flash Exp with 4M,Yes,Free,
-TTA Pedro,65,Yes,OpenChat-3.5-0106,Yes,,pending
-F-team,65,,,,,
-Neuraldeep-tech,63,Yes,LLAMA-3.1-8B-instruct,,,
-TTA Felix,63,,GPT-4o,Yes,,pending
-TTA Maria,60,,GPT-4o,Yes,,pending
-aimpresario team,56,,gpt-4o-mini,,,
-anonymous 1447,47,,GPT-4o,,,
-anonymous 1652,43,,GPT-4o,,,
-Ox1d,10,,gpt4o-mini,,,
+Team,Score,Model,Local,Design,Cost,Source,AIR,TTA
+Daniel Weller,84,GPT-4o,,Bulk checklists with structured outputs,$5.96+$2.44,pending,Yes,Yes
+Ilya Rice,76,GPT-4o,,Langchain RAG with GPT-4o,,,,
+Artem Multi Stage Checklist,73,Gemini Flash Exp,,Multi-stage checklist + Gemini Flash,$4,,Yes,
+Aleksandr Bobrov,71,GPT-4o,,Knowledge Graph with Neo4j & Vectors,"$2,46 / ?",,,
+Anonymous 1337,71,,,Vector-based RAG,,,,
+Anonymous 1256,69,qwen72b,⭐,ReAct + RAG,,,,
+"A.Ovsov, M.Startseva (JustAI)",69,GPT-4o,,GPT-4o agent RAG,,,,
+Artem Checklist Plus,69,Gemini Flash Exp with 4M,,Checklist + Gemini Flash 4M,Free,,Yes,
+Pedro Ananias,65,OpenChat-3.5-0106,⭐,Local RAG with embeddings,,pending,Yes,Yes
+Anonymous F-team,65,,,RAG with hybrid search and knowledge graphs,,,,
+Neuraldeep Tech,63,Llama-3.1-8B-instruct,⭐,AutoRAG with agents and tuned LLama-3.1-8B,,,,
+Felix Krause,63,GPT-4o,,Multiagent GPT-4o with vector DB,,pending,Yes,Yes
+Maria Ronacher,60,GPT-4o,,OpenAI Assistants API with GPT-4o,,pending,Yes,Yes
+Aimpresario Team,56,gpt-4o-mini,,Multi-agent RAG with CoT and tools,,,,
+Anonymous 1447,47,GPT-4o,,"Structured output, semantic RAG",,,,
+Anonymous 1652,43,GPT-4o,,RAG + OpenAI Embeddings + Chroma,,,,
+Anonymous Ox1d,10,gpt4o-mini,,RAG with reciprocal rank fusion,,,,
