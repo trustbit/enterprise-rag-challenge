@@ -1,8 +1,8 @@
 # Enterprise RAG Challenge with Annual Reports
 
 ## Registration is open for round two!
-**Important! This repository contains results from the first round of the Enterprise RAG Challenge in 2024. The registration is already open for the second round on February 27th 2025.
-**
+**Important! This repository contains results from the first round of the Enterprise RAG Challenge in 2024. The registration is already open for the second round on February 27th 2025.**
+
 👉[Register here](https://www.timetoact-group.at/details/enterprise-rag-challenge)👈 
 
 
