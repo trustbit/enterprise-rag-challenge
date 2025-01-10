@@ -1,5 +1,15 @@
 # Enterprise RAG Challenge with Annual Reports
 
+## Registration is open for round two!
+**Important! This repository contains results from the first round of the Enterprise RAG Challenge in 2024. The registration is already open for the second round on February 27th 2025.
+**
+👉[Register here](https://www.timetoact-group.at/details/enterprise-rag-challenge)👈 
+
+
+##  Round 1 
+
+
+
 by [Trustbit](https://www.trustbit.tech) (now a part of TIMETOACT GROUP as [TimeToAct Austria](https://www.timetoact-group.at))
 
 Copyright 2024 TimeToAct Austria, licensed under Apache 2.0 license
