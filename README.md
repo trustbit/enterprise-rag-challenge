@@ -160,10 +160,35 @@ It generated questions like the ones below (full list is in [samples/questions.j
 
 ## Schema
 
-Note the schema specified for each question:
+Note the schema specified for each question. It follows this pydantic schema:
+
+
+```py
+from pydantic import BaseModel, Literal, Field, Union
+from typing import List
+
+class Question(BaseModel):
+    text: str
+    kind: Literal["number", "name", "boolean", "names"]
+
+
+class SourceReference(BaseModel):
+    pdf_sha1: str = Field(..., description="SHA1 hash of the PDF file")
+    page_index: int = Field(..., description="Physical page number in the PDF file")
+
+
+class Answer(BaseModel):
+    value: Union[float, str, bool, List[str], Literal["N/A"]] = Field(..., description="Answer to the question, according to the question schema")
+    references: List[SourceReference] = Field([], description="References to the source material in the PDF file")
+
+
+```
+
+
 
 * number - only a metric number is expected as an answer. No decimal commas or separators. Correct: `122333`, incorrect: `122k`, `122 233`
-* name - only name of the company is expected as an answer. It must be exactly as the name of the company in a dataset
+* name - only name is expected as an answer. 
+* names - multiple names
 * boolean - only `yes` or `no` (or `true`, `false`). Case doesn't matter.
 
 Important! Each schema also allows `N/A` or `n/a` which means "Not Applicable" or "There is not enough information even for a human to answer this question".
