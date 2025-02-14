@@ -9,13 +9,90 @@ STEP2: Given the subset of files, it will generate a set of questions to ask abo
 """
 import json
 from pathlib import Path
-from typing import List
-import csv
+from random import randint
 import click
+import pandas as pd
+
+
+from typing import Literal, Dict, List, Optional, Union
+
+from pydantic import BaseModel, RootModel, Field
+
+industries = [
+    "Technology", "Financial Services", "Healthcare", "Automotive",
+    "Retail", "Energy and Utilities", "Hospitality", "Telecommunications",
+    "Media & Entertainment", "Pharmaceuticals", "Aerospace & Defense",
+    "Transport & Logistics", "Food & Beverage"
+]
+
+class EndOfPeriod(BaseModel):
+    year: int
+    month: int
+
+class AnnualReportInfo(BaseModel):
+    end_of_period: EndOfPeriod
+    company_name: str
+    major_industry: Literal[tuple(industries)]
+    mentions_recent_mergers_and_acquisitions: bool
+    has_leadership_changes: bool
+    has_layoffs: bool
+    has_executive_compensation: bool
+    has_rnd_investment_numbers: bool
+    has_new_product_launches: bool
+    has_capital_expenditures: bool
+    has_financial_performance_indicators: bool
+    has_dividend_policy_changes: bool
+    has_share_buyback_plans: bool
+    has_capital_structure_changes: bool
+    mentions_new_risk_factors: bool
+    has_guidance_updates: bool
+    has_regulatory_or_litigation_issues: bool
+    has_strategic_restructuring: bool
+    has_supply_chain_disruptions: bool
+    has_esg_initiatives: bool
+
+
+class ReportEntry(BaseModel):
+    letters: int
+    pages: int
+    meta: AnnualReportInfo
+    currency: Dict[str, int]
+    sha1: str
+
+    def main_currency(self) -> Optional[str]:
+        if not self.currency:
+            return None
+        return max(self.currency, key=self.currency.get)
+
+
+ReportFile = Dict[str, ReportEntry]
+
+
+class Question(BaseModel):
+    text: str
+    kind: Literal["number", "name", "boolean", "names"]
+
+
+class SourceReference(BaseModel):
+    pdf_sha1: str = Field(..., description="SHA1 hash of the PDF file")
+    page_index: int = Field(..., description="Physical page number in the PDF file")
+
+
+class Answer(BaseModel):
+    value: Union[float, str, bool, List[str], Literal["N/A"]] = Field(..., description="Answer to the question, according to the question schema")
+    references: List[SourceReference] = Field([], description="References to the source material in the PDF file")
+
+
+
+class SubsetFile(RootModel):
+    root: List[ReportEntry]
+
 
 
 class DeterministicRNG:
     def __init__(self, seed: int):
+        if seed == 0:
+            seed = randint(1, 2 ** 32)
         self.state = seed
 
     def random(self, n: int) -> int:
@@ -29,6 +106,8 @@ class DeterministicRNG:
         return self.state % n
 
     def choice(self, seq: List) -> str:
+        if len(seq) == 0:
+            raise ValueError("Cannot choose from an empty sequence")
         return seq[self.random(len(seq))]
 
     def sample(self, seq: List, k: int) -> List:
@@ -43,128 +122,489 @@ class DeterministicRNG:
 
         # pick k unique elements from seq
 
-
-# Define question templates
-templates = [
-    ('What was the {fin_metric} of "{company}" in {time_frame}?', "number"),
-    ('How much did "{company}" spend on {focus_area} in {time_frame}?', "number"),
-    ('What was the {ratio_or_metric} of "{company}" in {time_frame}?', "number"),
-    ('How many {count_metric} did "{company}" have in {time_frame}?', "number"),
-    ('Which company had a higher {fin_metric}: "{company1}", "{company2}" or "{company3}", in {time_frame}?', "name"),
-    ('Did "{company1}" have a greater {ratio_or_metric} than "{company2}" in {time_frame}?', "boolean"),
-    ('How much more did "{company1}" spend on {focus_area} compared to "{company2}" in {time_frame}?', "number"),
-    ('Who is the {role} in the company "{company}"?', "name"),
-]
-
-# Define possible values for variables
-parameters = {
-    "year": ["2021", "2022", "2023"],
-
-    "quarter": [1, 2, 3, 4],
-    "region": ["North America", "Europe", "Asia Pacific", "Latin America", "Middle East and Africa"],
-    "country": ["USA", "China", "Germany", "Japan", "UK", "France", "Canada", "India", "Brazil", "Australia"],
-    "segment": ["Cloud Services", "Consumer Products", "Enterprise Solutions", "Hardware", "Software",
-                "Pharmaceuticals", "Automotive", "Financial Services", "E-commerce", "Advertising"],
-    "fin_metric": ["total revenue", "net income", "total assets", "total liabilities", "shareholders' equity",
-                        "intangible assets", "inventories", "accounts receivable", "accounts payable",
-                         "operating cash flow", "free cash flow", "capital expenditures",
-                         "research and development expenses", "marketing expenses", "acquisition costs"],
-    "ratio_or_metric": ["earnings per share (EPS)", "Debt-to-Equity ratio", "Return on Equity (ROE)",
-                        "Return on Assets (ROA)", "Quick Ratio", "Gross Profit Margin",
-                        "Operating Margin", "Net Profit Margin", "market capitalization"],
-    "count_metric": ["employees", "stores", "patents", "subsidiaries"],
-    "percentage_base": ["total revenue", "total sales", "operating income", "net profit"],
-    "segment_or_region": ["North America", "Europe", "Asia Pacific", "Latin America", "Middle East and Africa",
-                          "Cloud Services", "Consumer Products", "Enterprise Solutions", "Hardware", "Software",
-                          "Pharmaceuticals", "Automotive", "Financial Services", "E-commerce", "Advertising"],
-    "external_entity": ["firm", "agency", "institution"],
-    "action": ["spend", "invest", "allocate", "report", "disclose", "audit"],
-    "focus_area": ["marketing", "sustainability initiatives", "risk management", "customer acquisition", "R&D"],
-    "time_frame": ["the fiscal year {year}", "Q{quarter} {year}", "{date}", "the end of fiscal year {year}"],
-    "date": ["December 31, {year}", "June 30, {year}"],
-    "sustainability_metric": ["carbon emissions (in metric tons)", "water consumption (in cubic meters)",
-                              "renewable energy usage (in percentage)", "waste reduction (in tons)"],
-    "role": ["CEO", "CFO", "CTO", "COO", "CMO", "Board Chairman", "Chief Legal Officer"]
-}
-
-
 @click.group()
 def cli():
     pass
 
 
-def load_dataset() -> list[dict]:
-    dataset = Path(__file__).parent / "dataset.csv"
-    with open(dataset, "r") as file:
-        # read the csv
-        reader = csv.reader(file)
-        rows = list(reader)
+def load_dataset() -> dict[str, ReportEntry]:
+    dataset = Path(__file__).parent / "dataset_v2.json"
 
-    return [dict(zip(rows[0], row)) for row in rows[1:]]
+    obj = json.loads(dataset.read_text())
 
+    result = {}
+
+    for k, v in obj.items():
+        if "sha1" not in v:
+            continue
+        if "meta" not in v:
+            continue
+        result[k] = ReportEntry.model_validate(v)
+
+    return result
 
 @cli.command()
 @click.option("--count", default=10, help="Number of files to sample")
 @click.option("--seed", default=42, help="Seed for random number generation")
-@click.option("--subset", default="subset.json", help="Output file")
-def step1(count: int = 10, seed: int = 42, subset: str = "subset.json"):
+@click.option("--subset", default="subset.csv", help="Output file")
+def step1(count: int = 10, seed: int = 42, subset: str = "subset.csv"):
     rand = DeterministicRNG(seed)
     dataset = load_dataset()
 
-    files = rand.sample(dataset, count)
+    files = rand.sample(list(dataset.values()), count)
 
     # sort by hash
-    files.sort(key=lambda x: x['sha1'])
+    files.sort(key=lambda x: x.sha1)
+
+    records = []
 
     for i, row in enumerate(files):
-        print(f"# {row['sha1']} {row['name']}")
+        print(f"# {row.sha1} {row.meta.company_name}")
+        # flatten into a dict
 
-    with Path(subset).open("w") as file:
-        json.dump(files, file, indent=2, ensure_ascii=False)
+        meta = row.meta.model_dump()
+        # drop period
+        meta.pop('end_of_period')
+
+        records.append(
+            dict(
+                sha1=row.sha1,
+                cur=row.main_currency(),
+                **meta # all the other fields
+            )
+        )
+
+    pd.DataFrame(records).to_csv(subset, index=False)
+
+
+
+def ask_indicator_compare(rand: DeterministicRNG, df: pd.DataFrame) -> Optional[Question]:
+    # only companies that have financial metric
+    grouped = df[df['has_financial_performance_indicators']].groupby('cur').filter(lambda x: len(x) >= 3)
+    # currency for them
+    cur = rand.choice(list(grouped['cur'].unique()))
+    # and pick 3 companies with that currency
+    companies = rand.sample(list(grouped[grouped['cur'] == cur]['company_name']), 5)
+    company_list = ", ".join(f'"{c}"' for c in companies)
+
+    # generate questions
+    ref = rand.choice(["highest", "lowest"])
+    metric = rand.choice(["total revenue", "net income", "total assets"])
+    question = f"Which of the companies had the {ref} {metric} in {cur} at the end of the period listed in annual report: {company_list}? If data for the company is not available, exclude it from the comparison."
+
+    return Question(text=question, kind="name")
+
+def ask_fin_metric(rand: DeterministicRNG, df: pd.DataFrame) -> Optional[Question]:
+    """
+    Generate a question asking for a common financial KPI from the annual report.
+    Returns a Question object with the schema set to "number".
+    """
+
+    company = rand.choice(list(df['company_name']))
+    cur = df[df['company_name'] == company]['cur'].iloc[0]
+
+    # A list of common financial KPIs that can be verified from an annual report
+    financial_metrics = [
+        f"Total revenue (in {cur})",
+        f"Operating income (in {cur})",
+        f"Net income (in {cur})",
+        f"Gross margin (%)",
+        f"Operating margin (%)",
+        f"EPS (earnings per share) (in {cur})",
+        f"EBITDA (in {cur})",
+        f"Capital expenditures (in {cur})",
+        f"Cash flow from operations (in {cur})",
+        f"Long-term debt (in {cur})",
+        f"Shareholders' equity (in {cur})",
+        f"Dividend per share (in {cur})",
+    ]
+
+    metric = rand.choice(financial_metrics)
+
+    question_variations = [
+        f"What was the {metric} for {company} according to the annual report (within the last period or at the end of the last period)? If data is not available, return 'N/A'.",
+        f"According to the annual report, what is the {metric} for {company}  (within the last period or at the end of the last period)? If data is not available, return 'N/A'.",
+    ]
+
+    question = rand.choice(question_variations)
+
+    return Question(text=question, kind="number")
+
+
+def ask_latest_merger_entity(rand: DeterministicRNG, df: pd.DataFrame) -> Optional[Question]:
+    # pick one company with mentions_recent_mergers_and_acquisitions
+    company = rand.choice(list(df[df['mentions_recent_mergers_and_acquisitions']]['company_name']))
+
+    questions = [
+        Question(text=f"What was the latest merger or acquisition that {company} was involved in? Return name of the entity or 'N/A'", kind="name"),
+        # boolean
+        Question(text=f"Did {company} mention any mergers or acquisitions in the annual report?", kind="boolean"),
+    ]
+
+    return rand.choice(questions)
+
+def ask_about_compensation(rand: DeterministicRNG, df: pd.DataFrame) -> Optional[Question]:
+    # pick one company with has_executive_compensation
+    company = rand.choice(list(df[df['has_executive_compensation']]['company_name']))
+    currency = df[df['company_name'] == company]['cur'].iloc[0]
+    question = f"What was the largest single spending of {company} on executive compensation in {currency}?"
+    return Question(text=question, kind="name")
+
+def ask_about_leadership_changes(rand: DeterministicRNG, df: pd.DataFrame) -> Optional[Question]:
+    # pick company with changes
+    company = rand.choice(list(df[df['has_leadership_changes']]['company_name']))
+
+    questions = [
+        Question(text=f"What are the names of all executives removed from their positions in {company}?", kind="names"),
+        Question(text=f"What are the names of all new executives that took on new leadership positions in {company}?", kind="names"),
+        Question(text=f"Which leadership **positions** changed at {company} in the reporting period? If data is not available, return 'N/A'.", kind="names"),
+        # boolean
+        Question(text=f"Did {company} announce any changes to its executive team in the annual report?", kind="boolean"),
+
+    ]
+
+    return rand.choice(questions)
+
+def ask_layoffs(rand: DeterministicRNG, df: pd.DataFrame) -> Optional[Question]:
+    """
+    Asks about layoffs if 'has_layoffs' is True.
+    """
+    eligible = df[df['has_layoffs'] == True]['company_name']
+    if len(eligible) == 0:
+        return None
+
+    company = rand.choice(list(eligible))
+    question_variations = [
+        f"How many employees were laid off by {company} during the period covered by the annual report? If data is not available, return 'N/A'.",
+        f"What is the total number of employees let go by {company} according to the annual report? If data is not available, return 'N/A'."
+    ]
+    question = rand.choice(question_variations)
+    return Question(text=question, kind="number")
+
+# product launches
+def ask_about_product_launches(rand: DeterministicRNG, df: pd.DataFrame) -> Optional[Question]:
+    # pick company with changes
+    company = rand.choice(list(df[df['has_new_product_launches']]['company_name']))
+
+    questions = [
+        Question(text=f"What are the names of new products launched by {company} as mentioned in the annual report?", kind="names"),
+        Question(text=f"What is the name of the last product launched by {company} as mentioned in the annual report?", kind="name"),
+        # boolean
+        Question(text=f"Did {company} announce any new product launches in the annual report?", kind="boolean"),
+    ]
+
+    return rand.choice(questions)
+
+
+def ask_metadata_boolean(rand: DeterministicRNG, df: pd.DataFrame) -> Optional[Question]:
+
+    question_templates = {
+        "has_regulatory_or_litigation_issues": "Did {company} mention any ongoing litigation or regulatory inquiries?",
+        "has_capital_structure_changes": "Did {company} report any changes to its capital structure?",
+        "has_share_buyback_plans": "Did {company} announce a share buyback plan in the annual report?",
+        "has_dividend_policy_changes": "Did {company} announce any changes to its dividend policy in the annual report?",
+        "has_strategic_restructuring": "Did {company} detail any restructuring plans in the latest filing?",
+        "has_supply_chain_disruptions": "Did {company} report any supply chain disruptions in the annual report?",
+        "has_esg_initiatives": "Did {company} outline any new ESG initiatives in the annual report?",
+    }
+
+    field, template = rand.choice(list(question_templates.items()))
+
+    # pick all companies with this field
+    eligible = df[df[field] == True]['company_name']
+    if len(eligible) == 0:
+        return None
+
+    company = rand.choice(list(eligible))
+    question_text = template.format(company=company)
+    return Question(text=question_text, kind="boolean")
+
+
+
+
+
+def ask_industry_metric(rand: DeterministicRNG, df: pd.DataFrame) -> Optional[Question]:
+
+    company = rand.choice(df['company_name'])
+    industry = df[df['company_name'] == company]['major_industry'].iloc[0]
+
+    industry_metrics = {
+        "Technology": [
+            "Number of patents at year-end",
+            "Total capitalized R&D expenditure",
+            "Total expensed R&D expenditure",
+            "End-of-year tech staff headcount",
+            "End-of-year total headcount",
+            "Annual recurring revenue (ARR)",
+            "Total intangible assets (IP valuation)",
+            "Number of active software licenses",
+            "Data center capacity (MW)",
+            "Data center capacity (sq. ft.)",
+            "Cloud storage capacity (TB)",
+            "End-of-period market capitalization",
+            "Year-end customer base",
+            "Year-end user base"
+        ],
+        "Financial Services": [
+            "Total assets on balance sheet at year-end",
+            "Total deposits at year-end",
+            "Loans outstanding at year-end",
+            "Assets under management (AUM)",
+            "Non-performing loan ratio (NPL) at year-end",
+            "Tier 1 capital ratio at year-end",
+            "Number of customer accounts at year-end",
+            "Branch count at year-end",
+            "End-of-year net interest margin (NIM)",
+            "Return on equity (ROE) at year-end"
+        ],
+        "Healthcare": [
+            "Number of hospital beds at year-end",
+            "Number of owned clinics at year-end",
+            "Number of managed clinics at year-end",
+            "Active patient count (registered patients)",
+            "Value of medical equipment (balance sheet)",
+            "End-of-year bed occupancy rate",
+            "Number of healthcare professionals on staff",
+            "Number of laboratories at year-end",
+            "Number of diagnostic centers at year-end",
+            "Healthcare plan memberships (if applicable)",
+            "Outstanding insurance claims (if applicable)",
+            "R&D pipeline (number of therapies in phases)"
+        ],
+        "Automotive": [
+            "Vehicle production capacity (units/year)",
+            "Inventory of finished vehicles at year-end",
+            "Global dealership network size",
+            "Number of electric models available",
+            "Number of hybrid models available",
+            "Battery production capacity (if applicable)",
+            "End-of-year automotive patent portfolio",
+            "End-of-period market share (by units sold)",
+            "Number of EV charging stations in network",
+            "Year-end fleet average CO₂ emissions",
+            "R&D workforce headcount"
+        ],
+        "Retail": [
+            "Number of stores at year-end",
+            "Total store floor area (sqm)",
+            "Total store floor area (sq. ft.)",
+            "Value of inventory on hand at year-end",
+            "Number of distribution centers at year-end",
+            "Number of fulfillment centers at year-end",
+            "Loyalty program membership at year-end",
+            "Online active customer accounts",
+            "E-commerce active customer accounts",
+            "Year-end store employee headcount",
+            "Private label SKUs in portfolio",
+            "Number of new store openings (cumulative in year)",
+            "Online order fulfillment capacity (daily)"
+        ],
+        "Energy and Utilities": [
+            "Total power generation capacity (MW)",
+            "Number of power plants at year-end",
+            "Number of facilities at year-end",
+            "Percentage of renewable energy capacity",
+            "Transmission network length",
+            "Distribution network length",
+            "Total number of customers connected",
+            "Proven oil reserves (if applicable)",
+            "Proven gas reserves (if applicable)",
+            "Refinery throughput capacity",
+            "Pipeline network length",
+            "Greenhouse gas emissions intensity (CO₂/MWh)",
+            "Year-end weighted average cost of energy production"
+        ],
+        "Hospitality": [
+            "Number of properties at year-end",
+            "Number of hotels at year-end",
+            "Total number of rooms available",
+            "Year-end occupancy rate",
+            "Average daily rate (ADR) at final period",
+            "Revenue per available room (RevPAR) at final period",
+            "Loyalty program membership at year-end",
+            "Number of restaurants",
+            "Number of bars",
+            "Conference/banquet space capacity (sq. ft.)",
+            "Franchise agreements in force",
+            "Hospitality workforce headcount"
+        ],
+        "Telecommunications": [
+            "Mobile subscriber base at year-end",
+            "Broadband subscriber base at year-end",
+            "Mobile coverage area (population %)",
+            "Mobile coverage area (geography %)",
+            "Number of broadband subscribers",
+            "Number of fiber subscribers",
+            "Fiber network length (km)",
+            "Fiber network length (miles)",
+            "Average revenue per user (ARPU) at year-end",
+            "5G coverage ratio (population %)",
+            "Data center capacity (MW)",
+            "Data center capacity (racks)",
+            "Number of retail stores",
+            "Number of service stores",
+            "Network downtime (hours) in final reporting period"
+        ],
+        "Media & Entertainment": [
+            "Number of streaming platform subscribers",
+            "Number of online platform subscribers",
+            "Broadcast coverage area (population reach)",
+            "Advertising inventory at year-end",
+            "Number of active licensing deals",
+            "Size of film/TV content library (hours)",
+            "Size of film/TV content library (titles)",
+            "Social media follower count (all platforms)",
+            "Year-end box office market share (if applicable)",
+            "Number of production facilities",
+            "In-house production capacity (titles/year)",
+            "Headcount for creative roles",
+            "Headcount for production roles"
+        ],
+        "Pharmaceuticals": [
+            "Number of drugs on the market (approved)",
+            "Number of compounds in Phase I",
+            "Number of compounds in Phase II",
+            "Number of compounds in Phase III",
+            "Manufacturing capacity (units/year)",
+            "Manufacturing capacity (liters/year)",
+            "Global distribution network (markets served)",
+            "Number of active pharmaceutical patents",
+            "Clinical trial sites operating at year-end",
+            "Inventory of active pharmaceutical ingredients",
+            "Size of sales force (year-end)",
+            "Pharmacovigilance reports (adverse events logged)",
+            "Branded product count",
+            "Generic product count"
+        ],
+        "Aerospace & Defense": [
+            "Order backlog (value) at year-end",
+            "Order backlog (units) at year-end",
+            "Production capacity (aircraft/year)",
+            "Production capacity (units/year)",
+            "Number of defense contracts active",
+            "Number of government contracts active",
+            "R&D spending on advanced programs",
+            "Number of employees with security clearance",
+            "Military products in service (units)",
+            "Defense products in service (units)",
+            "Satellite capacity in orbit",
+            "Spacecraft capacity in orbit",
+            "Facilities footprint (sq. ft.)",
+            "Facilities footprint (number of sites)",
+            "Year-end patent portfolio (aerospace tech)",
+            "Partnerships with government agencies at year-end"
+        ],
+        "Transport & Logistics": [
+            "Fleet size (vehicles) at year-end",
+            "Fleet size (aircraft) at year-end",
+            "Fleet size (vessels) at year-end",
+            "Warehouse capacity (sq. ft.)",
+            "Warehouse capacity (cubic ft.)",
+            "Number of distribution hubs",
+            "Global route coverage (countries served)",
+            "Global route coverage (regions served)",
+            "Final-period on-time delivery rate",
+            "Freight volume capacity (TEU)",
+            "Freight volume capacity (tons)",
+            "Fuel consumption rate (liters/year)",
+            "Fuel consumption rate (per mile)",
+            "CO₂ emissions from operations (ton/year)",
+            "Year-end logistics staff headcount",
+            "Infrastructure investments completed in the period"
+        ],
+        "Food & Beverage": [
+            "Production capacity (e.g., bottling liters/hour)",
+            "Number of manufacturing plants",
+            "Number of warehouses in distribution network",
+            "Number of depots in distribution network",
+            "SKU count in portfolio",
+            "Raw material supply contracts",
+            "Inventory of raw materials at year-end",
+            "Number of company-owned outlets",
+            "Number of franchised outlets",
+            "Year-end market share (by product category)",
+            "Food safety certifications (sites certified)",
+            "Brand portfolio size (distinct brands at year-end)"
+        ]
+    }
+
+    metric = rand.choice(industry_metrics[industry])
+
+    question_variatons = [
+        f"What was the value of {metric} of {company} at the end of the period listed in annual report? If data is not available, return 'N/A'.",
+        f"For {company}, what was the value of {metric} at the end of the period listed in annual report? If data is not available, return 'N/A'."]
+
+    question = rand.choice(question_variatons)
+
+    return Question(text=question, kind="number")
+
+
 
 
 @cli.command()
 @click.option("--count", default=10, help="Number of questions to generate")
 @click.option("--seed", default=42, help="Seed for random number generation")
-@click.option("--subset", default="subset.json", help="Subset of files")
+@click.option("--subset", default="subset.csv", help="Subset of files")
 @click.option("--questions", default="questions.json", help="Output file")
-def step2(count: int = 10, seed: int = 42, subset: str = "subset.json", questions: str = "questions.json"):
-    rand = DeterministicRNG(seed)
+def step2(count: int = 10, seed: int = 42, subset: str = "subset.csv", questions: str = "questions.json"):
+    rng = DeterministicRNG(seed)
 
-    with Path(subset).open("r") as file:
-        rows = json.load(file)
+    df = pd.read_csv(subset)
 
-    # pick company names
-    companies = [row['name'] for row in rows]
-    # add 15% of companies not in this subset, to test no answer
-    extra_count = int(0.15 * count)
-    extra = [row['name'] for row in rand.sample(load_dataset(), extra_count)]
-    companies.extend(extra)
+    results = []
 
-    parameters['company'] = companies
+    while len(results) < count:
 
-    selected = []
+        generators = [
+            ask_indicator_compare,
+            ask_latest_merger_entity,
+            ask_industry_metric,
+            ask_industry_metric, # twice for more cases
+            ask_industry_metric,
+            ask_fin_metric,
+            ask_fin_metric,
+            ask_about_compensation,
+            ask_about_leadership_changes,
+            ask_about_product_launches,
+            ask_metadata_boolean,
+            ask_layoffs,
+            ]
+
+        try:
+            question = rng.choice(generators)(rng, df)
+            if question and question.text not in [q.text for q in results]:
+                print(question.text)
+                results.append(question)
+        except Exception as e:
+            raise
+            print(e)
+            continue
+
+    with open(questions, "w") as f:
+        json.dump([q.model_dump() for q in results], f, indent=2)
+
+
+
+
+@cli.command()
+
+@click.option("--limit", default=100, help="Number of random numbers to generate")
+@click.option("--count", default=100, help="Number of iterations")
+@click.option("--seed", default=42, help="Seed for random number generation")
+def test_rng(limit: int = 100, count: int = 100, seed: int = 42):
+
+    rng = DeterministicRNG(seed)
+    # make array of 100
+    arr = [0] * limit
 
     for i in range(count):
-        # generate all args for this run
-        args = {k: rand.choice(v) for k, v in parameters.items()}
-        # company names should be different
-        c1, c2, c3 = rand.sample(companies, 3)
-        args['company1'] = c1
-        args['company2'] = c2
-        args['company3'] = c3
+        arr[rng.random(limit)] += 1
 
-        template, schema = rand.choice(templates)
+    print(arr)
 
-        while "{" in template:
-            template = template.format(**args)
 
-        print(f"{i+1}. {schema}: {template}")
 
-        selected.append({"question": template, "schema": schema, "answer": None})
 
-    with Path(questions).open("w") as file:
-        json.dump(selected, file, indent=2, ensure_ascii=False)
 
 
 if __name__ == "__main__":

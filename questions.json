@@ -1,202 +1,402 @@
 [
   {
-    "question": "What was the Net Profit Margin of \"Oesterreichische Kontrollbank\" in June 30, 2023?",
-    "schema": "number",
-    "answer": null
+    "text": "What is the total number of employees let go by TFI International Inc. according to the annual report? If data is not available, return 'N/A'.",
+    "kind": "number"
   },
   {
-    "question": "What was the total liabilities of \"CrossFirst Bank\" in the fiscal year 2023?",
-    "schema": "number",
-    "answer": null
+    "text": "Which leadership **positions** changed at Adient plc in the reporting period? If data is not available, return 'N/A'.",
+    "kind": "names"
   },
   {
-    "question": "How much more did \"Astral Resources NL\" spend on marketing compared to \"TSX_Y\" in June 30, 2021?",
-    "schema": "number",
-    "answer": null
+    "text": "Did Neurotech International Limited announce any new product launches in the annual report?",
+    "kind": "boolean"
   },
   {
-    "question": "Which company had a higher free cash flow: \"TSX_ACQ\", \"QUIDELORTHO CORPORATION\" or \"PowerFleet, Inc.\", in the fiscal year 2022?",
-    "schema": "name",
-    "answer": null
+    "text": "Did ADT Inc. announce a share buyback plan in the annual report?",
+    "kind": "boolean"
   },
   {
-    "question": "What was the earnings per share (EPS) of \"Holley Inc.\" in June 30, 2023?",
-    "schema": "number",
-    "answer": null
+    "text": "What was the value of Refinery throughput capacity of DTE Energy Company at the end of the period listed in annual report? If data is not available, return 'N/A'.",
+    "kind": "number"
   },
   {
-    "question": "What was the accounts receivable of \"Petra Diamonds\" in the fiscal year 2023?",
-    "schema": "number",
-    "answer": null
+    "text": "What was the largest single spending of ACM Research, Inc. on executive compensation in USD?",
+    "kind": "name"
   },
   {
-    "question": "How much more did \"Creative Media & Community Trust Corporation\" spend on sustainability initiatives compared to \"BAKER STEEL RESOURCES TRUST LIMITED\" in June 30, 2021?",
-    "schema": "number",
-    "answer": null
+    "text": "Did Heritage-Crystal Clean, Inc. mention any mergers or acquisitions in the annual report?",
+    "kind": "boolean"
   },
   {
-    "question": "Which company had a higher total liabilities: \"Creative Media & Community Trust Corporation\", \"Sleep Country Canada Holdings Inc.\" or \"Tradition\", in the fiscal year 2023?",
-    "schema": "name",
-    "answer": null
+    "text": "For Aecon Group Inc., what was the value of Warehouse capacity (cubic ft.) at the end of the period listed in annual report? If data is not available, return 'N/A'.",
+    "kind": "number"
   },
   {
-    "question": "What was the Net Profit Margin of \"QUIDELORTHO CORPORATION\" in June 30, 2023?",
-    "schema": "number",
-    "answer": null
+    "text": "For Tanfield Group PLC, what was the value of Number of customer accounts at year-end at the end of the period listed in annual report? If data is not available, return 'N/A'.",
+    "kind": "number"
   },
   {
-    "question": "What was the acquisition costs of \"Safe & Green Holdings Corp.\" in the fiscal year 2021?",
-    "schema": "number",
-    "answer": null
+    "text": "Did Allergy Therapeutics plc report any supply chain disruptions in the annual report?",
+    "kind": "boolean"
   },
   {
-    "question": "How much more did \"Astral Resources NL\" spend on marketing compared to \"TSX_ACQ\" in June 30, 2023?",
-    "schema": "number",
-    "answer": null
+    "text": "What was the largest single spending of Byron Energy Limited on executive compensation in USD?",
+    "kind": "name"
   },
   {
-    "question": "Which company had a higher shareholders' equity: \"MITSUI O.S.K. LINES\", \"TSX_Y\" or \"Tradition\", in the fiscal year 2022?",
-    "schema": "name",
-    "answer": null
+    "text": "What was the Gross margin (%) for Bank of South Carolina Corporation according to the annual report (within the last period or at the end of the last period)? If data is not available, return 'N/A'.",
+    "kind": "number"
   },
   {
-    "question": "What was the Gross Profit Margin of \"JOURNEY MEDICAL CORPORATION\" in June 30, 2022?",
-    "schema": "number",
-    "answer": null
+    "text": "Did TFI International Inc. mention any mergers or acquisitions in the annual report?",
+    "kind": "boolean"
   },
   {
-    "question": "What was the operating cash flow of \"JOURNEY MEDICAL CORPORATION\" in the fiscal year 2023?",
-    "schema": "number",
-    "answer": null
+    "text": "Did Outokumpu outline any new ESG initiatives in the annual report?",
+    "kind": "boolean"
   },
   {
-    "question": "How much more did \"Astral Resources NL\" spend on risk management compared to \"Caixa Geral de Depósitos, S.A.\" in June 30, 2023?",
-    "schema": "number",
-    "answer": null
+    "text": "What is the total number of employees let go by Finance of America Companies Inc. according to the annual report? If data is not available, return 'N/A'.",
+    "kind": "number"
   },
   {
-    "question": "Which company had a higher acquisition costs: \"PowerFleet, Inc.\", \"Oesterreichische Kontrollbank\" or \"Astral Resources NL\", in the fiscal year 2023?",
-    "schema": "name",
-    "answer": null
+    "text": "Which leadership **positions** changed at Ameren Corporation in the reporting period? If data is not available, return 'N/A'.",
+    "kind": "names"
   },
   {
-    "question": "What was the Quick Ratio of \"IMUNON, INC.\" in June 30, 2021?",
-    "schema": "number",
-    "answer": null
+    "text": "Did AdAlta Ltd announce any new product launches in the annual report?",
+    "kind": "boolean"
   },
   {
-    "question": "What was the net income of \"Petra Diamonds\" in the fiscal year 2022?",
-    "schema": "number",
-    "answer": null
+    "text": "For 4DMedical Limited, what was the value of Number of hospital beds at year-end at the end of the period listed in annual report? If data is not available, return 'N/A'.",
+    "kind": "number"
   },
   {
-    "question": "How much more did \"Sensata\" spend on customer acquisition compared to \"Laserbond\" in June 30, 2022?",
-    "schema": "number",
-    "answer": null
+    "text": "For Credit Corp Group, what was the value of Number of customer accounts at year-end at the end of the period listed in annual report? If data is not available, return 'N/A'.",
+    "kind": "number"
   },
   {
-    "question": "Which company had a higher free cash flow: \"Sensata\", \"TransUnion\" or \"First Mid Bancshares, Inc.\", in the fiscal year 2021?",
-    "schema": "name",
-    "answer": null
+    "text": "Did ADT Inc. outline any new ESG initiatives in the annual report?",
+    "kind": "boolean"
   },
   {
-    "question": "What was the market capitalization of \"Holley Inc.\" in June 30, 2023?",
-    "schema": "number",
-    "answer": null
+    "text": "What was the value of End-of-year bed occupancy rate of AdAlta Ltd at the end of the period listed in annual report? If data is not available, return 'N/A'.",
+    "kind": "number"
   },
   {
-    "question": "What was the total assets of \"TransUnion\" in the fiscal year 2023?",
-    "schema": "number",
-    "answer": null
+    "text": "What was the value of Refinery throughput capacity of Empire Metals Limited at the end of the period listed in annual report? If data is not available, return 'N/A'.",
+    "kind": "number"
   },
   {
-    "question": "How much more did \"BAKER STEEL RESOURCES TRUST LIMITED\" spend on customer acquisition compared to \"Sleep Country Canada Holdings Inc.\" in June 30, 2021?",
-    "schema": "number",
-    "answer": null
+    "text": "What was the value of Healthcare plan memberships (if applicable) of Sesen Bio, Inc. at the end of the period listed in annual report? If data is not available, return 'N/A'.",
+    "kind": "number"
   },
   {
-    "question": "Which company had a higher research and development expenses: \"MITSUI O.S.K. LINES\", \"Holley Inc.\" or \"First Mid Bancshares, Inc.\", in the fiscal year 2021?",
-    "schema": "name",
-    "answer": null
+    "text": "What was the largest single spending of T2 Biosystems, Inc. on executive compensation in USD?",
+    "kind": "name"
   },
   {
-    "question": "What was the Operating Margin of \"Sleep Country Canada Holdings Inc.\" in June 30, 2022?",
-    "schema": "number",
-    "answer": null
+    "text": "Did Tecogen Inc. mention any mergers or acquisitions in the annual report?",
+    "kind": "boolean"
   },
   {
-    "question": "What was the intangible assets of \"TransUnion\" in the fiscal year 2021?",
-    "schema": "number",
-    "answer": null
+    "text": "According to the annual report, what is the Cash flow from operations (in EUR) for Elastic N.V.  (within the last period or at the end of the last period)? If data is not available, return 'N/A'.",
+    "kind": "number"
   },
   {
-    "question": "How much more did \"PowerFleet, Inc.\" spend on R&D compared to \"JOURNEY MEDICAL CORPORATION\" in June 30, 2022?",
-    "schema": "number",
-    "answer": null
+    "text": "For Mako Gold Limited, what was the value of Number of drugs on the market (approved) at the end of the period listed in annual report? If data is not available, return 'N/A'.",
+    "kind": "number"
   },
   {
-    "question": "Which company had a higher inventories: \"TSX_Y\", \"Mercia Asset Management PLC\" or \"Tradition\", in the fiscal year 2022?",
-    "schema": "name",
-    "answer": null
+    "text": "What was the value of End-of-year bed occupancy rate of Sigilon Therapeutics, Inc. at the end of the period listed in annual report? If data is not available, return 'N/A'.",
+    "kind": "number"
   },
   {
-    "question": "What was the Gross Profit Margin of \"Safe & Green Holdings Corp.\" in June 30, 2022?",
-    "schema": "number",
-    "answer": null
+    "text": "Which leadership **positions** changed at ELMO Software Limited in the reporting period? If data is not available, return 'N/A'.",
+    "kind": "names"
   },
   {
-    "question": "What was the total revenue of \"Mercia Asset Management PLC\" in the fiscal year 2021?",
-    "schema": "number",
-    "answer": null
+    "text": "What are the names of new products launched by ams OSRAM as mentioned in the annual report?",
+    "kind": "names"
   },
   {
-    "question": "How much more did \"First Mid Bancshares, Inc.\" spend on risk management compared to \"QUIDELORTHO CORPORATION\" in June 30, 2022?",
-    "schema": "number",
-    "answer": null
+    "text": "For Finance of America Companies Inc., what was the value of End-of-year net interest margin (NIM) at the end of the period listed in annual report? If data is not available, return 'N/A'.",
+    "kind": "number"
   },
   {
-    "question": "Which company had a higher total liabilities: \"DouYu International Holdings Limited\", \"CrossFirst Bank\" or \"First Mid Bancshares, Inc.\", in the fiscal year 2023?",
-    "schema": "name",
-    "answer": null
+    "text": "According to the annual report, what is the Total revenue (in EUR) for Lavazza Group  (within the last period or at the end of the last period)? If data is not available, return 'N/A'.",
+    "kind": "number"
   },
   {
-    "question": "What was the Return on Assets (ROA) of \"ENRG ELEMENTS LIMITED\" in June 30, 2022?",
-    "schema": "number",
-    "answer": null
+    "text": "For Elastic N.V., what was the value of Cloud storage capacity (TB) at the end of the period listed in annual report? If data is not available, return 'N/A'.",
+    "kind": "number"
   },
   {
-    "question": "What was the free cash flow of \"Oesterreichische Kontrollbank\" in the fiscal year 2023?",
-    "schema": "number",
-    "answer": null
+    "text": "Did Sesen Bio, Inc. report any changes to its capital structure?",
+    "kind": "boolean"
   },
   {
-    "question": "How much more did \"Sensata\" spend on risk management compared to \"Holley Inc.\" in June 30, 2022?",
-    "schema": "number",
-    "answer": null
+    "text": "For Exelixis, Inc., what was the value of Number of compounds in Phase II at the end of the period listed in annual report? If data is not available, return 'N/A'.",
+    "kind": "number"
   },
   {
-    "question": "Which company had a higher free cash flow: \"BAKER STEEL RESOURCES TRUST LIMITED\", \"Safe & Green Holdings Corp.\" or \"PowerFleet, Inc.\", in the fiscal year 2021?",
-    "schema": "name",
-    "answer": null
+    "text": "For Tower Limited, what was the value of End-of-year net interest margin (NIM) at the end of the period listed in annual report? If data is not available, return 'N/A'.",
+    "kind": "number"
   },
   {
-    "question": "What was the Operating Margin of \"Mercia Asset Management PLC\" in June 30, 2021?",
-    "schema": "number",
-    "answer": null
+    "text": "Which leadership **positions** changed at Flinders Mines Limited in the reporting period? If data is not available, return 'N/A'.",
+    "kind": "names"
   },
   {
-    "question": "What was the free cash flow of \"JOURNEY MEDICAL CORPORATION\" in the fiscal year 2023?",
-    "schema": "number",
-    "answer": null
+    "text": "What was the Dividend per share (in GBP) for IMI plc according to the annual report (within the last period or at the end of the last period)? If data is not available, return 'N/A'.",
+    "kind": "number"
   },
   {
-    "question": "How much more did \"Laserbond\" spend on R&D compared to \"PowerFleet, Inc.\" in June 30, 2021?",
-    "schema": "number",
-    "answer": null
+    "text": "Did Tower Limited announce any new product launches in the annual report?",
+    "kind": "boolean"
   },
   {
-    "question": "Which company had a higher total assets: \"MITSUI O.S.K. LINES\", \"ENRG ELEMENTS LIMITED\" or \"First Mid Bancshares, Inc.\", in the fiscal year 2021?",
-    "schema": "name",
-    "answer": null
+    "text": "For Vancouver City Savings Credit Union, what was the value of Number of customer accounts at year-end at the end of the period listed in annual report? If data is not available, return 'N/A'.",
+    "kind": "number"
+  },
+  {
+    "text": "According to the annual report, what is the Total revenue (in USD) for Finance of America Companies Inc.  (within the last period or at the end of the last period)? If data is not available, return 'N/A'.",
+    "kind": "number"
+  },
+  {
+    "text": "According to the annual report, what is the Cash flow from operations (in USD) for Finance of America Companies Inc.  (within the last period or at the end of the last period)? If data is not available, return 'N/A'.",
+    "kind": "number"
+  },
+  {
+    "text": "For Mako Gold Limited, what was the value of Clinical trial sites operating at year-end at the end of the period listed in annual report? If data is not available, return 'N/A'.",
+    "kind": "number"
+  },
+  {
+    "text": "According to the annual report, what is the Total revenue (in GBP) for Gaming Realms plc  (within the last period or at the end of the last period)? If data is not available, return 'N/A'.",
+    "kind": "number"
+  },
+  {
+    "text": "Did Gamma Communications plc outline any new ESG initiatives in the annual report?",
+    "kind": "boolean"
+  },
+  {
+    "text": "What was the largest single spending of Northrim Bank on executive compensation in USD?",
+    "kind": "name"
+  },
+  {
+    "text": "What was the Capital expenditures (in USD) for Veris Limited according to the annual report (within the last period or at the end of the last period)? If data is not available, return 'N/A'.",
+    "kind": "number"
+  },
+  {
+    "text": "Did Bank of South Carolina Corporation announce any new product launches in the annual report?",
+    "kind": "boolean"
+  },
+  {
+    "text": "For Playtech plc, what was the value of Cloud storage capacity (TB) at the end of the period listed in annual report? If data is not available, return 'N/A'.",
+    "kind": "number"
+  },
+  {
+    "text": "For ams OSRAM, what was the value of Cloud storage capacity (TB) at the end of the period listed in annual report? If data is not available, return 'N/A'.",
+    "kind": "number"
+  },
+  {
+    "text": "What was the largest single spending of Zivo Bioscience, Inc. on executive compensation in USD?",
+    "kind": "name"
+  },
+  {
+    "text": "What was the Capital expenditures (in USD) for Hillman Solutions Corp. according to the annual report (within the last period or at the end of the last period)? If data is not available, return 'N/A'.",
+    "kind": "number"
+  },
+  {
+    "text": "What are the names of new products launched by Eagers Automotive Limited as mentioned in the annual report?",
+    "kind": "names"
+  },
+  {
+    "text": "For Tanfield Group PLC, what was the value of Total assets on balance sheet at year-end at the end of the period listed in annual report? If data is not available, return 'N/A'.",
+    "kind": "number"
+  },
+  {
+    "text": "Did DEUTZ AG announce any changes to its dividend policy in the annual report?",
+    "kind": "boolean"
+  },
+  {
+    "text": "What was the largest single spending of Heritage-Crystal Clean, Inc. on executive compensation in USD?",
+    "kind": "name"
+  },
+  {
+    "text": "What was the Gross margin (%) for IMI plc according to the annual report (within the last period or at the end of the last period)? If data is not available, return 'N/A'.",
+    "kind": "number"
+  },
+  {
+    "text": "What was the Dividend per share (in USD) for Acushnet Holdings Corp. according to the annual report (within the last period or at the end of the last period)? If data is not available, return 'N/A'.",
+    "kind": "number"
+  },
+  {
+    "text": "Did VEON Ltd. announce any new product launches in the annual report?",
+    "kind": "boolean"
+  },
+  {
+    "text": "Did Heritage-Crystal Clean, Inc. outline any new ESG initiatives in the annual report?",
+    "kind": "boolean"
+  },
+  {
+    "text": "What was the largest single spending of Credit Corp Group on executive compensation in USD?",
+    "kind": "name"
+  },
+  {
+    "text": "What was the Dividend per share (in USD) for Rewardle Holdings Limited according to the annual report (within the last period or at the end of the last period)? If data is not available, return 'N/A'.",
+    "kind": "number"
+  },
+  {
+    "text": "Did Mako Gold Limited mention any mergers or acquisitions in the annual report?",
+    "kind": "boolean"
+  },
+  {
+    "text": "Did ENRG Elements Limited report any changes to its capital structure?",
+    "kind": "boolean"
+  },
+  {
+    "text": "What was the value of Year-end user base of Consensus Cloud Solutions, Inc. at the end of the period listed in annual report? If data is not available, return 'N/A'.",
+    "kind": "number"
+  },
+  {
+    "text": "Which leadership **positions** changed at Getinge AB in the reporting period? If data is not available, return 'N/A'.",
+    "kind": "names"
+  },
+  {
+    "text": "Did Southern Cross Austereo announce any new product launches in the annual report?",
+    "kind": "boolean"
+  },
+  {
+    "text": "Did Naspers announce any changes to its dividend policy in the annual report?",
+    "kind": "boolean"
+  },
+  {
+    "text": "What was the largest single spending of Galan Lithium Limited on executive compensation in USD?",
+    "kind": "name"
+  },
+  {
+    "text": "Did Veris Limited mention any mergers or acquisitions in the annual report?",
+    "kind": "boolean"
+  },
+  {
+    "text": "Did Adient plc report any changes to its capital structure?",
+    "kind": "boolean"
+  },
+  {
+    "text": "What was the value of In-house production capacity (titles/year) of Southern Cross Austereo at the end of the period listed in annual report? If data is not available, return 'N/A'.",
+    "kind": "number"
+  },
+  {
+    "text": "What was the largest single spending of Allergy Therapeutics plc on executive compensation in GBP?",
+    "kind": "name"
+  },
+  {
+    "text": "What are the names of new products launched by Bodycote plc as mentioned in the annual report?",
+    "kind": "names"
+  },
+  {
+    "text": "Did Datalogic outline any new ESG initiatives in the annual report?",
+    "kind": "boolean"
+  },
+  {
+    "text": "Did Neurotech International Limited mention any mergers or acquisitions in the annual report?",
+    "kind": "boolean"
+  },
+  {
+    "text": "Did Elastic N.V. report any supply chain disruptions in the annual report?",
+    "kind": "boolean"
+  },
+  {
+    "text": "What was the value of Assets under management (AUM) of Hiscox Ltd at the end of the period listed in annual report? If data is not available, return 'N/A'.",
+    "kind": "number"
+  },
+  {
+    "text": "For Finance of America Companies Inc., what was the value of Number of customer accounts at year-end at the end of the period listed in annual report? If data is not available, return 'N/A'.",
+    "kind": "number"
+  },
+  {
+    "text": "Did Hardide plc detail any restructuring plans in the latest filing?",
+    "kind": "boolean"
+  },
+  {
+    "text": "What was the largest single spending of Empire Metals Limited on executive compensation in GBP?",
+    "kind": "name"
+  },
+  {
+    "text": "Did TransUnion mention any mergers or acquisitions in the annual report?",
+    "kind": "boolean"
+  },
+  {
+    "text": "Did ELMO Software Limited report any changes to its capital structure?",
+    "kind": "boolean"
+  },
+  {
+    "text": "What was the value of End-of-year bed occupancy rate of Zivo Bioscience, Inc. at the end of the period listed in annual report? If data is not available, return 'N/A'.",
+    "kind": "number"
+  },
+  {
+    "text": "What was the value of Freight volume capacity (TEU) of Severfield plc at the end of the period listed in annual report? If data is not available, return 'N/A'.",
+    "kind": "number"
+  },
+  {
+    "text": "What was the Dividend per share (in USD) for Ameren Corporation according to the annual report (within the last period or at the end of the last period)? If data is not available, return 'N/A'.",
+    "kind": "number"
+  },
+  {
+    "text": "What are the names of new products launched by DTE Energy Company as mentioned in the annual report?",
+    "kind": "names"
+  },
+  {
+    "text": "For Health Catalyst, Inc., what was the value of Value of medical equipment (balance sheet) at the end of the period listed in annual report? If data is not available, return 'N/A'.",
+    "kind": "number"
+  },
+  {
+    "text": "Did Rave Restaurant Group, Inc. report any supply chain disruptions in the annual report?",
+    "kind": "boolean"
+  },
+  {
+    "text": "What was the value of Order backlog (units) at year-end of Magellan Aerospace Corporation at the end of the period listed in annual report? If data is not available, return 'N/A'.",
+    "kind": "number"
+  },
+  {
+    "text": "Which leadership **positions** changed at Datalogic in the reporting period? If data is not available, return 'N/A'.",
+    "kind": "names"
+  },
+  {
+    "text": "Did AdAlta Ltd mention any mergers or acquisitions in the annual report?",
+    "kind": "boolean"
+  },
+  {
+    "text": "For T2 Biosystems, Inc., what was the value of Number of hospital beds at year-end at the end of the period listed in annual report? If data is not available, return 'N/A'.",
+    "kind": "number"
+  },
+  {
+    "text": "According to the annual report, what is the Cash flow from operations (in USD) for Credit Corp Group  (within the last period or at the end of the last period)? If data is not available, return 'N/A'.",
+    "kind": "number"
+  },
+  {
+    "text": "Did Hamilton Beach Brands Holding Company announce a share buyback plan in the annual report?",
+    "kind": "boolean"
+  },
+  {
+    "text": "What was the largest single spending of Bel Fuse Inc. on executive compensation in USD?",
+    "kind": "name"
+  },
+  {
+    "text": "What was the Capital expenditures (in USD) for Bank of South Carolina Corporation according to the annual report (within the last period or at the end of the last period)? If data is not available, return 'N/A'.",
+    "kind": "number"
+  },
+  {
+    "text": "Did Adient plc mention any mergers or acquisitions in the annual report?",
+    "kind": "boolean"
+  },
+  {
+    "text": "For Biome Technologies plc, what was the value of End-of-year total headcount at the end of the period listed in annual report? If data is not available, return 'N/A'.",
+    "kind": "number"
+  },
+  {
+    "text": "For Galileo Resources Plc, what was the value of Number of drugs on the market (approved) at the end of the period listed in annual report? If data is not available, return 'N/A'.",
+    "kind": "number"
   }
 ]
