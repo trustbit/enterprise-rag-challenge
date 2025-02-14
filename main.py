@@ -13,7 +13,6 @@ from random import randint
 import click
 import pandas as pd
 
-
 from typing import Literal, Dict, List, Optional, Union
 
 from pydantic import BaseModel, RootModel, Field
@@ -25,9 +24,11 @@ industries = [
     "Transport & Logistics", "Food & Beverage"
 ]
 
+
 class EndOfPeriod(BaseModel):
     year: int
     month: int
+
 
 class AnnualReportInfo(BaseModel):
     end_of_period: EndOfPeriod
@@ -79,14 +80,13 @@ class SourceReference(BaseModel):
 
 
 class Answer(BaseModel):
-    value: Union[float, str, bool, List[str], Literal["N/A"]] = Field(..., description="Answer to the question, according to the question schema")
+    value: Union[float, str, bool, List[str], Literal["N/A"]] = Field(...,
+                                                                      description="Answer to the question, according to the question schema")
     references: List[SourceReference] = Field([], description="References to the source material in the PDF file")
-
 
 
 class SubsetFile(RootModel):
     root: List[ReportEntry]
-
 
 
 class DeterministicRNG:
@@ -122,6 +122,7 @@ class DeterministicRNG:
 
         # pick k unique elements from seq
 
+
 @click.group()
 def cli():
     pass
@@ -142,6 +143,7 @@ def load_dataset() -> dict[str, ReportEntry]:
         result[k] = ReportEntry.model_validate(v)
 
     return result
+
 
 @cli.command()
 @click.option("--count", default=10, help="Number of files to sample")
@@ -170,12 +172,11 @@ def step1(count: int = 10, seed: int = 42, subset: str = "subset.csv"):
             dict(
                 sha1=row.sha1,
                 cur=row.main_currency(),
-                **meta # all the other fields
+                **meta  # all the other fields
             )
         )
 
     pd.DataFrame(records).to_csv(subset, index=False)
-
 
 
 def ask_indicator_compare(rand: DeterministicRNG, df: pd.DataFrame) -> Optional[Question]:
@@ -193,6 +194,7 @@ def ask_indicator_compare(rand: DeterministicRNG, df: pd.DataFrame) -> Optional[
     question = f"Which of the companies had the {ref} {metric} in {cur} at the end of the period listed in annual report: {company_list}? If data for the company is not available, exclude it from the comparison."
 
     return Question(text=question, kind="name")
+
 
 def ask_fin_metric(rand: DeterministicRNG, df: pd.DataFrame) -> Optional[Question]:
     """
@@ -236,12 +238,15 @@ def ask_latest_merger_entity(rand: DeterministicRNG, df: pd.DataFrame) -> Option
     company = rand.choice(list(df[df['mentions_recent_mergers_and_acquisitions']]['company_name']))
 
     questions = [
-        Question(text=f"What was the latest merger or acquisition that {company} was involved in? Return name of the entity or 'N/A'", kind="name"),
+        Question(
+            text=f"What was the latest merger or acquisition that {company} was involved in? Return name of the entity or 'N/A'",
+            kind="name"),
         # boolean
         Question(text=f"Did {company} mention any mergers or acquisitions in the annual report?", kind="boolean"),
     ]
 
     return rand.choice(questions)
+
 
 def ask_about_compensation(rand: DeterministicRNG, df: pd.DataFrame) -> Optional[Question]:
     # pick one company with has_executive_compensation
@@ -250,20 +255,26 @@ def ask_about_compensation(rand: DeterministicRNG, df: pd.DataFrame) -> Optional
     question = f"What was the largest single spending of {company} on executive compensation in {currency}?"
     return Question(text=question, kind="name")
 
+
 def ask_about_leadership_changes(rand: DeterministicRNG, df: pd.DataFrame) -> Optional[Question]:
     # pick company with changes
     company = rand.choice(list(df[df['has_leadership_changes']]['company_name']))
 
     questions = [
         Question(text=f"What are the names of all executives removed from their positions in {company}?", kind="names"),
-        Question(text=f"What are the names of all new executives that took on new leadership positions in {company}?", kind="names"),
-        Question(text=f"Which leadership **positions** changed at {company} in the reporting period? If data is not available, return 'N/A'.", kind="names"),
+        Question(text=f"What are the names of all new executives that took on new leadership positions in {company}?",
+                 kind="names"),
+        Question(
+            text=f"Which leadership **positions** changed at {company} in the reporting period? If data is not available, return 'N/A'.",
+            kind="names"),
         # boolean
-        Question(text=f"Did {company} announce any changes to its executive team in the annual report?", kind="boolean"),
+        Question(text=f"Did {company} announce any changes to its executive team in the annual report?",
+                 kind="boolean"),
 
     ]
 
     return rand.choice(questions)
+
 
 def ask_layoffs(rand: DeterministicRNG, df: pd.DataFrame) -> Optional[Question]:
     """
@@ -281,14 +292,17 @@ def ask_layoffs(rand: DeterministicRNG, df: pd.DataFrame) -> Optional[Question]:
     question = rand.choice(question_variations)
     return Question(text=question, kind="number")
 
+
 # product launches
 def ask_about_product_launches(rand: DeterministicRNG, df: pd.DataFrame) -> Optional[Question]:
     # pick company with changes
     company = rand.choice(list(df[df['has_new_product_launches']]['company_name']))
 
     questions = [
-        Question(text=f"What are the names of new products launched by {company} as mentioned in the annual report?", kind="names"),
-        Question(text=f"What is the name of the last product launched by {company} as mentioned in the annual report?", kind="name"),
+        Question(text=f"What are the names of new products launched by {company} as mentioned in the annual report?",
+                 kind="names"),
+        Question(text=f"What is the name of the last product launched by {company} as mentioned in the annual report?",
+                 kind="name"),
         # boolean
         Question(text=f"Did {company} announce any new product launches in the annual report?", kind="boolean"),
     ]
@@ -297,7 +311,6 @@ def ask_about_product_launches(rand: DeterministicRNG, df: pd.DataFrame) -> Opti
 
 
 def ask_metadata_boolean(rand: DeterministicRNG, df: pd.DataFrame) -> Optional[Question]:
-
     question_templates = {
         "has_regulatory_or_litigation_issues": "Did {company} mention any ongoing litigation or regulatory inquiries?",
         "has_capital_structure_changes": "Did {company} report any changes to its capital structure?",
@@ -320,11 +333,7 @@ def ask_metadata_boolean(rand: DeterministicRNG, df: pd.DataFrame) -> Optional[Q
     return Question(text=question_text, kind="boolean")
 
 
-
-
-
 def ask_industry_metric(rand: DeterministicRNG, df: pd.DataFrame) -> Optional[Question]:
-
     company = rand.choice(df['company_name'])
     industry = df[df['company_name'] == company]['major_industry'].iloc[0]
 
@@ -539,8 +548,6 @@ def ask_industry_metric(rand: DeterministicRNG, df: pd.DataFrame) -> Optional[Qu
     return Question(text=question, kind="number")
 
 
-
-
 @cli.command()
 @click.option("--count", default=10, help="Number of questions to generate")
 @click.option("--seed", default=42, help="Seed for random number generation")
@@ -559,7 +566,7 @@ def step2(count: int = 10, seed: int = 42, subset: str = "subset.csv", questions
             ask_indicator_compare,
             ask_latest_merger_entity,
             ask_industry_metric,
-            ask_industry_metric, # twice for more cases
+            ask_industry_metric,  # twice for more cases
             ask_industry_metric,
             ask_fin_metric,
             ask_fin_metric,
@@ -568,7 +575,7 @@ def step2(count: int = 10, seed: int = 42, subset: str = "subset.csv", questions
             ask_about_product_launches,
             ask_metadata_boolean,
             ask_layoffs,
-            ]
+        ]
 
         try:
             question = rng.choice(generators)(rng, df)
@@ -584,15 +591,11 @@ def step2(count: int = 10, seed: int = 42, subset: str = "subset.csv", questions
         json.dump([q.model_dump() for q in results], f, indent=2)
 
 
-
-
 @cli.command()
-
 @click.option("--limit", default=100, help="Number of random numbers to generate")
 @click.option("--count", default=100, help="Number of iterations")
 @click.option("--seed", default=42, help="Seed for random number generation")
 def test_rng(limit: int = 100, count: int = 100, seed: int = 42):
-
     rng = DeterministicRNG(seed)
     # make array of 100
     arr = [0] * limit
@@ -601,10 +604,6 @@ def test_rng(limit: int = 100, count: int = 100, seed: int = 42):
         arr[rng.random(limit)] += 1
 
     print(arr)
-
-
-
-
 
 
 if __name__ == "__main__":
