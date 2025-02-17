@@ -76,7 +76,7 @@ class Question(BaseModel):
 
 class SourceReference(BaseModel):
     pdf_sha1: str = Field(..., description="SHA1 hash of the PDF file")
-    page_index: int = Field(..., description="Physical page number in the PDF file")
+    page_index: int = Field(..., description="Zero-based physical page number in the PDF file")
 
 
 class Answer(BaseModel):
