@@ -6,7 +6,7 @@
 👉[Register here](https://www.timetoact-group.at/details/enterprise-rag-challenge)👈 
 
 
-##  Round 1 
+##  Round 1 - Sept. 2024
 
 
 
