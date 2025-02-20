@@ -259,8 +259,8 @@ def ask_about_compensation(rand: DeterministicRNG, df: pd.DataFrame) -> Optional
     # pick one company with has_executive_compensation
     company = rand.choice(list(df[df['has_executive_compensation']]['company_name']))
     currency = df[df['company_name'] == company]['cur'].iloc[0]
-    question = f"What was the largest single spending of {company} on executive compensation in {currency}?"
-    return Question(text=question, kind="name")
+    question = f"What was the largest single spending of {company} on executive compensation in {currency}? If data is not available in this currency, return 'N/A'."
+    return Question(text=question, kind="number")
 
 
 def ask_about_leadership_changes(rand: DeterministicRNG, df: pd.DataFrame) -> Optional[Question]:
