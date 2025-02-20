@@ -6,7 +6,7 @@
 👉[Register here](https://www.timetoact-group.at/details/enterprise-rag-challenge)👈 
 
 
-##  Round 1 
+##  Round 1 - Sept. 2024
 
 
 
@@ -160,31 +160,42 @@ It generated questions like the ones below (full list is in [samples/questions.j
 
 ## Schema
 
+### Generator Schema
 Note the schema specified for each question. It follows this pydantic schema:
 
-
 ```py
-from pydantic import BaseModel, Literal, Field, Union
-from typing import List
+from pydantic import BaseModel
+from typing import Literal
 
 class Question(BaseModel):
     text: str
     kind: Literal["number", "name", "boolean", "names"]
-
-
-class SourceReference(BaseModel):
-    pdf_sha1: str = Field(..., description="SHA1 hash of the PDF file")
-    page_index: int = Field(..., description="Zero-based physical page number in the PDF file")
-
-
-class Answer(BaseModel):
-    value: Union[float, str, bool, List[str], Literal["N/A"]] = Field(..., description="Answer to the question, according to the question schema")
-    references: List[SourceReference] = Field([], description="References to the source material in the PDF file")
-
-
 ```
 
 
+### Submission Schema
+
+For submission, we recommend using this schema:
+
+```py
+from pydantic import BaseModel, Field
+from typing import Optional, List, Union, Literal
+
+class SourceReference(BaseModel):
+    pdf_sha1: str = Field(..., description="SHA1 hash of the PDF file")
+    page_index: int = Field(..., description="Physical page number in the PDF file")
+
+class Answer(BaseModel):
+    question_text: Optional[str] = Field(None, description="Text of the question")
+    kind: Optional[Literal["number", "name", "boolean", "names"]] = Field(None, description="Kind of the question")
+    value: Union[float, str, bool, List[str], Literal["N/A"]] = Field(..., description="Answer to the question, according to the question schema")
+    references: List[SourceReference] = Field([], description="References to the source material in the PDF file")
+
+class AnswerSubmission(BaseModel):
+    team_email: str = Field(..., description="Email that your team used to register for the challenge")
+    submission_name: str = Field(..., description="Unique name of the submission (e.g. experiment name)")
+    answers: List[Answer] = Field(..., description="List of answers to the questions")
+```
 
 * number - only a metric number is expected as an answer. No decimal commas or separators. Correct: `122333`, incorrect: `122k`, `122 233`
 * name - only name is expected as an answer. 
@@ -192,6 +203,8 @@ class Answer(BaseModel):
 * boolean - only `yes` or `no` (or `true`, `false`). Case doesn't matter.
 
 Important! Each schema also allows `N/A` or `n/a` which means "Not Applicable" or "There is not enough information even for a human to answer this question".
+
+Adding the optional `question_text` element to `Answer` will allow the submission API to check if your answers are in the right order for correct scoring.  
 
 
 

@@ -80,8 +80,8 @@ class SourceReference(BaseModel):
 
 
 class Answer(BaseModel):
-    question_text: str = Field(..., description="Text of the question")
-    kind: Literal["number", "name", "boolean", "names"] = Field(..., description="Kind of the question")
+    question_text: Optional[str] = Field(None, description="Text of the question")
+    kind: Optional[Literal["number", "name", "boolean", "names"]] = Field(None, description="Kind of the question")
     value: Union[float, str, bool, List[str], Literal["N/A"]] = Field(..., description="Answer to the question, according to the question schema")
     references: List[SourceReference] = Field([], description="References to the source material in the PDF file")
 
@@ -272,7 +272,7 @@ def ask_about_leadership_changes(rand: DeterministicRNG, df: pd.DataFrame) -> Op
         Question(text=f"What are the names of all new executives that took on new leadership positions in {company}?",
                  kind="names"),
         Question(
-            text=f"Which leadership **positions** changed at {company} in the reporting period? If data is not available, return 'N/A'. Give me the title of the position.",
+            text=f"Which leadership positions changed at {company} in the reporting period? If data is not available, return 'N/A'. Give me the title of the position.",
             kind="names"),
         # boolean
         Question(text=f"Did {company} announce any changes to its executive team in the annual report? If there is no mention, return False.",
