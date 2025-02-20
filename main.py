@@ -198,7 +198,7 @@ def ask_indicator_compare(rand: DeterministicRNG, df: pd.DataFrame) -> Optional[
     # generate questions
     ref = rand.choice(["highest", "lowest"])
     metric = rand.choice(["total revenue", "net income", "total assets"])
-    question = f"Which of the companies had the {ref} {metric} in {cur} at the end of the period listed in annual report: {company_list}? If data for the company is not available, exclude it from the comparison."
+    question = f"Which of the companies had the {ref} {metric} in {cur} at the end of the period listed in annual report: {company_list}? If data for the company is not available, exclude it from the comparison. If only one company is left, return this company."
 
     return Question(text=question, kind="name")
 
@@ -249,7 +249,7 @@ def ask_latest_merger_entity(rand: DeterministicRNG, df: pd.DataFrame) -> Option
             text=f"What was the latest merger or acquisition that {company} was involved in? Return name of the entity or 'N/A'",
             kind="name"),
         # boolean
-        Question(text=f"Did {company} mention any mergers or acquisitions in the annual report?", kind="boolean"),
+        Question(text=f"Did {company} mention any mergers or acquisitions in the annual report? If there is no mention, return False.", kind="boolean"),
     ]
 
     return rand.choice(questions)
@@ -275,7 +275,7 @@ def ask_about_leadership_changes(rand: DeterministicRNG, df: pd.DataFrame) -> Op
             text=f"Which leadership **positions** changed at {company} in the reporting period? If data is not available, return 'N/A'.",
             kind="names"),
         # boolean
-        Question(text=f"Did {company} announce any changes to its executive team in the annual report?",
+        Question(text=f"Did {company} announce any changes to its executive team in the annual report? If there is no mention, return False.",
                  kind="boolean"),
 
     ]
@@ -311,7 +311,7 @@ def ask_about_product_launches(rand: DeterministicRNG, df: pd.DataFrame) -> Opti
         Question(text=f"What is the name of the last product launched by {company} as mentioned in the annual report?",
                  kind="name"),
         # boolean
-        Question(text=f"Did {company} announce any new product launches in the annual report?", kind="boolean"),
+        Question(text=f"Did {company} announce any new product launches in the annual report? If there is no mention, return False.", kind="boolean"),
     ]
 
     return rand.choice(questions)
@@ -336,7 +336,7 @@ def ask_metadata_boolean(rand: DeterministicRNG, df: pd.DataFrame) -> Optional[Q
         return None
 
     company = rand.choice(list(eligible))
-    question_text = template.format(company=company)
+    question_text = template.format(company=company) + " If there is no mention, return False."
     return Question(text=question_text, kind="boolean")
 
 
@@ -558,7 +558,7 @@ def ask_industry_metric(rand: DeterministicRNG, df: pd.DataFrame) -> Optional[Qu
 @cli.command()
 @click.option("--count", default=10, help="Number of questions to generate")
 @click.option("--seed", default=42, help="Seed for random number generation")
-@click.option("--subset", default="subset.csv", help="Subset of files")
+@click.option("--subset", default="subset.json", help="Subset of files")
 @click.option("--questions", default="questions.json", help="Output file")
 def step2(count: int = 10, seed: int = 42, subset: str = "subset.csv", questions: str = "questions.json"):
     rng = DeterministicRNG(seed)
