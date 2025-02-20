@@ -80,8 +80,8 @@ class SourceReference(BaseModel):
 
 
 class Answer(BaseModel):
-    question_text: str = Field(..., description="Text of the question")
-    kind: Literal["number", "name", "boolean", "names"] = Field(..., description="Kind of the question")
+    question_text: Optional[str] = Field(None, description="Text of the question")
+    kind: Optional[Literal["number", "name", "boolean", "names"]] = Field(None, description="Kind of the question")
     value: Union[float, str, bool, List[str], Literal["N/A"]] = Field(..., description="Answer to the question, according to the question schema")
     references: List[SourceReference] = Field([], description="References to the source material in the PDF file")
 
