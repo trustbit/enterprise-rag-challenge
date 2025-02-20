@@ -272,7 +272,7 @@ def ask_about_leadership_changes(rand: DeterministicRNG, df: pd.DataFrame) -> Op
         Question(text=f"What are the names of all new executives that took on new leadership positions in {company}?",
                  kind="names"),
         Question(
-            text=f"Which leadership **positions** changed at {company} in the reporting period? If data is not available, return 'N/A'. Give me the title of the position.",
+            text=f"Which leadership positions changed at {company} in the reporting period? If data is not available, return 'N/A'. Give me the title of the position.",
             kind="names"),
         # boolean
         Question(text=f"Did {company} announce any changes to its executive team in the annual report? If there is no mention, return False.",
