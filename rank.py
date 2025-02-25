@@ -7,13 +7,10 @@ import click
 
 import pandas as pd
 
-
 VALID_NONES = ["N/A", "n/a"]
 
 
-
 def get_answer_category(expected_answers: list) -> (str, float):
-
     # if N/A is a valid answer, return, then it can be guessed, score it lower
     if any(a in VALID_NONES for a in expected_answers):
         return "N/A", 1
@@ -22,10 +19,7 @@ def get_answer_category(expected_answers: list) -> (str, float):
 
 
 def grade_answer(actual_answer, schema, expected_answer) -> float:
-
     # answer is correct if it is in the list of expected answers
-
-
 
     is_na_expected = expected_answer in VALID_NONES
     is_na_actual = actual_answer in VALID_NONES
@@ -36,7 +30,6 @@ def grade_answer(actual_answer, schema, expected_answer) -> float:
     # so NA is not expected. But what if we have NA in the actual answer?
     if is_na_actual:
         return 0
-
 
     if schema == "number":
         expected_value = float(expected_answer)
@@ -68,20 +61,19 @@ def grade_answer(actual_answer, schema, expected_answer) -> float:
     else:
         raise Exception(f"Unknown schema {schema}")
 
+
 @dataclass
 class TeamRank:
     name: str
     score: int
     answers: List[str]
 
+
 def rank_team(expected, file) -> TeamRank:
     team = file.stem
 
-
-
     with file.open("r") as file:
         submission = json.load(file)
-
 
     if team == "anonymous_1652":
         # this team returned a list of answers instead of a dict
@@ -104,10 +96,8 @@ def rank_team(expected, file) -> TeamRank:
         valid_answers = ex["answer"]
         schema = ex["schema"]
 
-
         category, max_score = get_answer_category(valid_answers)
         ideal_score += max_score
-
 
         if answer is None:
             # no answer
@@ -117,7 +107,6 @@ def rank_team(expected, file) -> TeamRank:
         answer_grade = max(grade_answer(answer, schema, a) for a in valid_answers)
         score += answer_grade * max_score
 
-
     print(f"Score: {score} / {ideal_score}")
     # normalize score
     score = 100.0 * score / ideal_score
@@ -126,12 +115,13 @@ def rank_team(expected, file) -> TeamRank:
 
     return TeamRank(team, int(score), answer_list)
 
+
 import importlib.util
+
 
 @click.command()
 @click.argument("folder", type=click.Path(exists=True))
 def run(folder: str):
-
     expected_file = Path(folder) / "answers.json"
 
     with expected_file.open("r") as file:
@@ -145,22 +135,11 @@ def run(folder: str):
     spec.loader.exec_module(teams_module)
     teams = {t.file_name: t.__dict__ for t in teams_module.TEAMS}
 
-
-
-
-
-
-
-
-
-
     files = Path(folder).glob("answers/*.json")
 
-
-    answers = [{'real':x['answer']} for x in expected]
+    answers = [{'real': x['answer']} for x in expected]
 
     records = []
-
 
     for f in sorted(files):
 
@@ -168,11 +147,10 @@ def run(folder: str):
 
         team_obj = teams[f.stem]
 
-
         try:
             team = rank_team(expected, f)
 
-            for a,t in zip(answers, team.answers):
+            for a, t in zip(answers, team.answers):
                 a[team_name] = t
 
             print(f"{team_name}: {team.score}")
@@ -196,10 +174,8 @@ def run(folder: str):
             # ansi color red
             raise e
 
-
     df = pd.DataFrame(answers)
     df.to_csv(Path(folder) / "answers.csv", index=False)
-
 
     df_rec = pd.DataFrame(records)
     # sort by score
@@ -209,6 +185,7 @@ def run(folder: str):
     print(df_rec.to_string(index=False))
     # save to scores.csv
     df_rec.to_csv(Path(folder) / "scores.csv", index=False)
+
 
 if __name__ == "__main__":
     run()
