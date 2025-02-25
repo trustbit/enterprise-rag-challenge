@@ -1,0 +1,719 @@
+{
+  "questions": [
+    {
+      "question_text": "According to the annual report, what is the Operating margin (%) for Altech Chemicals Ltd  (within the last period or at the end of the last period)? If data is not available, return 'N/A'.",
+      "kind": "number",
+      "value": null,
+      "ground_truth": [
+        "N/A",
+        -1294.7
+      ],
+      "comment": "Not directly stated in the text, though can be calculated from Total revenue which is $468,659 (p.34, p.48, p.64) and Operating Loss (before tax) which is -$6,067,791 (p.48, p.65). -6067791/468659*100=-1294.7%. Web search provided margin of -1196,3% for june 2022. Link: https://www.alphaspread.com/security/asx/atc/profitability/ratio/operating-margin",
+      "references": [
+        {
+          "pdf_sha1": "63688d5d0b4f12e9f847c5407439a1ec46047a4a",
+          "page_index": 33
+        },
+        {
+          "pdf_sha1": "63688d5d0b4f12e9f847c5407439a1ec46047a4a",
+          "page_index": 47
+        },
+        {
+          "pdf_sha1": "63688d5d0b4f12e9f847c5407439a1ec46047a4a",
+          "page_index": 63
+        },
+        {
+          "pdf_sha1": "63688d5d0b4f12e9f847c5407439a1ec46047a4a",
+          "page_index": 64
+        }
+      ]
+    },
+    {
+      "question_text": "According to the annual report, what is the Operating margin (%) for Cofinimmo  (within the last period or at the end of the last period)? If data is not available, return 'N/A'.",
+      "kind": "number",
+      "value": null,
+      "ground_truth": 81,
+      "comment": "Directly stated on p.19, p.33, p.107, p.226",
+      "references": [
+        {
+          "pdf_sha1": "9cc771c2171bacc138cda4e7d68b8b427a514d81",
+          "page_index": 18
+        },
+        {
+          "pdf_sha1": "9cc771c2171bacc138cda4e7d68b8b427a514d81",
+          "page_index": 32
+        },
+        {
+          "pdf_sha1": "9cc771c2171bacc138cda4e7d68b8b427a514d81",
+          "page_index": 106
+        },
+        {
+          "pdf_sha1": "9cc771c2171bacc138cda4e7d68b8b427a514d81",
+          "page_index": 225
+        }
+      ]
+    },
+    {
+      "question_text": "Did Cofinimmo outline any new ESG initiatives in the annual report?",
+      "kind": "boolean",
+      "value": null,
+      "ground_truth": false,
+      "comment": "Even though report mentions progress on their 30³ project, new German BREEAM certifications, and renewed ESG transparency labels, the answer is 'no', because these represent continuations and recognitions of their existing ESG strategy, not the announcement of distinct, new initiatives for 2022. The final answer depends on whether the initiative launched in 2020 is considered new in the context of the fact that the report was released in 2022. If we proceed from the fact that this initiative is mentioned in the reports for the previous two years, then this initiative cannot be considered new.",
+      "references": [
+        {
+          "pdf_sha1": "9cc771c2171bacc138cda4e7d68b8b427a514d81",
+          "page_index": 27
+        },
+        {
+          "pdf_sha1": "9cc771c2171bacc138cda4e7d68b8b427a514d81",
+          "page_index": 98
+        },
+        {
+          "pdf_sha1": "9cc771c2171bacc138cda4e7d68b8b427a514d81",
+          "page_index": 123
+        },
+        {
+          "pdf_sha1": "9cc771c2171bacc138cda4e7d68b8b427a514d81",
+          "page_index": 124
+        },
+        {
+          "pdf_sha1": "9cc771c2171bacc138cda4e7d68b8b427a514d81",
+          "page_index": 125
+        }
+      ]
+    },
+    {
+      "question_text": "What is the total number of employees let go by Hagerty, Inc. according to the annual report? If data is not available, return 'N/A'.",
+      "kind": "number",
+      "value": null,
+      "ground_truth": "N/A",
+      "comment": "The context mentions restructuring and reduction in force (Initiatives VRP and RIF) on page 102, but does not provide specific numbers of employees let go. Web search revealred 103 employees were let go in 2022. But this number is not mentioned in the report. Link: https://coverager.com/hagerty-reduces-workforce/",
+      "references": [
+        {
+          "pdf_sha1": "a6f23184a87f3343f17e8e8ed08f604615cdefc1",
+          "page_index": 101
+        }
+      ]
+    },
+    {
+      "question_text": "Which leadership **positions** changed at Renold plc in the reporting period? If data is not available, return 'N/A'.",
+      "kind": "names",
+      "value": null,
+      "ground_truth": [
+        [
+          "Non-Executive Chair",
+          "Chair of the Audit Committee",
+          "Senior Independent Non-Executive Director"
+        ],
+        [
+          "Non-Executive Chair",
+          "Chair of the Audit Committee",
+          "Senior Independent Non-Executive Director",
+          "Non-Executive Director"
+        ]
+      ],
+      "comment": "David Landless was appointed as Chair on 23 August 2021 (p.64) (Name of the position also addressed as Non-Executive Chair on p.66); Andrew Magson was appointed as Chair of the Audit Committee on 23 August 2021 (p.65); Tim Cooper was appointed as the Senior Independent Director on 23 August 2021 (p.65); Also mentioned that Vicki Potter was appointed as a Non-Executive Director on 3 May 2022 (p.65), but technically this is not a change in position, it is a new appointment. Information repeated in pages 11, 62, 83 any many more. Confirmed by web search, link: https://investors.renold.com/corporate-governance/directors-biographies",
+      "references": [
+        {
+          "pdf_sha1": "da8afefdc3840175c9f26a4dbbed05e250a342cc",
+          "page_index": 10
+        },
+        {
+          "pdf_sha1": "da8afefdc3840175c9f26a4dbbed05e250a342cc",
+          "page_index": 61
+        },
+        {
+          "pdf_sha1": "da8afefdc3840175c9f26a4dbbed05e250a342cc",
+          "page_index": 63
+        },
+        {
+          "pdf_sha1": "da8afefdc3840175c9f26a4dbbed05e250a342cc",
+          "page_index": 64
+        },
+        {
+          "pdf_sha1": "da8afefdc3840175c9f26a4dbbed05e250a342cc",
+          "page_index": 65
+        },
+        {
+          "pdf_sha1": "da8afefdc3840175c9f26a4dbbed05e250a342cc",
+          "page_index": 82
+        }
+      ]
+    },
+    {
+      "question_text": "What was the Gross margin (%) for Charles & Colvard, Ltd. according to the annual report (within the last period or at the end of the last period)? If data is not available, return 'N/A'.",
+      "kind": "number",
+      "value": null,
+      "ground_truth": [
+        "N/A",
+        46.98
+      ],
+      "comment": "The context provides net sales and cost of goods sold figures (p.41 or p.61), allowing calculation of gross margin percentage. However, the exact percentage is not explicitly stated in the context. Web search provided margin of 47% for 2022. Link: https://ir.charlesandcolvard.com/news-releases/news-release-details/charles-colvard-reports-fourth-quarter-and-full-fiscal-year-2022",
+      "references": [
+        {
+          "pdf_sha1": "d3a834539b046a49708161a6c0d35aad29dd15ec",
+          "page_index": 40
+        },
+        {
+          "pdf_sha1": "d3a834539b046a49708161a6c0d35aad29dd15ec",
+          "page_index": 60
+        }
+      ]
+    },
+    {
+      "question_text": "What was the Capital expenditures (in GBP) for Harworth Group plc according to the annual report (within the last period or at the end of the last period)? If data is not available, return 'N/A'.",
+      "kind": "number",
+      "value": null,
+      "ground_truth": [
+        "N/A",
+        66600000
+      ],
+      "comment": "p.37 mentions 'Property expenditure and acquisitions' which is 66600000 GBP. This is not exactly Capital Expeditures but closest to it metric that is mentioned in the report. It reflects the company's investments in land and property, which are the core capital assets of their business. But it is possible that 'Property expenditure and acquisitions' might include some items that are technically not pure Capex under a strict accounting definition. For example, it could potentially include some capitalized interest or certain types of development-related costs that are borderline between Capex and operational expenses.",
+      "references": [
+        {
+          "pdf_sha1": "placeholder",
+          "page_index": 36
+        }
+      ]
+    },
+    {
+      "question_text": "What was the Capital expenditures (in USD) for Charles & Colvard, Ltd. according to the annual report (within the last period or at the end of the last period)? If data is not available, return 'N/A'.",
+      "kind": "number",
+      "value": null,
+      "ground_truth": 1496471,
+      "comment": "Directly stated on p.63, p.71",
+      "references": [
+        {
+          "pdf_sha1": "d3a834539b046a49708161a6c0d35aad29dd15ec",
+          "page_index": 62
+        },
+        {
+          "pdf_sha1": "d3a834539b046a49708161a6c0d35aad29dd15ec",
+          "page_index": 70
+        }
+      ]
+    },
+    {
+      "question_text": "What are the names of new products launched by Zymeworks Inc. as mentioned in the annual report?",
+      "kind": "names",
+      "value": null,
+      "ground_truth": "N/A",
+      "comment": "Directly stated on p.36: 'We currently have no products approved for sale or marketing in any country'; p.8, p.9: Introduces 'zanidatamab' as 'Our lead product candidate' and 'zanidatamab zovodotin' as 'Our second product candidate', both in clinical development.; p.25: 'Any product candidates that we successfully develop and commercialize will compete with existing therapies and new therapies that may become available in the future'; p.13: States 'Zanidatamab zovodotin... is currently being evaluated in a Phase 1 clinical trial.';The report consistently refers to 'product candidates' that are currently in preclinical or clinical development; Because of that a lot more pages counts as relevant.; These products cannot be counted as 'new launched products', because both of these products is under onging development which started around 2014 for zanidatamab and 2016 for zanidatamab zovodotin.; Info confirmed with web search, link: https://ir.zymeworks.com/news-releases/news-release-details/zymeworks-reports-fourth-quarter-and-full-year-2022-financial",
+      "references": [
+        {
+          "pdf_sha1": "69b472e4c05986db72ff8e547bb220e2d222b7ef",
+          "page_index": 7
+        },
+        {
+          "pdf_sha1": "69b472e4c05986db72ff8e547bb220e2d222b7ef",
+          "page_index": 8
+        },
+        {
+          "pdf_sha1": "69b472e4c05986db72ff8e547bb220e2d222b7ef",
+          "page_index": 12
+        },
+        {
+          "pdf_sha1": "69b472e4c05986db72ff8e547bb220e2d222b7ef",
+          "page_index": 24
+        },
+        {
+          "pdf_sha1": "69b472e4c05986db72ff8e547bb220e2d222b7ef",
+          "page_index": 35
+        },
+        {
+          "pdf_sha1": "69b472e4c05986db72ff8e547bb220e2d222b7ef",
+          "page_index": 243
+        }
+      ]
+    },
+    {
+      "question_text": "For Lipocine Inc., what was the value of Number of diagnostic centers at year-end at the end of the period listed in annual report? If data is not available, return 'N/A'.",
+      "kind": "number",
+      "value": null,
+      "ground_truth": "N/A",
+      "comment": "The annual report describes Lipocine Inc. as a biopharmaceutical company focused on drug development and because of that alot of pages counts as relevant; p.5-17: Lipocine Inc. is a 'biopharmaceutical company focused on leveraging our proprietary Lip'ral platform to develop differentiated products through oral delivery of previously difficult to deliver molecules, focused on treating Central Nervous System ('CNS') disorders' and details its drug development pipeline; p.25-54, 55-64 repeatedly show focus on 'product candidates', 'clinical trials', and 'regulatory approvals' (p. 25-54, 55-64), all related to pharmaceutical development. The concept of 'Number of diagnostic centers at year-end' is not relevant to Lipocine's business; Confirmed with web search, link: https://www.prnewswire.com/news-releases/lipocine-announces-financial-results-for-the-third-quarter-ended-september-30-2022-301671125.html",
+      "references": [
+        {
+          "pdf_sha1": "c51f3c5aff7bea6fbc0bb7537838fa2f44f35c23",
+          "page_index": 4
+        },
+        {
+          "pdf_sha1": "c51f3c5aff7bea6fbc0bb7537838fa2f44f35c23",
+          "page_index": 16
+        },
+        {
+          "pdf_sha1": "c51f3c5aff7bea6fbc0bb7537838fa2f44f35c23",
+          "page_index": 24
+        },
+        {
+          "pdf_sha1": "c51f3c5aff7bea6fbc0bb7537838fa2f44f35c23",
+          "page_index": 53
+        },
+        {
+          "pdf_sha1": "c51f3c5aff7bea6fbc0bb7537838fa2f44f35c23",
+          "page_index": 54
+        },
+        {
+          "pdf_sha1": "c51f3c5aff7bea6fbc0bb7537838fa2f44f35c23",
+          "page_index": 63
+        }
+      ]
+    },
+    {
+      "question_text": "According to the annual report, what is the Total revenue (in USD) for Winnebago Industries, Inc.  (within the last period or at the end of the last period)? If data is not available, return 'N/A'.",
+      "kind": "number",
+      "value": null,
+      "ground_truth": 4957730000,
+      "comment": "Directly stated on p.22, 33, 44, 45; Confirmed with web search, link: https://winnebago.gcs-web.com/news-releases/news-release-details/winnebago-industries-reports-strong-fourth-quarter-and-full-year",
+      "references": [
+        {
+          "pdf_sha1": "7820b6e9487202b30f2883a6df91ae76f9461f2f",
+          "page_index": 21
+        },
+        {
+          "pdf_sha1": "7820b6e9487202b30f2883a6df91ae76f9461f2f",
+          "page_index": 32
+        },
+        {
+          "pdf_sha1": "7820b6e9487202b30f2883a6df91ae76f9461f2f",
+          "page_index": 43
+        },
+        {
+          "pdf_sha1": "7820b6e9487202b30f2883a6df91ae76f9461f2f",
+          "page_index": 44
+        }
+      ]
+    },
+    {
+      "question_text": "For Lipocine Inc., what was the value of Value of medical equipment (balance sheet) at the end of the period listed in annual report? If data is not available, return 'N/A'.",
+      "kind": "number",
+      "value": null,
+      "ground_truth": [
+        "N/A",
+        131589,
+        1180052
+      ],
+      "comment": "Answer is N/A as 'Value of medical equipment' is not explicitly stated. However, there are metrics that *might* be considered as related to the question, but are not direct answers. Closest metrics are: $131,589 (p.68): 'Property and equipment, net of accumulated depreciation', net book value potentially including medical equipment; and $1,180,052 (p.68): 'Lab and office equipment', original cost of lab and office equipment, but may not be solely medical equipment. $1,180,052 is the original cost of lab and office equipment. 'Less accumulated depreciation - ($1,153,530)' is the total accumulated depreciation recorded against property and equipment (p.68).; In summary, while $131,589 or $1,180,052 might be considered, it is a stretch to interpret them as valid answers.; Web search also didn't yield direct information about the value of medical equipment.",
+      "references": [
+        {
+          "pdf_sha1": "c51f3c5aff7bea6fbc0bb7537838fa2f44f35c23",
+          "page_index": 67
+        }
+      ]
+    },
+    {
+      "question_text": "According to the annual report, what is the Operating margin (%) for Audalia Resources Limited  (within the last period or at the end of the last period)? If data is not available, return 'N/A'.",
+      "kind": "number",
+      "value": null,
+      "ground_truth": "N/A",
+      "comment": "Answer is N/A as 'Operating margin' is not explicitly stated; p.14  mentions that company is primarily an exploration and evaluation company. This means their main activity is finding and assessing mineral resources, not yet extracting and selling them.; p.28 contains The Statement of Profit or Loss, that shows only a tiny amount of interest income ($122). There's no revenue from the sale of any minerals. According to same table< the Company incurred a loss of $836,378 after income tax for the financial year. Operating margin is calculated as (Operating Income / Revenue) * 100, but without revenue from core operations (mineral sales), the calculation isn't applicable; Web search didn't yield any information about Operating margin.",
+      "references": [
+        {
+          "pdf_sha1": "601aba58deffc81230c837404aa883de0d1dde1c",
+          "page_index": 13
+        },
+        {
+          "pdf_sha1": "601aba58deffc81230c837404aa883de0d1dde1c",
+          "page_index": 27
+        }
+      ]
+    },
+    {
+      "question_text": "According to the annual report, what is the Total revenue (in USD) for Lipocine Inc.  (within the last period or at the end of the last period)? If data is not available, return 'N/A'.",
+      "kind": "number",
+      "value": null,
+      "ground_truth": 500000,
+      "comment": "Directly stated on p.60,65,71,75,84. The only source of revenue was non-refundable cash fee received from Antares.; Confirmed with web search, link: https://ir.lipocine.com/2024-03-07-Lipocine-Announces-Financial-Results-for-the-Full-Year-Ended-December-31,-2023",
+      "references": [
+        {
+          "pdf_sha1": "c51f3c5aff7bea6fbc0bb7537838fa2f44f35c23",
+          "page_index": 59
+        },
+        {
+          "pdf_sha1": "c51f3c5aff7bea6fbc0bb7537838fa2f44f35c23",
+          "page_index": 64
+        },
+        {
+          "pdf_sha1": "c51f3c5aff7bea6fbc0bb7537838fa2f44f35c23",
+          "page_index": 70
+        },
+        {
+          "pdf_sha1": "c51f3c5aff7bea6fbc0bb7537838fa2f44f35c23",
+          "page_index": 74
+        },
+        {
+          "pdf_sha1": "c51f3c5aff7bea6fbc0bb7537838fa2f44f35c23",
+          "page_index": 83
+        }
+      ]
+    },
+    {
+      "question_text": "Did Charles & Colvard, Ltd. mention any ongoing litigation or regulatory inquiries?",
+      "kind": "boolean",
+      "value": null,
+      "ground_truth": false,
+      "comment": "In Item 3. Legal Proceedings directly stated `There are no material pending legal proceedings to which we are a party or to which any of our property is subject.` (p.35). There are also some mentions on government regulations (p.22, p.31), but it discusses compliance with FTC guidelines rather than ongoing inquiries.",
+      "references": [
+        {
+          "pdf_sha1": "d3a834539b046a49708161a6c0d35aad29dd15ec",
+          "page_index": 21
+        },
+        {
+          "pdf_sha1": "d3a834539b046a49708161a6c0d35aad29dd15ec",
+          "page_index": 30
+        },
+        {
+          "pdf_sha1": "d3a834539b046a49708161a6c0d35aad29dd15ec",
+          "page_index": 34
+        }
+      ]
+    },
+    {
+      "question_text": "Which leadership **positions** changed at Enerflex Ltd. in the reporting period? If data is not available, return 'N/A'.",
+      "kind": "names",
+      "value": null,
+      "ground_truth": [
+        "N/A",
+        [
+          "President",
+          "Board Member"
+        ]
+      ],
+      "comment": "p.5 states 'Through the acquisition, we also welcomed Mr. Roger George, President, Water Solutions, to the EMT and Mr. James Gouin to the Board. More recently, Ms. Laura Folse joined the Board', but this is a new appointment (due to acquisition of Exterran), rather than a change in position. But opposite argument is when a new board member is appointed (or elected), it changes the composition of the leadership group, so appointment also counted as a change in position.",
+      "references": [
+        {
+          "pdf_sha1": "612279ce81b538da24834af47131cc73e8c01a80",
+          "page_index": 4
+        }
+      ]
+    },
+    {
+      "question_text": "Did HV Bancorp, Inc. mention any mergers or acquisitions in the annual report?",
+      "kind": "boolean",
+      "value": null,
+      "ground_truth": true,
+      "comment": "p.5 contains dedicated section titled 'Proposed Merger with Citizens Financial Services, Inc.' which details the merger agreement with Citizens Financial Services, Inc. and First Citizens Community Bank; p.36 starts the 'Management's Discussion and Analysis of Financial Condition and Results of Operations' section which includes an 'Overview' mentioning the 'Merger with Citizens Financial'; p.39: Under 'Comparison of Statements of Income for the Year Ended December 31, 2022 and 2021', the report mentions 'Merger with Citizens Financial' again within the 'General' subsection; p.40: The 'Management's Discussion and Analysis of Financial Condition and Results of Operations' section includes a 'Merger with Citizens Financial' subsection. The report mentions the merger with Citizens Financial Services, Inc. and First Citizens Community Bank in multiple places.",
+      "references": [
+        {
+          "pdf_sha1": "69a9dcb0bb6a46e2ff9f969d035e1774a2d49ef1",
+          "page_index": 4
+        },
+        {
+          "pdf_sha1": "69a9dcb0bb6a46e2ff9f969d035e1774a2d49ef1",
+          "page_index": 35
+        },
+        {
+          "pdf_sha1": "69a9dcb0bb6a46e2ff9f969d035e1774a2d49ef1",
+          "page_index": 38
+        },
+        {
+          "pdf_sha1": "69a9dcb0bb6a46e2ff9f969d035e1774a2d49ef1",
+          "page_index": 39
+        }
+      ]
+    },
+    {
+      "question_text": "For Alien Metals Limited, what was the value of End-of-year total headcount at the end of the period listed in annual report? If data is not available, return 'N/A'.",
+      "kind": "number",
+      "value": null,
+      "ground_truth": "N/A",
+      "comment": "The annual report does not provide a specific figure for the headcount at the end of the year; Closest relevant info: p.18 mentions: 'At the Company's present stage of development, it has less than 10 employees...'. This statement is a qualitative statement about the company's size, not a quantitative one; p.52 mentions: 'The average monthly number of employees during the year was 6'; Web search didn't yield any information about headcount.",
+      "references": [
+        {
+          "pdf_sha1": "8dd1306c26c63913495fe81dde5180033b39fc44",
+          "page_index": 17
+        },
+        {
+          "pdf_sha1": "8dd1306c26c63913495fe81dde5180033b39fc44",
+          "page_index": 51
+        }
+      ]
+    },
+    {
+      "question_text": "For Renold plc, what was the value of Warehouse capacity (cubic ft.) at the end of the period listed in annual report? If data is not available, return 'N/A'.",
+      "kind": "number",
+      "value": null,
+      "ground_truth": "N/A",
+      "comment": "The annual report does not provide a specific amount of warehouse capacity. The report does not even mention any keywords like 'feet', 'ft', or 'meters' at all; a web search did not yield any information about warehouse capacity.",
+      "references": []
+    },
+    {
+      "question_text": "According to the annual report, what is the Operating margin (%) for Lipocine Inc.  (within the last period or at the end of the last period)? If data is not available, return 'N/A'.",
+      "kind": "number",
+      "value": null,
+      "ground_truth": [
+        "N/A",
+        -2424
+      ],
+      "comment": "Not directly stated in the text, though can be calculated from Operating income/Total revenue. Total revenue is directly stated on p.60,65,71,75,84 Operating income is directly stated on p.71; -12119375/500000 = -2424; Web search didn't yield any information about Operating margin.",
+      "references": [
+        {
+          "pdf_sha1": "c51f3c5aff7bea6fbc0bb7537838fa2f44f35c23",
+          "page_index": 59
+        },
+        {
+          "pdf_sha1": "c51f3c5aff7bea6fbc0bb7537838fa2f44f35c23",
+          "page_index": 64
+        },
+        {
+          "pdf_sha1": "c51f3c5aff7bea6fbc0bb7537838fa2f44f35c23",
+          "page_index": 70
+        },
+        {
+          "pdf_sha1": "c51f3c5aff7bea6fbc0bb7537838fa2f44f35c23",
+          "page_index": 74
+        },
+        {
+          "pdf_sha1": "c51f3c5aff7bea6fbc0bb7537838fa2f44f35c23",
+          "page_index": 83
+        }
+      ]
+    },
+    {
+      "question_text": "According to the annual report, what is the Total revenue (in EUR) for Cofinimmo  (within the last period or at the end of the last period)? If data is not available, return 'N/A'.",
+      "kind": "number",
+      "value": null,
+      "ground_truth": "N/A",
+      "comment": "The closest metric to total revenue mentioned in the report is Net rental income, which is mentioned on p.110, 190, 234, 254, 260. The value of total income is 322518000 EUR. Total revenue is not explicitly mentioned in the report. Web research revealed total revenue of 365050000 EUR for 2022. This number was not found in the report. Link: https://www.reuters.com/markets/companies/COFB.BR/financials/income-annual",
+      "references": [
+        {
+          "pdf_sha1": "9cc771c2171bacc138cda4e7d68b8b427a514d81",
+          "page_index": 109
+        },
+        {
+          "pdf_sha1": "9cc771c2171bacc138cda4e7d68b8b427a514d81",
+          "page_index": 189
+        },
+        {
+          "pdf_sha1": "9cc771c2171bacc138cda4e7d68b8b427a514d81",
+          "page_index": 233
+        },
+        {
+          "pdf_sha1": "9cc771c2171bacc138cda4e7d68b8b427a514d81",
+          "page_index": 253
+        },
+        {
+          "pdf_sha1": "9cc771c2171bacc138cda4e7d68b8b427a514d81",
+          "page_index": 259
+        }
+      ]
+    },
+    {
+      "question_text": "Did Canadian Tire Corporation announce a share buyback plan in the annual report?",
+      "kind": "boolean",
+      "value": null,
+      "ground_truth": true,
+      "comment": "p.6 directly states: 'Moreover, we successfully delivered our stated goal of more than $300 million in operating efficiencies and renewed our share buyback program with the intention to repurchase between $500 million and $700 million by the end of 2023'; p.22: 'Completed the previously announced $400 million share repurchase commitment and announced a new share repurchase program to purchase between $500 to $700 million Class A Non-Voting Shares by the end of 2023'; Similar states repeated on p.21,23,52",
+      "references": [
+        {
+          "pdf_sha1": "7c55d7900a241e732c145687598d43c915a678f9",
+          "page_index": 5
+        },
+        {
+          "pdf_sha1": "7c55d7900a241e732c145687598d43c915a678f9",
+          "page_index": 20
+        },
+        {
+          "pdf_sha1": "7c55d7900a241e732c145687598d43c915a678f9",
+          "page_index": 21
+        },
+        {
+          "pdf_sha1": "7c55d7900a241e732c145687598d43c915a678f9",
+          "page_index": 22
+        },
+        {
+          "pdf_sha1": "7c55d7900a241e732c145687598d43c915a678f9",
+          "page_index": 51
+        }
+      ]
+    },
+    {
+      "question_text": "Which leadership **positions** changed at Canadian Tire Corporation in the reporting period? If data is not available, return 'N/A'.",
+      "kind": "names",
+      "value": null,
+      "ground_truth": [
+        [
+          "Chairman of the Board"
+        ],
+        [
+          "Chairman of the Board",
+          "Board Member"
+        ]
+      ],
+      "comment": "p.4,5: 'It is a privilege to write to you for the first time as Chairman of Canadian Tire Corporation's (CTC) Board of Directors.<...>Sincerely, J. Michael Owens'; p.7: 'I also want to thank our Chairman of the Board, Mike Owens, and our Board of Directors for their unwavering support and guidance. And thank you to Martha Billes for her vision, business acumen and determination, and Owen Billes for continuing the Billes family legacy of striving always to make things better.'; p.5: 'To that end, during the past year, we remained focused on Board renewal, including formalizing a skills matrix and implementing a purposeful planning process to accelerate the diversity of thought around our table. Since our 2022 Annual Meeting of Shareholders, we appointed Christine Rupp to our Board and are pleased to propose Cathryn Cranston and Lyne Castonguay for election at this year's meeting.'; About Board Member, it is a new appointment rather than a change in position. But opposite argument is when a new board member is appointed (or elected), it changes the composition of the leadership group, so appointment also counted as a change in position.",
+      "references": [
+        {
+          "pdf_sha1": "7c55d7900a241e732c145687598d43c915a678f9",
+          "page_index": 3
+        },
+        {
+          "pdf_sha1": "7c55d7900a241e732c145687598d43c915a678f9",
+          "page_index": 4
+        },
+        {
+          "pdf_sha1": "7c55d7900a241e732c145687598d43c915a678f9",
+          "page_index": 6
+        }
+      ]
+    },
+    {
+      "question_text": "Did LVMH mention any mergers or acquisitions in the annual report?",
+      "kind": "boolean",
+      "value": null,
+      "ground_truth": true,
+      "comment": "Company mentioned several mergers and acquisitions. p.4: 'The LVMH Group was formed in 1987, following the merger between Louis Vuitton and Moët Hennessy.'; p.14: 'Recent acquisitions have also been a success, a shining example of which is Tiffany & Co.'; p.16: 'It approved the planned merger by absorption of LV Group SA, wholly owned by LVMH SE.'; p.17: 'Nicolas Bazire Development & Acquisitions' - indicating Acquisitions as a key area; p.56: 'Lastly, the acquisition of Joseph Phelps Vineyards, one of the most acclaimed wine estates in Napa Valley, California, strengthened and rounded out its portfolio of exceptional wines.'; p.76: 'These investments, together with the acquisition of a majority stake in knitwear producer Maglificio Matisse, are testament to Fendi's commitment to Italian expert craftsmanship.'; p.114: '2021 saw the arrival of the prestigious American jewelry house Tiffany & Co., which has substantially bolstered the business group's standing in a very dynamic, highly promising market segment.'",
+      "references": [
+        {
+          "pdf_sha1": "dda7722dd2e90c9942ed383957b527873cc74174",
+          "page_index": 3
+        },
+        {
+          "pdf_sha1": "dda7722dd2e90c9942ed383957b527873cc74174",
+          "page_index": 13
+        },
+        {
+          "pdf_sha1": "dda7722dd2e90c9942ed383957b527873cc74174",
+          "page_index": 15
+        },
+        {
+          "pdf_sha1": "dda7722dd2e90c9942ed383957b527873cc74174",
+          "page_index": 16
+        },
+        {
+          "pdf_sha1": "dda7722dd2e90c9942ed383957b527873cc74174",
+          "page_index": 55
+        },
+        {
+          "pdf_sha1": "dda7722dd2e90c9942ed383957b527873cc74174",
+          "page_index": 75
+        },
+        {
+          "pdf_sha1": "dda7722dd2e90c9942ed383957b527873cc74174",
+          "page_index": 113
+        }
+      ]
+    },
+    {
+      "question_text": "For Winnebago Industries, Inc., what was the value of Number of hybrid models available at the end of the period listed in annual report? If data is not available, return 'N/A'.",
+      "kind": "number",
+      "value": null,
+      "ground_truth": "N/A",
+      "comment": "The annual report describes Winnebago Industries' business, products, segments, and various financial and operational aspects. It details the types of RVs (towables and motorhomes) and marine products (boats) they manufacture, along with their different brands and models. The report focuses on traditional RV and marine classifications and product offerings, without any reference to hybrid vehicles. Report does not mention 'hybrid' or 'electric' keywords anywhere.; Web search didn't yield any information about hybrid models.",
+      "references": []
+    },
+    {
+      "question_text": "For Johns Lyng Group Limited, what was the value of Total expensed R&D expenditure at the end of the period listed in annual report? If data is not available, return 'N/A'.",
+      "kind": "number",
+      "value": null,
+      "ground_truth": "N/A",
+      "comment": "R&D expenditure is not explicitly mentioned in the provided annual report text. Review of Consolidated Statement of Profit or Loss (p.73) shows no line item for 'Research and Development expenses'. Expense section on p.73 lists various operational expenses but omits R&D.; Web search didn't yield any information about R&D expenditure.",
+      "references": [
+        {
+          "pdf_sha1": "f393170837ab7636d83fdc105279dfc61ebeb017",
+          "page_index": 72
+        }
+      ]
+    },
+    {
+      "question_text": "Did Cofinimmo announce any changes to its dividend policy in the annual report?",
+      "kind": "boolean",
+      "value": null,
+      "ground_truth": false,
+      "comment": "The context mentions the board of directors proposing a stable dividend of 6.20 EUR per share for the 2023 financial year, which is the same as for the 2022 financial year. The context repeatedly notes the stability of the dividend, indicating no changes in the dividend policy. Mentioned on pages 20, 24, 26, 112, 117, 184 and many more. Web search also didn't yield any information about changes in the dividend policy.",
+      "references": [
+        {
+          "pdf_sha1": "9cc771c2171bacc138cda4e7d68b8b427a514d81",
+          "page_index": 19
+        },
+        {
+          "pdf_sha1": "9cc771c2171bacc138cda4e7d68b8b427a514d81",
+          "page_index": 23
+        },
+        {
+          "pdf_sha1": "9cc771c2171bacc138cda4e7d68b8b427a514d81",
+          "page_index": 25
+        },
+        {
+          "pdf_sha1": "9cc771c2171bacc138cda4e7d68b8b427a514d81",
+          "page_index": 111
+        },
+        {
+          "pdf_sha1": "9cc771c2171bacc138cda4e7d68b8b427a514d81",
+          "page_index": 116
+        },
+        {
+          "pdf_sha1": "9cc771c2171bacc138cda4e7d68b8b427a514d81",
+          "page_index": 183
+        }
+      ]
+    },
+    {
+      "question_text": "What was the value of Distribution network length of Maxeon Solar Technologies, Ltd. at the end of the period listed in annual report? If data is not available, return 'N/A'.",
+      "kind": "number",
+      "value": null,
+      "ground_truth": "N/A",
+      "comment": "The annual report does not provide a specific 'value of Distribution network length' as requested. While the report extensively discusses Maxeon's distribution network, it quantifies its reach through partner numbers and regional presence rather than a single 'length' metric. p.52: 'Established differentiated sales, marketing, and distribution channels in each of our key markets... As examples, we have over 750 sales and installation partners in the Asia Pacific region, over 1,000 in the Europe, Middle East and Africa region, and over 50 in Latin America.' - This page confirms the existence of a strong distribution network and provides partner numbers in key regions, but lacks a 'network length' value. p.52: 'In North America, we have supply contracts with SunPower through 2025 for our products to be used in its residential business.' - This page further details regional reach, mentioning North America but still not providing a 'network length' value. p.53: 'Leveraging our established distributed generation channels to drive continued growth... The expansion of this network is a vital element for future growth...' -  This page highlights the importance of network expansion without mentioning a 'network length' metric. These pages, while detailing the *extent* and *importance* of the distribution network, do *not* contain the specific metric of 'value of Distribution network length', suggesting this metric is not disclosed in the annual report.; Search with keywords 'length', 'km', 'kilometers', 'meters', 'm.', 'feet', 'ft' didn't yield any information about Distribution network length.; Web search didn't yield any information about Distribution network length.",
+      "references": [
+        {
+          "pdf_sha1": "a34c22665bada80d76b98b0e794096aefc06758a",
+          "page_index": 51
+        },
+        {
+          "pdf_sha1": "a34c22665bada80d76b98b0e794096aefc06758a",
+          "page_index": 52
+        }
+      ]
+    },
+    {
+      "question_text": "What was the value of Healthcare plan memberships (if applicable) of Nevro Corp. at the end of the period listed in annual report? If data is not available, return 'N/A'.",
+      "kind": "number",
+      "value": null,
+      "ground_truth": "N/A",
+      "comment": "This question is not applicable to Nevro Corp. because they are a medical device company, not a healthcare plan provider; p.3,80: 'We are a global medical device company focused on delivering comprehensive, life-changing solutions that continue to set the standard for enduring patient outcomes in chronic pain treatment.'; p.17: 'In the United States, the primary purchasers of Senza are hospitals, outpatient surgery centers and physician offices.' - This indicates Nevro sells to healthcare providers, not directly to individuals for healthcare plans; p.17: 'These purchasers bill various thirdparty payors, such as Medicare, Medicaid and private health insurance plans for the healthcare services associated with the SCS procedure.' -  Nevro's customers bill healthcare payors (insurance plans), highlighting that Nevro is focused on device reimbursement within existing healthcare plans, not providing the plans themselves. p.9,18,85: 'We are working to expand payor coverage to include the use of our 10 kHz Therapy for the management of PDN and NSBP.' -  Nevro seeks coverage *by* healthcare plans, further emphasizing their role as a device manufacturer dependent on external healthcare financing mechanisms, not a healthcare plan provider itself.",
+      "references": [
+        {
+          "pdf_sha1": "placeholder",
+          "page_index": 2
+        },
+        {
+          "pdf_sha1": "placeholder",
+          "page_index": 8
+        },
+        {
+          "pdf_sha1": "placeholder",
+          "page_index": 16
+        },
+        {
+          "pdf_sha1": "placeholder",
+          "page_index": 17
+        },
+        {
+          "pdf_sha1": "placeholder",
+          "page_index": 79
+        },
+        {
+          "pdf_sha1": "placeholder",
+          "page_index": 84
+        }
+      ]
+    },
+    {
+      "question_text": "What was the largest single spending of Maxeon Solar Technologies, Ltd. on executive compensation in USD?",
+      "kind": "name",
+      "value": null,
+      "ground_truth": [
+        "N/A",
+        "9.8 million",
+        "9.8m",
+        "9800000"
+      ],
+      "comment": "p.94: 'For fiscal year 2022, we paid and accrued compensation of approximately $9.8 million and granted 383,168 RSUs and 258,564 PSUs to our Executive Officers. The amount of compensation paid include benefits-in-kind such as insurance premiums, retirement plans and other benefits as the Company deems suitable.'; There are two potentially valid interpretations leading to different answers. 'N/A' as a valid answer: The question asks for a *single* spending. The provided text does not explicitly identify any single transaction or spending item on executive compensation. The $9.8 million figure is presented as an aggregate of 'paid and accrued compensation,' which implies it is a sum of multiple spending events (salaries, bonuses, etc.) rather than a single, large expenditure; '$9.8 million' as a valid answer: While $9.8 million is an aggregated figure, it represents the *largest identifiable numerical value* associated with executive compensation *spending* in the report. In the context of an annual report , this aggregated value can be reasonably interpreted as the 'largest single spending' on executive compensation *within the scope of the provided information*.",
+      "references": [
+        {
+          "pdf_sha1": "a34c22665bada80d76b98b0e794096aefc06758a",
+          "page_index": 93
+        }
+      ]
+    }
+  ]
+}
