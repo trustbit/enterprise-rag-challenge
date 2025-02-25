@@ -27,18 +27,19 @@ def get_latest_round():
 
 if __name__ == "__main__":
     current = get_latest_round()
-    print("Latest round")
+    print("Latest round:")
     print(datetime.now(), current)
 
     while True:
         print(".", end="", flush=True)
         time.sleep(1)
         new = get_latest_round()
+        time_found = datetime.now()
         if new["round"] > current["round"]:
-            time_found = datetime.now()
-            print("")
-            print(f"{time_found} - Round found: {new}")
-            print(f"-> Deterministic seed (randomness as decimal integer): {int(new['randomness'], 16)}")
+            print("\n\nNew round found:")
+            print(time_found, new)
 
-            current = new
+            seed = str(int(new['randomness'], 16))[:8]  # convert hex to decimal and take first 8 digits
+
+            print(f"-> Deterministic seed: {seed}")
             break
