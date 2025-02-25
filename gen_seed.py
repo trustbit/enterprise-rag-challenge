@@ -1,52 +1,44 @@
 """
-This script will poll the blockchain.info API for the next block and extract
-the last 8 characters of the hash to be used as the deterministic seed.
+The script polls https://api.drand.sh/public/latest every 1 second to check for a new randomness round
+(published every 30 sec).
 
-Nobody can predict the hash of the next block, so this is a good source of
-randomness for our purposes.
+Since Drand’s output is produced via a decentralized, publicly verifiable process, anyone with access to the beacon’s
+parameters can reproduce and verify the randomness based solely on the round’s timestamp and the procedure.
+See: https://drand.love/about/#why-decentralized-randomness-is-important
 
-Everybody can see the hash of all blocks, so this is verifiable by anyone.
+When a new round is detected (i.e. its round number exceeds the previously stored one), the randomness from that
+round becomes your verifiable, deterministic seed.
 
-Script can take some time to run (up to 10 minutes) as it waits for the next block.
+Randomness can be verified based on round number: https://api.drand.sh/public/{round}
 """
 
-from datetime import datetime
 import requests
 import time
+from datetime import datetime
 
 
-def get_latest_block():
-    url = "https://blockchain.info/latestblock"
+def get_latest_round():
+    url = "https://api.drand.sh/public/latest"
     response = requests.get(url)
     response.raise_for_status()
-    block = response.json()
-
-    # convert last 8 characters of the hash to int. This will be our random seed
-    chunk = block["hash"][-8:]
-    seed = int(chunk, 16)
-
-
-
-    return {
-        "time": datetime.utcfromtimestamp(block["time"]),
-        "index": block["block_index"],
-        "hash": block["hash"],
-        "seed": seed,
-        "tail": chunk,
-    }
-
+    data = response.json()
+    return data
 
 
 if __name__ == "__main__":
+    current = get_latest_round()
+    print("Latest round")
+    print(datetime.now(), current)
 
-    cur = get_latest_block()
-
-    print(f"# Current block: {cur['index']} at {cur['time']} (...{cur['tail']}). Waiting for new block...", flush=True, end="")
     while True:
         print(".", end="", flush=True)
-        time.sleep(10)  # Check every 10 seconds
-        new = get_latest_block()
-        if new['index'] > cur['index']:
-            print(f"# New block found! {new['index']} at {new['time']} (...{new['tail']})")
-            print(f"# Deterministic seed: {new['seed']}")
+        time.sleep(1)
+        new = get_latest_round()
+        if new["round"] > current["round"]:
+            time_found = datetime.now()
+            print("")
+            print(f"{time_found} - Round found: {new}")
+            print(f"# Deterministic seed (randomness as decimal integer): {int(new['randomness'], 16)}")
+
+            current = new
             break
