@@ -1,15 +1,13 @@
-from IPython.lib.display import YouTubeVideo
-
 # IBM WatsonX AI Foundational Server
 
 ## Introduction
 For the duration of the enterprise RAG challenge, we have our own server for interacting with IBM Foundation Models!
 
-Important! It is private. Don’t share access keys with the others. If somebody wants to have an access, then send them to Rinat.
+Important! It is private. Don’t share access keys with the others. Contact Rinat Abdullin (TimeToAct Austria) on Teams or discord, if you are interested in building RAG solution for the Enterprise RAG Challenge on top of WatsonX AI.
 
-Server is rate-limited, and total usage is capped, to avoid accidentally overloading and abusing IBM WatsonX-AI. You can use balance endpoint to keep an eye on your usage.
+Server is rate-limited, and total usage is capped, to avoid accidentally overloading upstream servers. You can use balance endpoint to keep an eye on your usage.
 
-It is OK to exceed it. Just talk to Rinat, if you need more.
+It is OK to exceed it, if you have an explanation. Just talk to Rinat, if you need more.
 
 How to use the server? Just send a HTTP JSON request in a common format, passing your own key. We have curl samples below, but if you want to have an client in a library of your choice, just:
 
@@ -19,7 +17,7 @@ How to use the server? Just send a HTTP JSON request in a common format, passing
  
 ### How to get the IBM API key?
 
-Just write @Rinat Abdullin  a short message on Teams along these lines:
+Just write Rinat Abdullin a short message on Teams/discord along these lines:
 
 ```
 Hi, I want to use IBM WatsonX AI models to participate in the Enterprise RAG Challenge! 
