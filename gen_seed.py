@@ -38,7 +38,7 @@ if __name__ == "__main__":
             time_found = datetime.now()
             print("")
             print(f"{time_found} - Round found: {new}")
-            print(f"# Deterministic seed (randomness as decimal integer): {int(new['randomness'], 16)}")
+            print(f"-> Deterministic seed (randomness as decimal integer): {int(new['randomness'], 16)}")
 
             current = new
             break
