@@ -1,0 +1,334 @@
+{
+    "submission_name": "test3",
+    "team_email": "test3@cleaned.com",
+    "time": "2025-02-24, 12:00:00",
+    "signature": "4b6e3576-1d1f-4d69-b632-80f52aec1f68",
+    "tsp_signature": "",
+    "submission_digest": "",
+    "answers": [
+        {
+            "question_text": "According to the annual report, what is the Operating margin (%) for Altech Chemicals Ltd  (within the last period or at the end of the last period)? If data is not available, return 'N/A'.",
+            "kind": "number",
+            "value": "N/A",
+            "references": []
+        },
+        {
+            "question_text": "According to the annual report, what is the Operating margin (%) for Cofinimmo  (within the last period or at the end of the last period)? If data is not available, return 'N/A'.",
+            "kind": "number",
+            "value": 81.0,
+            "references": [
+                {
+                    "pdf_sha1": "9cc771c2171bacc138cda4e7d68b8b427a514d81",
+                    "page_index": 32
+                },
+                {
+                    "pdf_sha1": "9cc771c2171bacc138cda4e7d68b8b427a514d81",
+                    "page_index": 29
+                }
+            ]
+        },
+        {
+            "question_text": "Did Cofinimmo outline any new ESG initiatives in the annual report?",
+            "kind": "boolean",
+            "value": true,
+            "references": [
+                {
+                    "pdf_sha1": "9cc771c2171bacc138cda4e7d68b8b427a514d81",
+                    "page_index": 142
+                },
+                {
+                    "pdf_sha1": "9cc771c2171bacc138cda4e7d68b8b427a514d81",
+                    "page_index": 141
+                }
+            ]
+        },
+        {
+            "question_text": "What is the total number of employees let go by Hagerty, Inc. according to the annual report? If data is not available, return 'N/A'.",
+            "kind": "number",
+            "value": "N/A",
+            "references": []
+        },
+        {
+            "question_text": "Which leadership **positions** changed at Renold plc in the reporting period? If data is not available, return 'N/A'.",
+            "kind": "names",
+            "value": [
+                "Chair",
+                "Non-Executive Chair",
+                "Senior Independent Non-Executive Director",
+                "Chair of the Audit Committee",
+                "Non-Executive Director"
+            ],
+            "references": [
+                {
+                    "pdf_sha1": "da8afefdc3840175c9f26a4dbbed05e250a342cc",
+                    "page_index": 82
+                },
+                {
+                    "pdf_sha1": "da8afefdc3840175c9f26a4dbbed05e250a342cc",
+                    "page_index": 97
+                }
+            ]
+        },
+        {
+            "question_text": "What was the Gross margin (%) for Charles & Colvard, Ltd. according to the annual report (within the last period or at the end of the last period)? If data is not available, return 'N/A'.",
+            "kind": "number",
+            "value": 53.35,
+            "references": [
+                {
+                    "pdf_sha1": "d3a834539b046a49708161a6c0d35aad29dd15ec",
+                    "page_index": 71
+                },
+                {
+                    "pdf_sha1": "d3a834539b046a49708161a6c0d35aad29dd15ec",
+                    "page_index": 70
+                }
+            ]
+        },
+        {
+            "question_text": "What was the Capital expenditures (in GBP) for Harworth Group plc according to the annual report (within the last period or at the end of the last period)? If data is not available, return 'N/A'.",
+            "kind": "number",
+            "value": 53100000.0,
+            "references": [
+                {
+                    "pdf_sha1": "ed55750eae9cb7d893e6484b92496639172717cd",
+                    "page_index": 32
+                },
+                {
+                    "pdf_sha1": "ed55750eae9cb7d893e6484b92496639172717cd",
+                    "page_index": 31
+                }
+            ]
+        },
+        {
+            "question_text": "What was the Capital expenditures (in USD) for Charles & Colvard, Ltd. according to the annual report (within the last period or at the end of the last period)? If data is not available, return 'N/A'.",
+            "kind": "number",
+            "value": 1496471.0,
+            "references": [
+                {
+                    "pdf_sha1": "d3a834539b046a49708161a6c0d35aad29dd15ec",
+                    "page_index": 71
+                },
+                {
+                    "pdf_sha1": "d3a834539b046a49708161a6c0d35aad29dd15ec",
+                    "page_index": 70
+                }
+            ]
+        },
+        {
+            "question_text": "What are the names of new products launched by Zymeworks Inc. as mentioned in the annual report?",
+            "kind": "names",
+            "value": [
+                "Zanidatamab",
+                "Zanidatamab Zovodotin",
+                "ZW191",
+                "ZW171"
+            ],
+            "references": [
+                {
+                    "pdf_sha1": "69b472e4c05986db72ff8e547bb220e2d222b7ef",
+                    "page_index": 89
+                },
+                {
+                    "pdf_sha1": "69b472e4c05986db72ff8e547bb220e2d222b7ef",
+                    "page_index": 16
+                }
+            ]
+        },
+        {
+            "question_text": "For Lipocine Inc., what was the value of Number of diagnostic centers at year-end at the end of the period listed in annual report? If data is not available, return 'N/A'.",
+            "kind": "number",
+            "value": "N/A",
+            "references": []
+        },
+        {
+            "question_text": "According to the annual report, what is the Total revenue (in USD) for Winnebago Industries, Inc.  (within the last period or at the end of the last period)? If data is not available, return 'N/A'.",
+            "kind": "number",
+            "value": 4957730000.0,
+            "references": [
+                {
+                    "pdf_sha1": "7820b6e9487202b30f2883a6df91ae76f9461f2f",
+                    "page_index": 43
+                },
+                {
+                    "pdf_sha1": "7820b6e9487202b30f2883a6df91ae76f9461f2f",
+                    "page_index": 42
+                }
+            ]
+        },
+        {
+            "question_text": "For Lipocine Inc., what was the value of Value of medical equipment (balance sheet) at the end of the period listed in annual report? If data is not available, return 'N/A'.",
+            "kind": "number",
+            "value": "N/A",
+            "references": []
+        },
+        {
+            "question_text": "According to the annual report, what is the Operating margin (%) for Audalia Resources Limited  (within the last period or at the end of the last period)? If data is not available, return 'N/A'.",
+            "kind": "number",
+            "value": "N/A",
+            "references": []
+        },
+        {
+            "question_text": "According to the annual report, what is the Total revenue (in USD) for Lipocine Inc.  (within the last period or at the end of the last period)? If data is not available, return 'N/A'.",
+            "kind": "number",
+            "value": 16140838.0,
+            "references": [
+                {
+                    "pdf_sha1": "c51f3c5aff7bea6fbc0bb7537838fa2f44f35c23",
+                    "page_index": 70
+                },
+                {
+                    "pdf_sha1": "c51f3c5aff7bea6fbc0bb7537838fa2f44f35c23",
+                    "page_index": 69
+                }
+            ]
+        },
+        {
+            "question_text": "Did Charles & Colvard, Ltd. mention any ongoing litigation or regulatory inquiries?",
+            "kind": "boolean",
+            "value": "N/A",
+            "references": []
+        },
+        {
+            "question_text": "Which leadership **positions** changed at Enerflex Ltd. in the reporting period? If data is not available, return 'N/A'.",
+            "kind": "names",
+            "value": "N/A",
+            "references": []
+        },
+        {
+            "question_text": "Did HV Bancorp, Inc. mention any mergers or acquisitions in the annual report?",
+            "kind": "boolean",
+            "value": true,
+            "references": [
+                {
+                    "pdf_sha1": "69a9dcb0bb6a46e2ff9f969d035e1774a2d49ef1",
+                    "page_index": 4
+                },
+                {
+                    "pdf_sha1": "69a9dcb0bb6a46e2ff9f969d035e1774a2d49ef1",
+                    "page_index": 3
+                }
+            ]
+        },
+        {
+            "question_text": "For Alien Metals Limited, what was the value of End-of-year total headcount at the end of the period listed in annual report? If data is not available, return 'N/A'.",
+            "kind": "number",
+            "value": "N/A",
+            "references": []
+        },
+        {
+            "question_text": "For Renold plc, what was the value of Warehouse capacity (cubic ft.) at the end of the period listed in annual report? If data is not available, return 'N/A'.",
+            "kind": "number",
+            "value": "N/A",
+            "references": []
+        },
+        {
+            "question_text": "According to the annual report, what is the Operating margin (%) for Lipocine Inc.  (within the last period or at the end of the last period)? If data is not available, return 'N/A'.",
+            "kind": "number",
+            "value": 2423.875,
+            "references": [
+                {
+                    "pdf_sha1": "c51f3c5aff7bea6fbc0bb7537838fa2f44f35c23",
+                    "page_index": 71
+                }
+            ]
+        },
+        {
+            "question_text": "According to the annual report, what is the Total revenue (in EUR) for Cofinimmo  (within the last period or at the end of the last period)? If data is not available, return 'N/A'.",
+            "kind": "number",
+            "value": "N/A",
+            "references": []
+        },
+        {
+            "question_text": "Did Canadian Tire Corporation announce a share buyback plan in the annual report?",
+            "kind": "boolean",
+            "value": true,
+            "references": [
+                {
+                    "pdf_sha1": "7c55d7900a241e732c145687598d43c915a678f9",
+                    "page_index": 51
+                },
+                {
+                    "pdf_sha1": "7c55d7900a241e732c145687598d43c915a678f9",
+                    "page_index": 21
+                }
+            ]
+        },
+        {
+            "question_text": "Which leadership **positions** changed at Canadian Tire Corporation in the reporting period? If data is not available, return 'N/A'.",
+            "kind": "names",
+            "value": [
+                "Board member"
+            ],
+            "references": [
+                {
+                    "pdf_sha1": "7c55d7900a241e732c145687598d43c915a678f9",
+                    "page_index": 5
+                },
+                {
+                    "pdf_sha1": "7c55d7900a241e732c145687598d43c915a678f9",
+                    "page_index": 4
+                }
+            ]
+        },
+        {
+            "question_text": "Did LVMH mention any mergers or acquisitions in the annual report?",
+            "kind": "boolean",
+            "value": true,
+            "references": [
+                {
+                    "pdf_sha1": "dda7722dd2e90c9942ed383957b527873cc74174",
+                    "page_index": 16
+                },
+                {
+                    "pdf_sha1": "dda7722dd2e90c9942ed383957b527873cc74174",
+                    "page_index": 15
+                }
+            ]
+        },
+        {
+            "question_text": "For Winnebago Industries, Inc., what was the value of Number of hybrid models available at the end of the period listed in annual report? If data is not available, return 'N/A'.",
+            "kind": "number",
+            "value": "N/A",
+            "references": []
+        },
+        {
+            "question_text": "For Johns Lyng Group Limited, what was the value of Total expensed R&D expenditure at the end of the period listed in annual report? If data is not available, return 'N/A'.",
+            "kind": "number",
+            "value": "N/A",
+            "references": []
+        },
+        {
+            "question_text": "Did Cofinimmo announce any changes to its dividend policy in the annual report?",
+            "kind": "boolean",
+            "value": "N/A",
+            "references": []
+        },
+        {
+            "question_text": "What was the value of Distribution network length of Maxeon Solar Technologies, Ltd. at the end of the period listed in annual report? If data is not available, return 'N/A'.",
+            "kind": "number",
+            "value": "N/A",
+            "references": []
+        },
+        {
+            "question_text": "What was the value of Healthcare plan memberships (if applicable) of Nevro Corp. at the end of the period listed in annual report? If data is not available, return 'N/A'.",
+            "kind": "number",
+            "value": "N/A",
+            "references": []
+        },
+        {
+            "question_text": "What was the largest single spending of Maxeon Solar Technologies, Ltd. on executive compensation in USD?",
+            "kind": "name",
+            "value": "47,700,000",
+            "references": [
+                {
+                    "pdf_sha1": "a34c22665bada80d76b98b0e794096aefc06758a",
+                    "page_index": 94
+                },
+                {
+                    "pdf_sha1": "a34c22665bada80d76b98b0e794096aefc06758a",
+                    "page_index": 93
+                }
+            ]
+        }
+    ]
+}

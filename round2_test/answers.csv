@@ -1,0 +1,31 @@
+ground_truth,test2-test2@cleaned.com,test3-test3@cleaned.com,test4-test4@cleaned.com,test5-test5@cleaned.com,test6-test6@cleaned.com
+"['N/A', -1294.7]",N/A,N/A,N/A,1.0,N/A
+81.0,81.0,81.0,81.0,1.0,81.0
+False,True,True,True,True,True
+N/A,N/A,N/A,N/A,1.0,N/A
+"[['Non-Executive Chair', 'Chair of the Audit Committee', 'Senior Independent Non-Executive Director'], ['Non-Executive Chair', 'Chair of the Audit Committee', 'Senior Independent Non-Executive Director', 'Non-Executive Director']]","['Chair', 'Non-Executive Chair', 'Senior Independent Non-Executive Director', 'Chair of the Audit Committee', 'Non-Executive Director']","['Chair', 'Non-Executive Chair', 'Senior Independent Non-Executive Director', 'Chair of the Audit Committee', 'Non-Executive Director']","['Chair of the Board (from Mark Harper to David Landless)', ""Chair of the Remuneration Committee / Senior Independent Non‐Executive Director (Tim Cooper's move)"", 'Chair of the Audit Committee (Andrew Magson appointed)']","['John', 'Andreas']","['Chair of the Board', 'Senior Independent Director', 'Chair of the Audit Committee']"
+"['N/A', 46.98]",N/A,53.35,47.0,1.0,N/A
+"['N/A', 66600000]",53100000.0,53100000.0,66600000.0,1.0,66600000.0
+1496471.0,1496471.0,1496471.0,1496471.0,1.0,1496471.0
+N/A,N/A,"['Zanidatamab', 'Zanidatamab Zovodotin', 'ZW191', 'ZW171']","['zanidatamab', 'zanidatamab zovodotin (formerly known as ZW49)', 'ZW191', 'ZW171']","['John', 'Andreas']","['zanidatamab', 'zanidatamab zovodotin', 'ZW191', 'ZW171', 'ZW251', 'ZW220']"
+N/A,N/A,N/A,N/A,1.0,N/A
+4957730000.0,4957730000.0,4957730000.0,4957730000.0,1.0,4957730000.0
+"['N/A', 131589, 1180052]",N/A,N/A,N/A,1.0,N/A
+N/A,N/A,N/A,N/A,1.0,N/A
+500000.0,16140838.0,16140838.0,500000.0,1.0,500000.0
+False,True,N/A,N/A,True,False
+"['N/A', ['President', 'Board Member']]",N/A,N/A,"['President, Water Solutions (Executive Management Team)', 'Board of Directors']","['John', 'Andreas']","['President', 'Executive Management Team (Water Solutions)', 'Board']"
+True,True,True,True,True,True
+N/A,6.0,N/A,6.0,1.0,N/A
+N/A,N/A,N/A,N/A,1.0,N/A
+"['N/A', -2424]",2423.875,2423.875,-2423.88,1.0,N/A
+N/A,N/A,N/A,322518000.0,1.0,326000000.0
+True,True,True,True,True,True
+"[['Chairman of the Board'], ['Chairman of the Board', 'Board Member']]",N/A,['Board member'],['Board of Directors membership (Christine Rupp appointed; Cathryn Cranston and Lyne Castonguay proposed for election)'],"['John', 'Andreas']",['Board of Directors']
+True,True,True,True,True,True
+N/A,N/A,N/A,N/A,1.0,N/A
+N/A,N/A,N/A,N/A,1.0,N/A
+False,N/A,N/A,N/A,True,False
+N/A,N/A,N/A,N/A,1.0,N/A
+N/A,N/A,N/A,N/A,1.0,N/A
+"['N/A', '9.8 million', '9.8m', '9800000']",N/A,"47,700,000",9800000,John,N/A
