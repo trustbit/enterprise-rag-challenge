@@ -155,8 +155,8 @@ def load_dataset() -> dict[str, ReportEntry]:
 @cli.command()
 @click.option("--count", default=10, help="Number of files to sample")
 @click.option("--seed", default=42, help="Seed for random number generation")
-@click.option("--subset", default="subset.csv", help="Output file")
-def step1(count: int = 10, seed: int = 42, subset: str = "subset.csv"):
+@click.option("--subset", default="subset", help="Output file")
+def step1(count: int = 10, seed: int = 42, subset: str = "subset"):
     rand = DeterministicRNG(seed)
     dataset = load_dataset()
 
@@ -183,7 +183,9 @@ def step1(count: int = 10, seed: int = 42, subset: str = "subset.csv"):
             )
         )
 
-    pd.DataFrame(records).to_csv(subset, index=False)
+
+    pd.DataFrame(records).to_csv(subset + ".json", index=False)
+    json.dump(records, open(subset + ".json", "w"), indent=2)
 
 
 def ask_indicator_compare(rand: DeterministicRNG, df: pd.DataFrame) -> Optional[Question]:
