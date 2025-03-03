@@ -1,0 +1,122 @@
+[
+  {
+    "text": "According to the annual report, what is the Operating margin (%) for Altech Chemicals Ltd  (within the last period or at the end of the last period)? If data is not available, return 'N/A'.",
+    "kind": "number"
+  },
+  {
+    "text": "According to the annual report, what is the Operating margin (%) for Cofinimmo  (within the last period or at the end of the last period)? If data is not available, return 'N/A'.",
+    "kind": "number"
+  },
+  {
+    "text": "Did Cofinimmo outline any new ESG initiatives in the annual report?",
+    "kind": "boolean"
+  },
+  {
+    "text": "What is the total number of employees let go by Hagerty, Inc. according to the annual report? If data is not available, return 'N/A'.",
+    "kind": "number"
+  },
+  {
+    "text": "Which leadership **positions** changed at Renold plc in the reporting period? If data is not available, return 'N/A'.",
+    "kind": "names"
+  },
+  {
+    "text": "What was the Gross margin (%) for Charles & Colvard, Ltd. according to the annual report (within the last period or at the end of the last period)? If data is not available, return 'N/A'.",
+    "kind": "number"
+  },
+  {
+    "text": "What was the Capital expenditures (in GBP) for Harworth Group plc according to the annual report (within the last period or at the end of the last period)? If data is not available, return 'N/A'.",
+    "kind": "number"
+  },
+  {
+    "text": "What was the Capital expenditures (in USD) for Charles & Colvard, Ltd. according to the annual report (within the last period or at the end of the last period)? If data is not available, return 'N/A'.",
+    "kind": "number"
+  },
+  {
+    "text": "What are the names of new products launched by Zymeworks Inc. as mentioned in the annual report?",
+    "kind": "names"
+  },
+  {
+    "text": "For Lipocine Inc., what was the value of Number of diagnostic centers at year-end at the end of the period listed in annual report? If data is not available, return 'N/A'.",
+    "kind": "number"
+  },
+  {
+    "text": "According to the annual report, what is the Total revenue (in USD) for Winnebago Industries, Inc.  (within the last period or at the end of the last period)? If data is not available, return 'N/A'.",
+    "kind": "number"
+  },
+  {
+    "text": "For Lipocine Inc., what was the value of Value of medical equipment (balance sheet) at the end of the period listed in annual report? If data is not available, return 'N/A'.",
+    "kind": "number"
+  },
+  {
+    "text": "According to the annual report, what is the Operating margin (%) for Audalia Resources Limited  (within the last period or at the end of the last period)? If data is not available, return 'N/A'.",
+    "kind": "number"
+  },
+  {
+    "text": "According to the annual report, what is the Total revenue (in USD) for Lipocine Inc.  (within the last period or at the end of the last period)? If data is not available, return 'N/A'.",
+    "kind": "number"
+  },
+  {
+    "text": "Did Charles & Colvard, Ltd. mention any ongoing litigation or regulatory inquiries?",
+    "kind": "boolean"
+  },
+  {
+    "text": "Which leadership **positions** changed at Enerflex Ltd. in the reporting period? If data is not available, return 'N/A'.",
+    "kind": "names"
+  },
+  {
+    "text": "Did HV Bancorp, Inc. mention any mergers or acquisitions in the annual report?",
+    "kind": "boolean"
+  },
+  {
+    "text": "For Alien Metals Limited, what was the value of End-of-year total headcount at the end of the period listed in annual report? If data is not available, return 'N/A'.",
+    "kind": "number"
+  },
+  {
+    "text": "For Renold plc, what was the value of Warehouse capacity (cubic ft.) at the end of the period listed in annual report? If data is not available, return 'N/A'.",
+    "kind": "number"
+  },
+  {
+    "text": "According to the annual report, what is the Operating margin (%) for Lipocine Inc.  (within the last period or at the end of the last period)? If data is not available, return 'N/A'.",
+    "kind": "number"
+  },
+  {
+    "text": "According to the annual report, what is the Total revenue (in EUR) for Cofinimmo  (within the last period or at the end of the last period)? If data is not available, return 'N/A'.",
+    "kind": "number"
+  },
+  {
+    "text": "Did Canadian Tire Corporation announce a share buyback plan in the annual report?",
+    "kind": "boolean"
+  },
+  {
+    "text": "Which leadership **positions** changed at Canadian Tire Corporation in the reporting period? If data is not available, return 'N/A'.",
+    "kind": "names"
+  },
+  {
+    "text": "Did LVMH mention any mergers or acquisitions in the annual report?",
+    "kind": "boolean"
+  },
+  {
+    "text": "For Winnebago Industries, Inc., what was the value of Number of hybrid models available at the end of the period listed in annual report? If data is not available, return 'N/A'.",
+    "kind": "number"
+  },
+  {
+    "text": "For Johns Lyng Group Limited, what was the value of Total expensed R&D expenditure at the end of the period listed in annual report? If data is not available, return 'N/A'.",
+    "kind": "number"
+  },
+  {
+    "text": "Did Cofinimmo announce any changes to its dividend policy in the annual report?",
+    "kind": "boolean"
+  },
+  {
+    "text": "What was the value of Distribution network length of Maxeon Solar Technologies, Ltd. at the end of the period listed in annual report? If data is not available, return 'N/A'.",
+    "kind": "number"
+  },
+  {
+    "text": "What was the value of Healthcare plan memberships (if applicable) of Nevro Corp. at the end of the period listed in annual report? If data is not available, return 'N/A'.",
+    "kind": "number"
+  },
+  {
+    "text": "What was the largest single spending of Maxeon Solar Technologies, Ltd. on executive compensation in USD?",
+    "kind": "name"
+  }
+]
