@@ -1,5 +1,7 @@
 # Enterprise RAG Challenge with Annual Reports
 
+BEFORE CLONING: Be aware that this repo has around 1,4GB (due to large PDFs contained). 
+
 ##  Round 1 - Sept. 2024
 You can find all infos on the first run in the folder [round1](round1). Make sure to check out the [README](round1/README.md) there. 
 
