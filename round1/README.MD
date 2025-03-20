@@ -26,7 +26,7 @@ Seed 2 generation output (UTC time):
 
 ## Answers
 
-Answer submissions are available in [answers](answers) folder.
+Answer submissions are available in [submissions](submissions) folder.
 
 "Correct" answers were derived manually, you can find them here: [answers.json](answers.json). I provided comments to explain each answer. 
 

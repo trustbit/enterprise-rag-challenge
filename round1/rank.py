@@ -132,7 +132,7 @@ import importlib.util
 @click.argument("folder", type=click.Path(exists=True))
 def run(folder: str):
 
-    expected_file = Path(folder) / "answers.json"
+    expected_file = Path(folder) / "submissions.json"
 
     with expected_file.open("r") as file:
         expected = json.load(file)
@@ -154,7 +154,7 @@ def run(folder: str):
 
 
 
-    files = Path(folder).glob("answers/*.json")
+    files = Path(folder).glob("submissions/*.json")
 
 
     answers = [{'real':x['answer']} for x in expected]
@@ -198,7 +198,7 @@ def run(folder: str):
 
 
     df = pd.DataFrame(answers)
-    df.to_csv(Path(folder) / "answers.csv", index=False)
+    df.to_csv(Path(folder) / "submissions.csv", index=False)
 
 
     df_rec = pd.DataFrame(records)
