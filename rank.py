@@ -437,10 +437,12 @@ def load_canonic_answers():
 
         # save submission to "ranked" folder
         ranked_dir = DIR / "ranked"
-        ranked_dir.mkdir(exist_ok=True)
-        ranked_dir.joinpath(submission.file_name).write_text(
-            submission.model_dump_json(indent=2), encoding="utf-8"
-        )
+
+        # OPTIONAL: save ranked submissions
+        # ranked_dir.mkdir(exist_ok=True)
+        # ranked_dir.joinpath(submission.file_name).write_text(
+        #     submission.model_dump_json(indent=2), encoding="utf-8"
+        # )
 
     # sort by score descending
     rankings.sort(key=lambda x: x.score, reverse=True)
