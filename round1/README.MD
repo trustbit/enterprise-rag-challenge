@@ -5,7 +5,7 @@
 
 Round one was a test run, to polish out the competition.
 
-- PDF selection started on August 15th at 10:00 CET. See [pdf](pdf) 
+- PDF selection started on August 15th at 10:00 CET. See [pdfs](pdfs) 
 - Question generation started at 12:00 CET. See  [questions.json](questions.json)
 
 Seed generation outputs are below (see `round01` tag, if you want to reproduce)

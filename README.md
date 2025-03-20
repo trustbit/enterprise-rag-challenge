@@ -14,7 +14,7 @@ by [Trustbit](https://www.trustbit.tech) (now a part of TIMETOACT GROUP as [Time
 
 Copyright 2024 TimeToAct Austria, licensed under Apache 2.0 license
 
-> If you came here for the test run, just go to the [samples](samples) folder. It has PDFs and list of questions to be filled (in JSON format).
+> If you came here for the test run, just go to the [samples](round1/samples) folder. It has PDFs and list of questions to be filled (in JSON format).
 
 
 **This is a friendly competition to test accuracy of different RAG systems in business workloads.**
@@ -83,7 +83,7 @@ As soon as we have a list of PDF files, TimeToAct will package them into a zip a
 
 For verification, we did make a test run with 20 files and 40 questions.
 
-You can find a list of files and questions in [samples](samples) folder. Below is the explanation of the process.
+You can find a list of files and questions in [samples](round1/samples) folder. Below is the explanation of the process.
 
 First, we waited for the next random seed:
 
@@ -120,7 +120,7 @@ python3 main.py step1 --seed=1836201229 --count=20            ~/tat/enterprise-r
 # faf8d7d79152d61279eda1cfb58b8236ce2f82fa EMT
 ```
 
-These files are uploaded to [samples](samples) folder. You can verify their hash using this code:
+These files are uploaded to [samples](round1/samples) folder. You can verify their hash using this code:
 
 ```py
 import hashlib
@@ -148,7 +148,7 @@ Then we generated a list of questions using command:
 python3 main.py step2 --seed=3031428637 --count=40
 ```
 
-It generated questions like the ones below (full list is in [samples/questions.json](samples/questions.json)):
+It generated questions like the ones below (full list is in [samples/questions.json](round1/samples/questions.json)):
 
 1. number: How much did "Accuray Incorporated" spend on risk management in Q2 2022?
 2. name: Who is the CEO in the company "Zegona Communications plc"?
