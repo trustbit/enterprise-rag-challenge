@@ -1,14 +1,14 @@
 {
-  "submission_name": "submission_29",
+  "submission_name": "Olaf Scholz",
   "team_email": "anon_29@anon.com",
-  "time": "2025-02-27, 11:00:00",
+  "time": "2025-02-27, 14:18:19",
   "signature": "",
   "tsp_signature": "",
   "submission_digest": "",
   "answers": [
     {
-      "question_text": null,
-      "kind": null,
+      "question_text": "For Ziff Davis, Inc., what was the value of Cloud storage capacity (TB) at the end of the period listed in annual report? If data is not available, return 'N/A'.'",
+      "kind": "number",
       "value": 2,
       "references": [
         {
@@ -16,18 +16,6 @@
           "page_index": 3
         }
       ]
-    },
-    {
-      "question_text": null,
-      "kind": null,
-      "value": 2.5,
-      "references": []
-    },
-    {
-      "question_text": null,
-      "kind": null,
-      "value": "no",
-      "references": []
     }
   ]
 }

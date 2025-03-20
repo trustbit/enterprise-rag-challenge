@@ -1,7 +1,7 @@
 {
-  "submission_name": "submission_66",
+  "submission_name": "@nikolay_sheyko:dummy_answers_v3_o3_mini90f300cc",
   "team_email": "anon_66@anon.com",
-  "time": "2025-02-27, 11:00:00",
+  "time": "2025-02-28, 14:03:31",
   "signature": "",
   "tsp_signature": "",
   "submission_digest": "",
@@ -20,14 +20,6 @@
         {
           "pdf_sha1": "446545ae548543d8744f8d885ff75face3424ba4",
           "page_index": 6
-        },
-        {
-          "pdf_sha1": "446545ae548543d8744f8d885ff75face3424ba4",
-          "page_index": 88
-        },
-        {
-          "pdf_sha1": "446545ae548543d8744f8d885ff75face3424ba4",
-          "page_index": 149
         }
       ]
     },
@@ -53,6 +45,14 @@
       "references": [
         {
           "pdf_sha1": "92d9de8e4db96e0b95a484afcd1c54c6beb62c03",
+          "page_index": 15
+        },
+        {
+          "pdf_sha1": "92d9de8e4db96e0b95a484afcd1c54c6beb62c03",
+          "page_index": 16
+        },
+        {
+          "pdf_sha1": "92d9de8e4db96e0b95a484afcd1c54c6beb62c03",
           "page_index": 61
         }
       ]
@@ -69,10 +69,6 @@
         {
           "pdf_sha1": "ddd10e4612006205c4b1ba050a11648071e6e429",
           "page_index": 29
-        },
-        {
-          "pdf_sha1": "ddd10e4612006205c4b1ba050a11648071e6e429",
-          "page_index": 60
         }
       ]
     },
@@ -84,10 +80,6 @@
         {
           "pdf_sha1": "682de8e45fd9688f3452bc0e18257132a8f3cff6",
           "page_index": 70
-        },
-        {
-          "pdf_sha1": "682de8e45fd9688f3452bc0e18257132a8f3cff6",
-          "page_index": 91
         }
       ]
     },
@@ -99,10 +91,6 @@
         {
           "pdf_sha1": "c74139ce26a6f803725f5074a8a0f539abb99c09",
           "page_index": 34
-        },
-        {
-          "pdf_sha1": "c74139ce26a6f803725f5074a8a0f539abb99c09",
-          "page_index": 232
         }
       ]
     },
@@ -126,14 +114,6 @@
         {
           "pdf_sha1": "1af8f906e34af6e0acfe4f73e37093bbe34700f3",
           "page_index": 5
-        },
-        {
-          "pdf_sha1": "1af8f906e34af6e0acfe4f73e37093bbe34700f3",
-          "page_index": 8
-        },
-        {
-          "pdf_sha1": "1af8f906e34af6e0acfe4f73e37093bbe34700f3",
-          "page_index": 29
         }
       ]
     },
@@ -150,11 +130,7 @@
       "references": [
         {
           "pdf_sha1": "0a61a353b1ea9fd9b8f63b60239634ca3007d58f",
-          "page_index": 13
-        },
-        {
-          "pdf_sha1": "0a61a353b1ea9fd9b8f63b60239634ca3007d58f",
-          "page_index": 117
+          "page_index": 10
         }
       ]
     },
@@ -183,10 +159,6 @@
         {
           "pdf_sha1": "e30ece688caf7602b734bbbcf39559b4acdb2739",
           "page_index": 14
-        },
-        {
-          "pdf_sha1": "e30ece688caf7602b734bbbcf39559b4acdb2739",
-          "page_index": 29
         }
       ]
     },
@@ -203,19 +175,7 @@
       "references": [
         {
           "pdf_sha1": "5a24fa827d172a7669eca206b2a5f47c2b19b48d",
-          "page_index": 110
-        },
-        {
-          "pdf_sha1": "5a24fa827d172a7669eca206b2a5f47c2b19b48d",
-          "page_index": 111
-        },
-        {
-          "pdf_sha1": "5a24fa827d172a7669eca206b2a5f47c2b19b48d",
-          "page_index": 112
-        },
-        {
-          "pdf_sha1": "5a24fa827d172a7669eca206b2a5f47c2b19b48d",
-          "page_index": 113
+          "page_index": 6
         }
       ]
     },
@@ -226,11 +186,7 @@
       "references": [
         {
           "pdf_sha1": "6d76ccb75bbf1b27ca60b8419c5343ac050cebb0",
-          "page_index": 3
-        },
-        {
-          "pdf_sha1": "6d76ccb75bbf1b27ca60b8419c5343ac050cebb0",
-          "page_index": 74
+          "page_index": 66
         }
       ]
     },
@@ -266,35 +222,11 @@
     {
       "question_text": "Which of the companies had the lowest total assets in EUR at the end of the period listed in annual report: \"Datalogic\", \"Terns Pharmaceuticals, Inc.\", \"Incyte Corporation\", \"INMUNE BIO INC.\", \"Duni Group\"? If data for the company is not available, exclude it from the comparison. If only one company is left, return this company.",
       "kind": "name",
-      "value": "INMUNE BIO INC.",
+      "value": "Datalogic",
       "references": [
         {
           "pdf_sha1": "980742aa08ea64d552c153bcefbd7e8243fb9efd",
-          "page_index": 71
-        },
-        {
-          "pdf_sha1": "980742aa08ea64d552c153bcefbd7e8243fb9efd",
-          "page_index": 110
-        },
-        {
-          "pdf_sha1": "79ffb9b8682aa565172233c070a47d944464644c",
-          "page_index": 136
-        },
-        {
-          "pdf_sha1": "4d3e52b69b4b5366e54ce87cf641b01b1419bdee",
-          "page_index": 83
-        },
-        {
-          "pdf_sha1": "553afbf09b6d83166b17acb02431c6cf38e4defc",
-          "page_index": 47
-        },
-        {
-          "pdf_sha1": "e7a45fed0d7ebfd13a524e7fcc443318bac654e2",
-          "page_index": 70
-        },
-        {
-          "pdf_sha1": "e7a45fed0d7ebfd13a524e7fcc443318bac654e2",
-          "page_index": 85
+          "page_index": 33
         }
       ]
     },
@@ -307,35 +239,11 @@
     {
       "question_text": "Which of the companies had the lowest total revenue in EUR at the end of the period listed in annual report: \"Atreca, Inc.\", \"Poste Italiane\", \"Datalogic\", \"NuCana plc\", \"RWE AG\"? If data for the company is not available, exclude it from the comparison. If only one company is left, return this company.",
       "kind": "name",
-      "value": "NuCana plc",
+      "value": "Datalogic",
       "references": [
-        {
-          "pdf_sha1": "c74139ce26a6f803725f5074a8a0f539abb99c09",
-          "page_index": 194
-        },
-        {
-          "pdf_sha1": "c74139ce26a6f803725f5074a8a0f539abb99c09",
-          "page_index": 195
-        },
         {
           "pdf_sha1": "980742aa08ea64d552c153bcefbd7e8243fb9efd",
           "page_index": 31
-        },
-        {
-          "pdf_sha1": "980742aa08ea64d552c153bcefbd7e8243fb9efd",
-          "page_index": 32
-        },
-        {
-          "pdf_sha1": "980742aa08ea64d552c153bcefbd7e8243fb9efd",
-          "page_index": 39
-        },
-        {
-          "pdf_sha1": "9b7fdb871fc4d4a8babc25448257ae0b81a6442d",
-          "page_index": 102
-        },
-        {
-          "pdf_sha1": "cc0fc5888b99758100a7ff024863fc4337b6b3c5",
-          "page_index": 118
         }
       ]
     },
@@ -360,15 +268,20 @@
     {
       "question_text": "For HCA Healthcare, Inc., what was the value of Outstanding insurance claims (if applicable) at the end of the period listed in annual report? If data is not available, return 'N/A'.",
       "kind": "number",
-      "value": "N/A",
-      "references": []
+      "value": 2043000000.0,
+      "references": [
+        {
+          "pdf_sha1": "a69ebee82a9acd54117407ca3697db0d7bfbfdac",
+          "page_index": 109
+        }
+      ]
     },
     {
       "question_text": "Which leadership positions changed at Datalogic in the reporting period? If data is not available, return 'N/A'. Give me the title of the position.",
       "kind": "names",
       "value": [
         "Director",
-        "Chair of the Board of Statutory Auditors"
+        "Chairman of the Board of Statutory Auditors"
       ],
       "references": [
         {
@@ -420,22 +333,18 @@
         },
         {
           "pdf_sha1": "6529fba868216a923407fb0d4e15a811a8e89ebc",
-          "page_index": 20
-        },
-        {
-          "pdf_sha1": "6529fba868216a923407fb0d4e15a811a8e89ebc",
-          "page_index": 121
+          "page_index": 60
         }
       ]
     },
     {
       "question_text": "What was the largest single spending of archTIS Limited on executive compensation in USD? If data is not available in this currency, return 'N/A'.",
       "kind": "number",
-      "value": 392611.0,
+      "value": 300000.0,
       "references": [
         {
           "pdf_sha1": "c06d5ad4b6408fec26675d30b37a6042c007095a",
-          "page_index": 24
+          "page_index": 25
         }
       ]
     },
@@ -443,7 +352,12 @@
       "question_text": "Did Guaranty Bancshares, Inc. announce any new product launches in the annual report? If there is no mention, return False.",
       "kind": "boolean",
       "value": false,
-      "references": []
+      "references": [
+        {
+          "pdf_sha1": "4e3efdc544140b872a59e124443a64c34f356911",
+          "page_index": 4
+        }
+      ]
     },
     {
       "question_text": "According to the annual report, what is the Cash flow from operations (in GBP) for AA Limited (within the last period or at the end of the last period)? If data is not available, return 'N/A'.",
@@ -492,43 +406,11 @@
     {
       "question_text": "Which of the companies had the lowest total revenue in EUR at the end of the period listed in annual report: \"Atreca, Inc.\", \"Poste Italiane\", \"Datalogic\", \"Duni Group\", \"Incyte Corporation\"? If data for the company is not available, exclude it from the comparison. If only one company is left, return this company.",
       "kind": "name",
-      "value": "Datalogic",
+      "value": "Datalogic had the lowest total revenue in EUR (approximately \u20ac654.6 million at year end) compared to Poste Italiane (around \u20ac11.9 billion) and Duni Group (about \u20ac2.662 billion).",
       "references": [
-        {
-          "pdf_sha1": "c74139ce26a6f803725f5074a8a0f539abb99c09",
-          "page_index": 12
-        },
-        {
-          "pdf_sha1": "c74139ce26a6f803725f5074a8a0f539abb99c09",
-          "page_index": 194
-        },
-        {
-          "pdf_sha1": "c74139ce26a6f803725f5074a8a0f539abb99c09",
-          "page_index": 195
-        },
-        {
-          "pdf_sha1": "980742aa08ea64d552c153bcefbd7e8243fb9efd",
-          "page_index": 31
-        },
         {
           "pdf_sha1": "980742aa08ea64d552c153bcefbd7e8243fb9efd",
           "page_index": 39
-        },
-        {
-          "pdf_sha1": "e7a45fed0d7ebfd13a524e7fcc443318bac654e2",
-          "page_index": 3
-        },
-        {
-          "pdf_sha1": "e7a45fed0d7ebfd13a524e7fcc443318bac654e2",
-          "page_index": 7
-        },
-        {
-          "pdf_sha1": "4d3e52b69b4b5366e54ce87cf641b01b1419bdee",
-          "page_index": 73
-        },
-        {
-          "pdf_sha1": "4d3e52b69b4b5366e54ce87cf641b01b1419bdee",
-          "page_index": 84
         }
       ]
     },
@@ -536,17 +418,14 @@
       "question_text": "Which leadership positions changed at Blue Apron Holdings, Inc. in the reporting period? If data is not available, return 'N/A'. Give me the title of the position.",
       "kind": "names",
       "value": [
-        "Chief Supply Chain Officer",
-        "Chief Operating Officer"
+        "Chief Financial Officer",
+        "Chief Executive Officer",
+        "Chief Operating Officer/Chief Supply Chain Officer"
       ],
       "references": [
         {
           "pdf_sha1": "35839effbc332f23d5f34263aab3dcb2c6976420",
-          "page_index": 136
-        },
-        {
-          "pdf_sha1": "35839effbc332f23d5f34263aab3dcb2c6976420",
-          "page_index": 153
+          "page_index": 26
         }
       ]
     },
@@ -558,10 +437,6 @@
         {
           "pdf_sha1": "78c71282723c2d66216cbba13183d19349d302b8",
           "page_index": 37
-        },
-        {
-          "pdf_sha1": "78c71282723c2d66216cbba13183d19349d302b8",
-          "page_index": 116
         }
       ]
     },
@@ -613,10 +488,6 @@
       "references": [
         {
           "pdf_sha1": "3f36d4f26ada778d89cf5a7344be0b9e9a5223a3",
-          "page_index": 5
-        },
-        {
-          "pdf_sha1": "3f36d4f26ada778d89cf5a7344be0b9e9a5223a3",
           "page_index": 190
         }
       ]
@@ -654,31 +525,11 @@
     {
       "question_text": "Which of the companies had the lowest total assets in EUR at the end of the period listed in annual report: \"Poste Italiane\", \"NuCana plc\", \"Incyte Corporation\", \"INMUNE BIO INC.\", \"Atreca, Inc.\"? If data for the company is not available, exclude it from the comparison. If only one company is left, return this company.",
       "kind": "name",
-      "value": "NuCana plc",
+      "value": "Poste Italiane",
       "references": [
         {
           "pdf_sha1": "c74139ce26a6f803725f5074a8a0f539abb99c09",
-          "page_index": 793
-        },
-        {
-          "pdf_sha1": "9b7fdb871fc4d4a8babc25448257ae0b81a6442d",
-          "page_index": 6
-        },
-        {
-          "pdf_sha1": "9b7fdb871fc4d4a8babc25448257ae0b81a6442d",
-          "page_index": 167
-        },
-        {
-          "pdf_sha1": "4d3e52b69b4b5366e54ce87cf641b01b1419bdee",
-          "page_index": 83
-        },
-        {
-          "pdf_sha1": "553afbf09b6d83166b17acb02431c6cf38e4defc",
-          "page_index": 47
-        },
-        {
-          "pdf_sha1": "5f226fe96206888930e3baaf0bff70d4b0a1db40",
-          "page_index": 81
+          "page_index": 539
         }
       ]
     },
@@ -697,51 +548,15 @@
     {
       "question_text": "Which of the companies had the lowest net income in EUR at the end of the period listed in annual report: \"Atreca, Inc.\", \"INMUNE BIO INC.\", \"Datalogic\", \"NuCana plc\", \"RWE AG\"? If data for the company is not available, exclude it from the comparison. If only one company is left, return this company.",
       "kind": "name",
-      "value": "Atreca, Inc.",
+      "value": "Datalogic had the lowest net income in EUR, with a net profit of approximately \u20ac30.1 million compared to RWE AG\u2019s \u20ac2,717 million. (See report_id_980742aa08ea64d552c153bcefbd7e8243fb9efd, page 39 for Datalogic and report_id_cc0fc5888b99758100a7ff024863fc4337b6b3c5, pages 2/4 for RWE AG.)",
       "references": [
-        {
-          "pdf_sha1": "5f226fe96206888930e3baaf0bff70d4b0a1db40",
-          "page_index": 25
-        },
-        {
-          "pdf_sha1": "5f226fe96206888930e3baaf0bff70d4b0a1db40",
-          "page_index": 82
-        },
-        {
-          "pdf_sha1": "553afbf09b6d83166b17acb02431c6cf38e4defc",
-          "page_index": 41
-        },
-        {
-          "pdf_sha1": "553afbf09b6d83166b17acb02431c6cf38e4defc",
-          "page_index": 44
-        },
-        {
-          "pdf_sha1": "553afbf09b6d83166b17acb02431c6cf38e4defc",
-          "page_index": 48
-        },
-        {
-          "pdf_sha1": "980742aa08ea64d552c153bcefbd7e8243fb9efd",
-          "page_index": 32
-        },
         {
           "pdf_sha1": "980742aa08ea64d552c153bcefbd7e8243fb9efd",
           "page_index": 39
         },
         {
-          "pdf_sha1": "9b7fdb871fc4d4a8babc25448257ae0b81a6442d",
-          "page_index": 5
-        },
-        {
-          "pdf_sha1": "9b7fdb871fc4d4a8babc25448257ae0b81a6442d",
-          "page_index": 165
-        },
-        {
           "pdf_sha1": "cc0fc5888b99758100a7ff024863fc4337b6b3c5",
           "page_index": 2
-        },
-        {
-          "pdf_sha1": "cc0fc5888b99758100a7ff024863fc4337b6b3c5",
-          "page_index": 53
         }
       ]
     },
@@ -766,51 +581,15 @@
     {
       "question_text": "Which of the companies had the lowest net income in EUR at the end of the period listed in annual report: \"Datalogic\", \"NuCana plc\", \"Duni Group\", \"Playtech plc\", \"Atreca, Inc.\"? If data for the company is not available, exclude it from the comparison. If only one company is left, return this company.",
       "kind": "name",
-      "value": "Atreca, Inc.",
+      "value": "Datalogic",
       "references": [
         {
           "pdf_sha1": "980742aa08ea64d552c153bcefbd7e8243fb9efd",
           "page_index": 32
         },
         {
-          "pdf_sha1": "980742aa08ea64d552c153bcefbd7e8243fb9efd",
-          "page_index": 39
-        },
-        {
-          "pdf_sha1": "9b7fdb871fc4d4a8babc25448257ae0b81a6442d",
-          "page_index": 5
-        },
-        {
-          "pdf_sha1": "9b7fdb871fc4d4a8babc25448257ae0b81a6442d",
-          "page_index": 165
-        },
-        {
-          "pdf_sha1": "e7a45fed0d7ebfd13a524e7fcc443318bac654e2",
-          "page_index": 3
-        },
-        {
-          "pdf_sha1": "e7a45fed0d7ebfd13a524e7fcc443318bac654e2",
-          "page_index": 70
-        },
-        {
-          "pdf_sha1": "e7a45fed0d7ebfd13a524e7fcc443318bac654e2",
-          "page_index": 84
-        },
-        {
           "pdf_sha1": "ded965ce7e3ea0ad9b83272b8c36f529793a2887",
           "page_index": 145
-        },
-        {
-          "pdf_sha1": "5f226fe96206888930e3baaf0bff70d4b0a1db40",
-          "page_index": 25
-        },
-        {
-          "pdf_sha1": "5f226fe96206888930e3baaf0bff70d4b0a1db40",
-          "page_index": 72
-        },
-        {
-          "pdf_sha1": "5f226fe96206888930e3baaf0bff70d4b0a1db40",
-          "page_index": 82
         }
       ]
     },
@@ -831,32 +610,8 @@
       "value": "Datalogic",
       "references": [
         {
-          "pdf_sha1": "ded965ce7e3ea0ad9b83272b8c36f529793a2887",
-          "page_index": 147
-        },
-        {
           "pdf_sha1": "980742aa08ea64d552c153bcefbd7e8243fb9efd",
-          "page_index": 71
-        },
-        {
-          "pdf_sha1": "980742aa08ea64d552c153bcefbd7e8243fb9efd",
-          "page_index": 110
-        },
-        {
-          "pdf_sha1": "e7a45fed0d7ebfd13a524e7fcc443318bac654e2",
-          "page_index": 70
-        },
-        {
-          "pdf_sha1": "e7a45fed0d7ebfd13a524e7fcc443318bac654e2",
-          "page_index": 85
-        },
-        {
-          "pdf_sha1": "c74139ce26a6f803725f5074a8a0f539abb99c09",
-          "page_index": 793
-        },
-        {
-          "pdf_sha1": "4d3e52b69b4b5366e54ce87cf641b01b1419bdee",
-          "page_index": 83
+          "page_index": 33
         }
       ]
     },
@@ -871,6 +626,10 @@
       "kind": "number",
       "value": 440.0,
       "references": [
+        {
+          "pdf_sha1": "2db41ba86cc015db1f5f7de00b764a06e6de3dcc",
+          "page_index": 3
+        },
         {
           "pdf_sha1": "2db41ba86cc015db1f5f7de00b764a06e6de3dcc",
           "page_index": 13
@@ -902,10 +661,6 @@
         {
           "pdf_sha1": "e229fc9f5c694e93b02ac312c231607a04e3e528",
           "page_index": 4
-        },
-        {
-          "pdf_sha1": "e229fc9f5c694e93b02ac312c231607a04e3e528",
-          "page_index": 56
         }
       ]
     },
@@ -917,17 +672,13 @@
         {
           "pdf_sha1": "23b2c590c4887dfb86761730dd7156fe3b216ab7",
           "page_index": 1
-        },
-        {
-          "pdf_sha1": "23b2c590c4887dfb86761730dd7156fe3b216ab7",
-          "page_index": 3
         }
       ]
     },
     {
       "question_text": "Did Elixir Energy Limited outline any new ESG initiatives in the annual report? If there is no mention, return False.",
       "kind": "boolean",
-      "value": false,
+      "value": "N/A",
       "references": []
     },
     {
@@ -947,10 +698,6 @@
       "kind": "number",
       "value": 348000.0,
       "references": [
-        {
-          "pdf_sha1": "3e5ccdb58faf901e75e31f154cb8330869ca5efa",
-          "page_index": 24
-        },
         {
           "pdf_sha1": "3e5ccdb58faf901e75e31f154cb8330869ca5efa",
           "page_index": 37
@@ -983,15 +730,15 @@
     {
       "question_text": "According to the annual report, what is the Cash flow from operations (in USD) for FNCB Bancorp, Inc. (within the last period or at the end of the last period)? If data is not available, return 'N/A'.",
       "kind": "number",
-      "value": 19970000.0,
+      "value": 20000000.0,
       "references": [
         {
           "pdf_sha1": "23b2c590c4887dfb86761730dd7156fe3b216ab7",
-          "page_index": 70
+          "page_index": 58
         },
         {
           "pdf_sha1": "23b2c590c4887dfb86761730dd7156fe3b216ab7",
-          "page_index": 58
+          "page_index": 70
         }
       ]
     },
@@ -1004,11 +751,15 @@
     {
       "question_text": "Did Empire Company Limited announce any changes to its dividend policy in the annual report? If there is no mention, return False.",
       "kind": "boolean",
-      "value": true,
+      "value": false,
       "references": [
         {
           "pdf_sha1": "8f5e29eea4f4a3e944707c71148439ca1fd4b2d8",
           "page_index": 6
+        },
+        {
+          "pdf_sha1": "8f5e29eea4f4a3e944707c71148439ca1fd4b2d8",
+          "page_index": 38
         }
       ]
     },
@@ -1016,11 +767,9 @@
       "question_text": "Which leadership positions changed at Duni Group in the reporting period? If data is not available, return 'N/A'. Give me the title of the position.",
       "kind": "names",
       "value": [
-        "The EVP",
-        "Senior Advisor",
-        "Chairman of BioPak Pty Ltd\u2019s Board",
-        "EVP Commercial Central & South",
-        "EVP Commercial for all regions."
+        "Executive Vice President, Commercial (the role was expanded from a regional split into a consolidated position held by Manfred Haagarten)",
+        "Senior Advisor (Mats Lindroth transitioned from EVP of the BioPak business area to this new role)",
+        "Executive Vice President, BioPak business area (changed from Mats Lindroth to Nicklas Bengtsson)"
       ],
       "references": [
         {
@@ -1036,19 +785,15 @@
       "references": [
         {
           "pdf_sha1": "2db41ba86cc015db1f5f7de00b764a06e6de3dcc",
-          "page_index": 7
-        },
-        {
-          "pdf_sha1": "2db41ba86cc015db1f5f7de00b764a06e6de3dcc",
-          "page_index": 8
-        },
-        {
-          "pdf_sha1": "2db41ba86cc015db1f5f7de00b764a06e6de3dcc",
           "page_index": 168
         },
         {
           "pdf_sha1": "2db41ba86cc015db1f5f7de00b764a06e6de3dcc",
           "page_index": 169
+        },
+        {
+          "pdf_sha1": "2db41ba86cc015db1f5f7de00b764a06e6de3dcc",
+          "page_index": 170
         }
       ]
     },
@@ -1072,49 +817,21 @@
         {
           "pdf_sha1": "a69ebee82a9acd54117407ca3697db0d7bfbfdac",
           "page_index": 2
-        },
-        {
-          "pdf_sha1": "a69ebee82a9acd54117407ca3697db0d7bfbfdac",
-          "page_index": 60
         }
       ]
     },
     {
       "question_text": "Which of the companies had the lowest total assets in EUR at the end of the period listed in annual report: \"Incyte Corporation\", \"INMUNE BIO INC.\", \"Datalogic\", \"Terns Pharmaceuticals, Inc.\", \"RWE AG\"? If data for the company is not available, exclude it from the comparison. If only one company is left, return this company.",
       "kind": "name",
-      "value": "INMUNE BIO INC.",
+      "value": "Datalogic",
       "references": [
         {
-          "pdf_sha1": "4d3e52b69b4b5366e54ce87cf641b01b1419bdee",
-          "page_index": 83
-        },
-        {
-          "pdf_sha1": "553afbf09b6d83166b17acb02431c6cf38e4defc",
-          "page_index": 47
-        },
-        {
           "pdf_sha1": "980742aa08ea64d552c153bcefbd7e8243fb9efd",
-          "page_index": 71
-        },
-        {
-          "pdf_sha1": "980742aa08ea64d552c153bcefbd7e8243fb9efd",
-          "page_index": 110
-        },
-        {
-          "pdf_sha1": "79ffb9b8682aa565172233c070a47d944464644c",
-          "page_index": 136
+          "page_index": 33
         },
         {
           "pdf_sha1": "cc0fc5888b99758100a7ff024863fc4337b6b3c5",
-          "page_index": 59
-        },
-        {
-          "pdf_sha1": "cc0fc5888b99758100a7ff024863fc4337b6b3c5",
-          "page_index": 282
-        },
-        {
-          "pdf_sha1": "cc0fc5888b99758100a7ff024863fc4337b6b3c5",
-          "page_index": 120
+          "page_index": 60
         }
       ]
     },
@@ -1143,7 +860,11 @@
       "references": [
         {
           "pdf_sha1": "b947c33b370d8a3251ef9c36ce7d71e8d16f4f8e",
-          "page_index": 22
+          "page_index": 14
+        },
+        {
+          "pdf_sha1": "b947c33b370d8a3251ef9c36ce7d71e8d16f4f8e",
+          "page_index": 61
         }
       ]
     },
@@ -1157,16 +878,12 @@
       "question_text": "Which leadership positions changed at Crombie REIT in the reporting period? If data is not available, return 'N/A'. Give me the title of the position.",
       "kind": "names",
       "value": [
-        "President and Chief Executive Officer"
+        "President & Chief Executive Officer"
       ],
       "references": [
         {
           "pdf_sha1": "14fa568899745270c4ff2c10073f97f2c2e7764b",
           "page_index": 3
-        },
-        {
-          "pdf_sha1": "14fa568899745270c4ff2c10073f97f2c2e7764b",
-          "page_index": 5
         }
       ]
     },
@@ -1192,11 +909,15 @@
       "references": [
         {
           "pdf_sha1": "6529fba868216a923407fb0d4e15a811a8e89ebc",
-          "page_index": 16
+          "page_index": 8
         },
         {
           "pdf_sha1": "6529fba868216a923407fb0d4e15a811a8e89ebc",
-          "page_index": 121
+          "page_index": 15
+        },
+        {
+          "pdf_sha1": "6529fba868216a923407fb0d4e15a811a8e89ebc",
+          "page_index": 16
         }
       ]
     },
@@ -1210,8 +931,7 @@
       "question_text": "Which leadership positions changed at Wheeler Real Estate Investment Trust, Inc. in the reporting period? If data is not available, return 'N/A'. Give me the title of the position.",
       "kind": "names",
       "value": [
-        "Chief Executive Officer",
-        "President"
+        "President and Chief Executive Officer (CEO)"
       ],
       "references": [
         {
@@ -1231,7 +951,11 @@
       "references": [
         {
           "pdf_sha1": "0981826b4b43a88920f3e01c71ae73539bab84cc",
-          "page_index": 56
+          "page_index": 12
+        },
+        {
+          "pdf_sha1": "0981826b4b43a88920f3e01c71ae73539bab84cc",
+          "page_index": 28
         }
       ]
     },
@@ -1262,8 +986,8 @@
       "question_text": "Which leadership positions changed at Origin Bancorp, Inc. in the reporting period? If data is not available, return 'N/A'. Give me the title of the position.",
       "kind": "names",
       "value": [
-        "Chief Legal Counsel",
-        "Chief Financial Officer"
+        "Chief Financial Officer",
+        "Chief Legal Counsel"
       ],
       "references": [
         {

@@ -1,21 +1,55 @@
 {
-  "submission_name": "submission_86",
+  "submission_name": "F-anonymous",
   "team_email": "anon_86@anon.com",
-  "time": "2025-02-27, 11:00:00",
+  "time": "2025-03-01, 16:32:40",
   "signature": "",
   "tsp_signature": "",
   "submission_digest": "",
   "answers": [
     {
-      "question_text": "For Ziff Davis, Inc., what was the value of Cloud storage capacity (TB) at the end of the period listed in annual report? If data is not available, return 'N/A'.'",
-      "kind": "number",
-      "value": 2,
+      "question_text": "For Ziff Davis, Inc., what was the value of Cloud storage capacity (TB) at the end of the period listed in annual report? If data is not available, return 'N/A'.",
+      "kind": null,
+      "value": "N/A",
       "references": [
         {
           "pdf_sha1": "053b7cb83115789346e2a9efc7e2e640851653ff",
           "page_index": 3
         }
       ]
+    },
+    {
+      "question_text": "Did Liberty Broadband Corporation announce a share buyback plan in the annual report? If there is no mention, return False.",
+      "kind": null,
+      "value": true,
+      "references": [
+        {
+          "pdf_sha1": "053b7cb83115789346e2a9efc7e2e640851653ff",
+          "page_index": 89
+        }
+      ]
+    },
+    {
+      "question_text": "What is the total number of employees let go by Pintec Technology Holdings Limited according to the annual report? If data is not available, return 'N/A'.",
+      "kind": null,
+      "value": "N/A",
+      "references": []
+    },
+    {
+      "question_text": "Which leadership positions changed at Westwater Resources, Inc. in the reporting period? If data is not available, return 'N/A'. Give me the title of the position.",
+      "kind": null,
+      "value": [
+        "President and Chief Executive Officer (CEO)",
+        "Senior Vice President \u2013 Finance and Chief Financial Officer (CFO)",
+        "Chief Administrative Officer",
+        "General Counsel, and Corporate Secretary"
+      ],
+      "references": []
+    },
+    {
+      "question_text": "Did Brave Bison Group plc mention any mergers or acquisitions in the annual report? If there is no mention, return False.",
+      "kind": null,
+      "value": true,
+      "references": []
     }
   ]
 }

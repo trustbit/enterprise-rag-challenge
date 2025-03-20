@@ -1,7 +1,7 @@
 {
-  "submission_name": "submission_96",
+  "submission_name": "[@mrvladd] md -> w/th maker-pdf lib - Qwen2.5 72b + FTS (rephrase query) + CheckList's",
   "team_email": "anon_96@anon.com",
-  "time": "2025-02-27, 11:00:00",
+  "time": "2025-03-03, 10:46:37",
   "signature": "",
   "tsp_signature": "",
   "submission_digest": "",
@@ -1277,7 +1277,8 @@
       "question_text": "Which leadership positions changed at Wheeler Real Estate Investment Trust, Inc. in the reporting period? If data is not available, return 'N/A'. Give me the title of the position.",
       "kind": null,
       "value": [
-        "CEO and President"
+        "CEO",
+        "President"
       ],
       "references": [
         {
