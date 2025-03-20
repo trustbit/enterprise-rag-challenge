@@ -136,7 +136,7 @@ def cli():
 
 
 def load_dataset() -> dict[str, ReportEntry]:
-    dataset = Path(__file__).parent / "dataset_v2.json"
+    dataset = Path(__file__).parent / "round2/dataset.json"
 
     obj = json.loads(dataset.read_text())
 
