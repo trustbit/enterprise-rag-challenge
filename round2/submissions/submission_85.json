@@ -1,0 +1,22 @@
+{
+  "submission_name": "submission_85",
+  "team_email": "anon_85@anon.com",
+  "time": "2025-02-27, 11:00:00",
+  "signature": "",
+  "tsp_signature": "",
+  "submission_digest": "",
+  "answers": [
+    {
+      "question_text": "For Ziff Davis, Inc., what was the value of Cloud storage capacity (TB) at the end of the period listed in annual report? If data is not available",
+      "kind": "number",
+      "value": "N/A",
+      "references": []
+    },
+    {
+      "question_text": "Did Liberty Broadband Corporation announce a share buyback plan in the annual report?",
+      "kind": "boolean",
+      "value": true,
+      "references": []
+    }
+  ]
+}

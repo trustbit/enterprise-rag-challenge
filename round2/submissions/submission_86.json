@@ -1,0 +1,21 @@
+{
+  "submission_name": "submission_86",
+  "team_email": "anon_86@anon.com",
+  "time": "2025-02-27, 11:00:00",
+  "signature": "",
+  "tsp_signature": "",
+  "submission_digest": "",
+  "answers": [
+    {
+      "question_text": "For Ziff Davis, Inc., what was the value of Cloud storage capacity (TB) at the end of the period listed in annual report? If data is not available, return 'N/A'.'",
+      "kind": "number",
+      "value": 2,
+      "references": [
+        {
+          "pdf_sha1": "053b7cb83115789346e2a9efc7e2e640851653ff",
+          "page_index": 3
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "submission_name": "submission_42",
+  "team_email": "anon_42@anon.com",
+  "time": "2025-02-27, 11:00:00",
+  "signature": "",
+  "tsp_signature": "",
+  "submission_digest": "",
+  "answers": [
+    {
+      "question_text": "For Ziff Davis, Inc., what was the value of Cloud storage capacity (TB) at the end of the period listed in annual report? If data is not available, return 'N/A'.",
+      "kind": "number",
+      "value": "N/A",
+      "references": [
+        {
+          "pdf_sha1": "ecabab4934d4b80570c4bb3b8e35b7476694b3fb",
+          "page_index": 0
+        }
+      ]
+    },
+    {
+      "question_text": "Did Liberty Broadband Corporation announce a share buyback plan in the annual report? If there is no mention, return False.",
+      "kind": "boolean",
+      "value": true,
+      "references": [
+        {
+          "pdf_sha1": "446545ae548543d8744f8d885ff75face3424ba4",
+          "page_index": 149
+        }
+      ]
+    },
+    {
+      "question_text": "What is the total number of employees let go by Pintec Technology Holdings Limited according to the annual report? If data is not available, return 'N/A'.",
+      "kind": "number",
+      "value": 5.0,
+      "references": [
+        {
+          "pdf_sha1": "9e794a58e511f6a6a9a13b201d652deff9f9f69a",
+          "page_index": 259
+        }
+      ]
+    },
+    {
+      "question_text": "Which leadership positions changed at Westwater Resources, Inc. in the reporting period? If data is not available, return 'N/A'. Give me the title of the position.",
+      "kind": "names",
+      "value": "Chief President and Chief Executive Officer, Chief Accounting Officer and Controller, Chief Financial Officer and Vice President of Finance",
+      "references": [
+        {
+          "pdf_sha1": "92d9de8e4db96e0b95a484afcd1c54c6beb62c03",
+          "page_index": 15
+        }
+      ]
+    },
+    {
+      "question_text": "Did Brave Bison Group plc mention any mergers or acquisitions in the annual report? If there is no mention, return False.",
+      "kind": "boolean",
+      "value": true,
+      "references": [
+        {
+          "pdf_sha1": "ddd10e4612006205c4b1ba050a11648071e6e429",
+          "page_index": 31
+        }
+      ]
+    },
+    {
+      "question_text": "According to the annual report, what is the Cash flow from operations (in USD) for Sonic Automotive, Inc.  (within the last period or at the end of the last period)? If data is not available, return 'N/A'.",
+      "kind": "number",
+      "value": "N/A",
+      "references": [
+        {
+          "pdf_sha1": "682de8e45fd9688f3452bc0e18257132a8f3cff6",
+          "page_index": 0
+        }
+      ]
+    }
+  ]
+}
