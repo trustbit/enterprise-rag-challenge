@@ -227,17 +227,12 @@ def load_canonic_answers():
 
     # now render to table
     table = Table(title="Ranking", row_styles=["dim", ""])
+
     table.add_column("Rank", width=20)
-    # table.add_column("Email", width=5)
-    table.add_column("Team", width=40)
-    # table.add_column("Signature")
-    table.add_column("R score", width=20)
-    table.add_column("G score", width=20)
+    table.add_column("Submission", width=40)
+    table.add_column("R", width=20)
+    table.add_column("G", width=20)
     table.add_column("Score", width=20)
-    table.add_column("Missing", width=20)
-    table.add_column("Missing Ref", width=20)
-    table.add_column("No rank", width=20)
-    table.add_column("Val Accuracy", width=25)
 
     df_records = []
 
@@ -251,19 +246,13 @@ def load_canonic_answers():
             str(i + 1),
             # r.submission.team_email,
             team.replace("\n", " "),
-            # signature,
             f"{r.ref_score:.1f}",
             f"{r.val_score:.1f}",
             f"{r.score:.1f}",
-            str(r.missing),
-            str(r.missing_ref),
-            str(r.no_rank),
-            f"{accuracy:.2f} %"
         )
 
         df_records.append({
             "rank": i + 1,
-            "email": r.submission.team_email,
             "team": team.replace("\n", " "),
             "signature": signature,
             "R": f"{r.ref_score:.1f}",
