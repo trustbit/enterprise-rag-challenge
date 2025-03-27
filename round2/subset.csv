@@ -1,0 +1,101 @@
+sha1,cur,company_name,major_industry,mentions_recent_mergers_and_acquisitions,has_leadership_changes,has_layoffs,has_executive_compensation,has_rnd_investment_numbers,has_new_product_launches,has_capital_expenditures,has_financial_performance_indicators,has_dividend_policy_changes,has_share_buyback_plans,has_capital_structure_changes,mentions_new_risk_factors,has_guidance_updates,has_regulatory_or_litigation_issues,has_strategic_restructuring,has_supply_chain_disruptions,has_esg_initiatives
+0279901b645e568591ad95dac2c2bf939ef0c00d,USD,ACRES Commercial Realty Corp.,Financial Services,False,False,False,True,False,False,False,True,False,True,False,True,True,False,False,False,True
+0981826b4b43a88920f3e01c71ae73539bab84cc,USD,Aptevo Therapeutics Inc.,Healthcare,True,False,False,True,True,True,True,True,False,False,False,True,False,True,False,True,True
+0a61a353b1ea9fd9b8f63b60239634ca3007d58f,USD,Downer EDI Limited,Transport & Logistics,True,True,True,True,False,False,True,True,True,True,True,True,True,True,True,False,True
+0c0faea14d108e1617f2d6d2a7c1aae04eb88fe0,USD,Odyssey Gold Limited,Pharmaceuticals,True,True,False,True,True,False,True,True,False,False,False,True,False,False,False,False,False
+0f111d244aee3d976684995a222fa177a64571c4,USD,NextNav Inc.,Technology,True,False,False,True,True,True,True,True,False,False,False,True,False,True,False,True,False
+105688726e097505beef4934896193ac51295037,USD,Peako Limited,Technology,False,True,False,True,True,False,True,True,False,False,True,True,False,False,False,False,False
+12bff07b957b1c8f8cad9d917ca18005720cce9b,USD,Mosaic Brands Limited,Retail,True,False,False,True,True,False,True,True,True,True,True,True,True,False,True,True,True
+13999998018cc53440310d94a26d1e8957e2277f,USD,"Aurora Innovation, Inc.",Technology,True,False,False,True,True,True,True,True,False,False,False,True,False,True,False,True,True
+14fa568899745270c4ff2c10073f97f2c2e7764b,USD,Crombie REIT,Retail,True,True,False,True,False,True,True,True,False,False,False,True,False,False,False,False,True
+1a12ef3f11a64e92eeca39e493a17d2860c014a6,USD,Medallion Financial Corp.,Financial Services,True,False,False,True,False,True,False,True,False,False,False,True,False,True,False,False,False
+1ab89c81bdb49d4bfba2202eeb8e1c93bed414c7,USD,"Enact Holdings, Inc.",Financial Services,False,False,False,True,False,False,False,True,False,False,False,True,False,True,False,False,False
+1af8f906e34af6e0acfe4f73e37093bbe34700f3,USD,BetMakers Technology Group Ltd,Technology,True,True,False,True,False,True,True,True,False,True,True,True,True,False,True,False,True
+1bd670f9cdf088266db849722c3aded77a2f4894,USD,OFX Group Limited,Financial Services,True,True,False,True,True,False,True,True,False,True,False,True,True,True,False,False,True
+23b2c590c4887dfb86761730dd7156fe3b216ab7,USD,"FNCB Bancorp, Inc.",Financial Services,True,True,False,True,False,True,True,True,True,True,False,True,False,True,False,False,True
+2cdfd39bbf896b0f6651ebb0fe697cdf8c7ef0e8,USD,"Celldex Therapeutics, Inc.",Healthcare,True,False,False,True,True,True,True,True,False,False,False,True,False,True,False,False,False
+2db41ba86cc015db1f5f7de00b764a06e6de3dcc,GBP,SIG plc,Retail,True,True,False,True,False,True,True,True,False,False,False,True,False,False,True,True,True
+2e315764be39701457b88c23f70c5ddede4b2453,GBP,Motability Operations Group plc,Transport & Logistics,False,True,False,True,True,True,True,True,False,False,False,True,False,False,False,True,True
+2fd79ae4ebe4943384c119eb1d1e9286ba3c5074,USD,"BCB Bancorp, Inc.",Financial Services,True,False,False,True,False,False,False,True,False,True,True,True,False,True,False,False,False
+30f64d1043f4cb425eb636763580ae27094ffef1,USD,"1-800-FLOWERS.COM, INC.",Retail,True,False,False,True,False,True,True,True,False,True,True,True,True,True,False,True,False
+31a60b930e0f1034afff6e2d1e406e7d9141b2a1,USD,"Weis Markets, Inc.",Retail,False,True,False,True,False,True,True,True,True,True,False,True,False,False,False,True,True
+31e16caf2a6d45fb9cc41fb158b49933df4895f7,USD,"Odyssey Group Holdings, Inc.",Financial Services,False,False,False,True,False,False,False,True,True,False,False,False,False,False,False,False,False
+35839effbc332f23d5f34263aab3dcb2c6976420,USD,"Blue Apron Holdings, Inc.",Food & Beverage,False,True,True,True,False,True,True,True,False,False,False,True,False,True,True,True,True
+36dd058d3237202cbb94139611c8b8a35ff8c158,AUD,"Ocugen, Inc.",Healthcare,True,False,False,True,True,True,True,True,False,False,False,True,True,True,False,False,False
+3bb894b4201667baf60b0b2c8a47109fa2357acb,USD,Rectifier Technologies Ltd,Technology,False,True,False,True,True,True,True,True,True,False,False,False,True,False,False,True,False
+3e5ccdb58faf901e75e31f154cb8330869ca5efa,USD,Structural Monitoring Systems Plc,Technology,True,True,False,True,True,True,True,True,False,False,True,True,False,True,False,True,False
+3f36d4f26ada778d89cf5a7344be0b9e9a5223a3,USD,"Origin Bancorp, Inc.",Financial Services,True,True,False,True,False,False,False,True,False,False,False,False,False,False,False,False,True
+446545ae548543d8744f8d885ff75face3424ba4,USD,Liberty Broadband Corporation,Telecommunications,True,True,False,True,False,True,False,True,False,True,False,True,False,False,False,False,True
+4d3e52b69b4b5366e54ce87cf641b01b1419bdee,EUR,Incyte Corporation,Pharmaceuticals,True,False,False,True,True,True,True,True,False,False,False,True,False,True,False,True,True
+4e3efdc544140b872a59e124443a64c34f356911,USD,"Guaranty Bancshares, Inc.",Financial Services,False,True,False,True,False,True,True,True,True,True,False,True,True,False,False,False,True
+51bae8eeb78cf7d8d96c5cb66c36c41c6bd71491,USD,Infinera Corporation,Technology,False,True,False,True,True,True,True,True,False,False,False,False,False,False,False,True,True
+53a00624418f6c5c2d044344a4125bba7743614f,USD,"MainStreet Bancshares, Inc.",Financial Services,False,False,False,True,False,True,False,True,False,False,False,True,False,True,False,False,True
+53aa4bfb3b29d7fc064e97626fc4f860942ca9fd,AUD,Starvest plc,Financial Services,False,True,False,True,False,False,False,True,False,False,False,True,False,False,False,False,False
+553afbf09b6d83166b17acb02431c6cf38e4defc,EUR,INMUNE BIO INC.,Healthcare,False,False,False,True,True,True,True,True,False,False,False,True,False,True,False,False,False
+5a24fa827d172a7669eca206b2a5f47c2b19b48d,USD,"Bionano Genomics, Inc.",Healthcare,True,False,False,True,True,True,True,True,False,False,False,True,True,True,False,True,False
+5bb5f71d1457f3272adab97d64a79c300da75cea,USD,AstraZeneca,Pharmaceuticals,True,True,False,True,True,True,True,True,True,False,False,True,True,False,True,False,True
+5f226fe96206888930e3baaf0bff70d4b0a1db40,EUR,"Atreca, Inc.",Healthcare,True,False,False,True,True,True,True,True,False,False,False,True,False,True,False,True,False
+6159f86f38ec4f82453d99a01c22f1847de133c6,USD,"Senti Biosciences, Inc.",Healthcare,False,False,False,True,True,True,True,True,False,False,False,True,True,True,False,False,False
+6406e378c1f49a29c836633f187c271b30b50183,AUD,Galileo Resources Plc,Pharmaceuticals,True,False,False,True,True,True,True,True,False,False,True,True,False,False,False,False,False
+6529fba868216a923407fb0d4e15a811a8e89ebc,USD,Incitec Pivot Limited,Energy and Utilities,True,True,False,True,True,True,True,True,True,True,True,True,True,False,True,True,True
+67185fca2a09b3c46ee961b2c1ae160dab8b5231,GBP,SThree plc,Technology,False,True,False,True,False,False,True,True,True,False,False,True,False,False,False,False,True
+674a255d82495ef40189645697460801193e5a2d,USD,EPI (HOLDINGS) LIMITED,Energy and Utilities,True,False,False,True,False,False,True,True,False,False,False,True,False,False,False,False,True
+682de8e45fd9688f3452bc0e18257132a8f3cff6,USD,"Sonic Automotive, Inc.",Automotive,True,True,False,True,False,False,True,True,True,True,False,True,True,True,False,True,False
+696ddc4c80febe0f1559ed3b1272487c74ca91cc,AUD,Commerzbank,Financial Services,False,True,True,True,False,True,False,True,True,True,False,True,True,False,True,True,True
+6d76ccb75bbf1b27ca60b8419c5343ac050cebb0,AUD,Seiko Epson Corporation,Technology,True,False,False,True,True,True,True,True,True,False,False,True,False,True,True,True,True
+6e36d57320ec525da93b3ce2c7269580c746475b,AUD,DiaMedica Therapeutics Inc.,Healthcare,False,True,False,True,False,False,False,True,False,False,False,False,False,True,False,False,False
+71d137454a1524843e1f49b34603438510232919,GBP,James Halstead plc,Retail,False,False,False,True,False,False,True,True,True,False,False,True,False,False,False,True,True
+74c690176ce433301f4d1e808bb002a2f4dc321a,USD,"Kiniksa Pharmaceuticals, Ltd.",Pharmaceuticals,True,False,False,True,True,True,True,True,False,False,False,True,True,True,False,False,False
+7792e23f8a40fb9461dbc26f417b0fb948f54f46,CAD,"MongoDB, Inc.",Technology,False,True,False,True,True,True,True,True,False,False,False,True,True,False,False,False,False
+78c71282723c2d66216cbba13183d19349d302b8,USD,Ritchie Bros. Auctioneers Incorporated,Transport & Logistics,True,False,False,True,False,True,True,True,True,False,False,True,False,True,False,True,True
+79ffb9b8682aa565172233c070a47d944464644c,EUR,"Terns Pharmaceuticals, Inc.",Healthcare,True,False,False,True,True,True,True,True,False,False,False,True,True,True,False,False,False
+7be0f16625505fb48ad135c1a3fccd75ce06671c,USD,"Insperity, Inc.",Financial Services,False,True,False,True,False,False,True,True,True,True,False,True,True,False,False,False,False
+8467b7fce0d860b56e30c79d253d0bb5e9a32e95,USD,"Bridgewater Bancshares, Inc.",Financial Services,True,False,False,True,False,True,False,True,False,False,False,True,True,True,False,False,True
+8f5e29eea4f4a3e944707c71148439ca1fd4b2d8,USD,Empire Company Limited,Food & Beverage,True,False,False,True,True,True,True,True,True,True,False,True,True,False,True,True,True
+91ba1d46cdde9c1c0cf34f6bcc107741244f8f3d,USD,Nordic American Tankers Limited,Transport & Logistics,False,False,False,True,False,False,True,True,True,False,False,True,False,True,False,False,True
+91caa5884d3fbc344a05ac2f1d113a5d8725e4cb,USD,Microsoft Corporation,Technology,True,False,False,True,True,True,True,True,False,True,False,True,False,False,False,True,True
+92d9de8e4db96e0b95a484afcd1c54c6beb62c03,USD,"Westwater Resources, Inc.",Energy and Utilities,True,True,False,True,True,True,True,True,False,False,False,True,True,True,False,True,True
+957f31e694198a1695d14aa512a972ab6f3c55b5,USD,Aptiv PLC,Automotive,True,True,False,True,True,True,True,True,False,False,False,True,True,True,True,True,True
+980742aa08ea64d552c153bcefbd7e8243fb9efd,EUR,Datalogic,Technology,True,True,False,True,True,True,True,True,True,False,False,True,False,False,False,True,True
+99cd0edaf5bfb233e5f46ee55af837de0b725274,USD,Rapid7,Technology,False,False,False,True,True,True,True,True,False,False,False,True,True,False,False,False,False
+9af0a7f8db3954c3e74851c8c1807a09ece8ef00,USD,Alcoa Corporation,Energy and Utilities,False,True,True,True,True,True,True,True,True,True,False,True,False,True,True,True,True
+9b7fdb871fc4d4a8babc25448257ae0b81a6442d,EUR,NuCana plc,Healthcare,False,False,False,True,True,False,False,True,False,False,False,True,False,True,False,True,False
+9e794a58e511f6a6a9a13b201d652deff9f9f69a,AUD,Pintec Technology Holdings Limited,Financial Services,False,False,True,True,False,True,False,True,False,False,False,True,False,True,True,False,False
+a533b44fe091a8aa62d1fa4f0a3262b311df8bd9,USD,"ARCA Biopharma, Inc.",Healthcare,True,False,False,True,True,True,False,True,False,False,False,True,False,True,False,True,False
+a69ebee82a9acd54117407ca3697db0d7bfbfdac,USD,"HCA Healthcare, Inc.",Healthcare,True,True,False,True,False,False,True,True,True,True,False,True,False,True,True,False,True
+a85dba6c75031912d56a811637f803ba4ddeb257,GBP,Armadale Capital Plc,Financial Services,True,False,False,True,True,False,True,True,False,False,True,True,False,False,False,False,True
+aa781901e117281bfee6f8e4bea6fc9c9bada62e,GBP,AA Limited,Transport & Logistics,True,True,False,True,True,True,True,True,False,False,True,True,False,True,True,True,True
+ad1613dac24a1349ec293100e3ea19fe913bb930,USD,"CSG Systems International, Inc.",Technology,True,True,True,True,True,True,True,True,True,True,True,True,False,True,True,True,True
+b33bd2220c0fc0939ef08b1bdd8d2ebea158aa59,CAD,Arcadia Minerals Limited,Technology,True,True,False,True,True,True,True,True,False,False,False,False,False,False,False,False,False
+b3c406f0cd22d58b25d0f52852e1c4a5d73daf35,USD,Tellurian Inc.,Energy and Utilities,True,False,False,True,True,True,True,True,False,False,False,True,False,True,False,True,True
+b947c33b370d8a3251ef9c36ce7d71e8d16f4f8e,USD,"Wheeler Real Estate Investment Trust, Inc.",Retail,True,True,False,True,False,False,True,True,True,False,True,True,False,True,False,False,False
+c06d5ad4b6408fec26675d30b37a6042c007095a,USD,archTIS Limited,Technology,True,True,False,True,True,True,True,True,False,False,True,True,True,False,False,False,False
+c5fc5890205fe5326d690fc017f7153fb09924e4,USD,Beazley plc,Financial Services,False,True,False,True,True,True,False,True,True,False,False,True,True,True,True,False,True
+c74139ce26a6f803725f5074a8a0f539abb99c09,EUR,Poste Italiane,Transport & Logistics,True,False,False,True,True,True,True,True,True,True,False,True,True,False,True,True,True
+c7475e1d98f9a46a4652e503881d4a67232b41d3,USD,NZME Limited,Media & Entertainment,True,True,True,True,False,True,True,True,True,True,False,True,True,False,True,False,True
+c8af22dbedd95ee719273792e5964ab8bbba17b2,USD,Kelly Partners Group Holdings Limited,Financial Services,True,True,False,True,False,False,True,True,True,False,False,True,False,False,False,False,False
+cc0fc5888b99758100a7ff024863fc4337b6b3c5,EUR,RWE AG,Energy and Utilities,True,True,True,True,True,True,True,True,False,False,True,True,True,True,True,True,True
+d14ae2b6284e48b5c1e6659a0a5863d84697b3b9,USD,KP Tissue Inc.,Healthcare,True,False,True,True,True,True,True,True,False,False,True,True,True,False,True,True,True
+d5ad1d288230072e3f6654bb6182d76f8af2ba0a,GBP,abrdn Japan Investment Trust plc,Financial Services,True,True,False,True,False,False,False,True,False,True,False,True,False,False,False,False,True
+d86be8a2fa1aab721d7de6de7fd4f5267c914cb2,USD,SWISS WATER DECAFFEINATED COFFEE INC.,Food & Beverage,False,True,False,True,False,False,True,True,False,False,True,True,False,False,True,True,True
+da663e46fbf02ec8a90b3f3c1079ef4c9f7907e1,USD,Albany International Corp.,Aerospace & Defense,False,True,False,True,True,True,True,True,False,True,False,True,False,True,False,True,True
+ddd10e4612006205c4b1ba050a11648071e6e429,GBP,Brave Bison Group plc,Media & Entertainment,True,True,False,True,False,False,True,True,False,False,False,True,False,False,True,False,True
+ded965ce7e3ea0ad9b83272b8c36f529793a2887,EUR,Playtech plc,Technology,True,True,False,True,True,True,True,True,False,False,False,True,False,True,True,True,True
+e117005fc313bf0d49429d34bc8e1ef64de54898,USD,MGM Resorts International,Hospitality,True,True,False,True,False,False,True,True,True,False,False,True,False,True,False,False,True
+e1edf72618e9d6ae2e72bb3ac7a9ddc15240e4ef,USD,Verrica Pharmaceuticals Inc.,Healthcare,True,False,False,True,True,True,True,True,False,False,False,True,True,True,False,True,False
+e21ac6c083a56192fab027ebd2ab0fad71de5d7d,USD,Emera Inc.,Energy and Utilities,False,True,False,True,True,False,True,True,True,False,False,True,True,True,False,True,True
+e229fc9f5c694e93b02ac312c231607a04e3e528,USD,Trinity Place Holdings Inc.,Retail,True,False,False,True,False,False,True,True,False,False,True,True,False,True,True,True,False
+e273ed0d9626b9feaf50c09405c2b70d461e41d7,AUD,Toshiba Corporation,Technology,True,True,False,True,True,True,True,True,False,False,False,True,True,False,True,False,True
+e2850fff8d9dee77f3a6520d0b1aba46adddc2c0,USD,Benjamin Hornigold Ltd,Financial Services,False,False,False,True,False,False,False,True,False,False,False,True,False,True,False,False,False
+e2923f240db86d0096f462f6cb398339d3251b50,AUD,"Syndax Pharmaceuticals, Inc.",Healthcare,True,False,False,True,True,True,True,True,False,False,False,True,True,True,False,True,True
+e30ece688caf7602b734bbbcf39559b4acdb2739,USD,Franklin Covey Co.,Media & Entertainment,True,True,False,True,False,False,False,True,False,True,False,False,True,False,False,False,True
+e6ce8ed579e95d2cfeabbbed872beb0c3f8396d7,USD,Suncorp Group,Financial Services,True,True,False,True,False,True,True,True,True,True,False,True,True,True,True,True,True
+e7a45fed0d7ebfd13a524e7fcc443318bac654e2,EUR,Duni Group,Food & Beverage,True,True,False,True,True,True,True,True,True,False,False,True,True,True,True,True,True
+e7f655f43bc2abf6216519187d9fc907e9224937,USD,"RumbleOn, Inc.",Technology,True,False,False,True,True,True,True,True,False,False,False,True,False,True,False,True,False
+ecabab4934d4b80570c4bb3b8e35b7476694b3fb,USD,"Ziff Davis, Inc.",Technology,True,False,False,True,True,True,True,True,False,True,False,True,False,True,False,False,True
+f015d4bfeec43fe65c003b6f4420ae864efbb58f,USD,CoreCard Corporation,Financial Services,False,True,False,True,True,False,True,True,False,True,False,True,False,False,False,False,False
+f6a1077a46cb36761604f8f4840698e22837f5f7,USD,Aeeris Ltd,Technology,False,True,False,True,False,True,False,True,False,False,True,True,False,False,False,False,False
+f7324f3868005b3aae6aafd30441c9bb6c8823e8,USD,Jefferies Financial Group Inc.,Financial Services,True,False,True,True,False,False,False,True,True,True,True,True,False,True,True,False,True
+f85f0ccbbc59f1423d52d44e5ab70e3a01164499,USD,Integra LifeSciences Holdings Corporation,Healthcare,True,False,False,True,True,True,True,True,False,False,False,True,False,True,True,True,True
+f879b3a802ccd6e8e6ca0a07ed8464318b7c0724,USD,Elixir Energy Limited,Energy and Utilities,True,False,False,True,True,True,True,True,False,False,True,True,False,False,False,True,True
+f9736aa2f56c40b127bced09ce1c8e8cbf7aa0e3,AUD,"NeoGenomics, Inc.",Healthcare,True,False,False,True,True,True,True,True,False,False,False,True,True,True,False,True,True

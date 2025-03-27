@@ -1,0 +1,33 @@
+{
+  "submission_name": "test-team",
+  "team_email": "anon_77@anon.com",
+  "time": "2025-02-28, 20:51:41",
+  "signature": "",
+  "tsp_signature": "",
+  "submission_digest": "",
+  "answers": [
+    {
+      "question_text": null,
+      "kind": null,
+      "value": 2,
+      "references": [
+        {
+          "pdf_sha1": "053b7cb83115789346e2a9efc7e2e640851653ff",
+          "page_index": 3
+        }
+      ]
+    },
+    {
+      "question_text": null,
+      "kind": null,
+      "value": 2.5,
+      "references": []
+    },
+    {
+      "question_text": null,
+      "kind": null,
+      "value": "no",
+      "references": []
+    }
+  ]
+}

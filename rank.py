@@ -1,214 +1,285 @@
-import importlib
-import json
+from collections import defaultdict
 from dataclasses import dataclass
+from datetime import datetime
 from pathlib import Path
-from typing import List
-import click
-
+from typing import Optional, Literal, List, Union, Dict
 import pandas as pd
+from pydantic import BaseModel, Field, RootModel
+
+from rich.table import Table
+from rich.console import Console
 
 
-VALID_NONES = ["N/A", "n/a"]
+class SourceReference(BaseModel):
+    pdf_sha1: str = Field(..., description="SHA1 hash of the PDF file")
+    page_index: int = Field(..., description="Zero-based physical page number in the PDF file")
 
 
-
-def get_answer_category(expected_answers: list) -> (str, float):
-
-    # if N/A is a valid answer, return, then it can be guessed, score it lower
-    if any(a in VALID_NONES for a in expected_answers):
-        return "N/A", 1
-
-    return "retrieval", 2
+Value = Union[float, str, bool, List[str], Literal["N/A"]]
+Schema = Literal["number", "name", "boolean", "names"]
 
 
-def grade_answer(actual_answer, schema, expected_answer) -> float:
+class Answer(BaseModel):
+    question_text: Optional[str]
+    kind: Optional[Schema]
+    value: Value
+    references: List[SourceReference] = []
 
-    # answer is correct if it is in the list of expected answers
+    # extended gt data
+    gt_value: Optional[List[Value]] = None
+    gt_refs: List[List[str]] = None
+    debug: List[str] = None
 
 
+class AnswerSubmission(BaseModel):
+    answers: List[Answer] = Field(..., description="List of answers to the questions")
+    team_email: str = Field(..., description="Email that your team used to register for the challenge")
+    submission_name: str = Field(..., description="Unique name of the submission (e.g. experiment name)")
+    signature: str
+    file_name: str = ""
+    time: str = ""
 
-    is_na_expected = expected_answer in VALID_NONES
-    is_na_actual = actual_answer in VALID_NONES
 
-    if is_na_expected:
-        return 1 if is_na_actual else 0
+class CanonicData(BaseModel):
+    kind: Schema
+    answers: List[str]
+    reference_pools: List[List[str]]
 
-    # so NA is not expected. But what if we have NA in the actual answer?
-    if is_na_actual:
-        return 0
 
+class CanonicFile(RootModel):
+    root: Dict[str, CanonicData]
+
+
+@dataclass
+class Ranking:
+    submission: AnswerSubmission
+    missing: int = 0
+    missing_ref: int = 0
+    no_rank: int = 0
+    score: float = 0
+    val_score: float = 0
+    ref_score: float = 0
+    elapsed_hours: float = 0
+
+
+DIR = Path(__file__).parent / "round2"
+
+
+def load_submissions() -> List[AnswerSubmission]:
+    files = (DIR / "submissions").glob("*.json")
+    submissions = []
+    for f in files:
+        v = AnswerSubmission.model_validate_json(f.read_text())
+        v.file_name = f.name
+        submissions.append(v)
+    return submissions
+
+
+def compare(schema: Schema, actual: str, predicted: Value) -> float:
+    if predicted == "N/A" and actual == "N/A":
+        return 1.0
+
+    if actual == "N/A" or predicted == "N/A":
+        return 0.0
 
     if schema == "number":
-        expected_value = float(expected_answer)
         try:
-            actual_value = float(actual_answer)
+            actual = float(actual)
+            predicted = float(predicted)
         except ValueError:
-            # invalid format
-            return 0
+            return 0.0
 
         # if answer is within 1 % of the expected value, give full score
-        if abs(actual_value - expected_value) < 0.01 * expected_value:
-            return 1
+        if abs(predicted - actual) < 0.01 * actual:
+            return 1.0
 
-        # if answer is within 10 % of the expected value, give half score
-        if abs(actual_value - expected_value) < 0.1 * expected_value:
-            return 0.5
-
-        return 0
+        return 0.0
 
     elif schema == "boolean":
-        expected_value = bool(expected_answer)
-        actual_value = actual_answer in ["True", "true", "1", "yes", True]
-        return 1 if actual_value == expected_value else 0
+        if str(actual).lower() == str(predicted).lower():
+            return 1.0
+        else:
+            return 0.0
 
     elif schema == "name":
-        actual_value = str(actual_answer).strip().lower()
-        expected_value = str(expected_answer).strip().lower()
-        return 1 if actual_value == expected_value else 0
+        if str(actual).strip().lower() == str(predicted).strip().lower():
+            return 1.0
+        else:
+            return 0.0
+
+    elif schema == "names":
+        # ensure that predicted is list of strings
+        if isinstance(predicted, str):
+            # convert to list of strings by splitting
+            predicted = predicted.split(",")
+            # and trip spaces
+            predicted = [p.strip() for p in predicted]
+
+        actual_names = str(actual).strip().lower().split(",")
+        predicted_names = [str(p).strip().lower() for p in predicted]
+
+        # jaqqard distance
+        intersection = len(set(actual_names).intersection(predicted_names))
+        union = len(set(actual_names).union(predicted_names))
+        return 1.0 * intersection / union
+
     else:
         raise Exception(f"Unknown schema {schema}")
 
-@dataclass
-class TeamRank:
-    name: str
-    score: int
-    answers: List[str]
 
-def rank_team(expected, file) -> TeamRank:
-    team = file.stem
+def load_canonic_answers():
+    file = DIR / "answers.json"
+    data = CanonicFile.model_validate_json(file.read_text())
+    schemas = data.root
 
+    console = Console(width=120)
+    rankings = []
 
+    for submission in load_submissions():
+        stats = defaultdict(int)
+        index = {a.question_text: a for a in submission.answers}
 
-    with file.open("r") as file:
-        submission = json.load(file)
+        for q, data in schemas.items():
+            predicted = index.get(q)
+            if predicted is None:
+                stats["missing"] += 1
+                continue
 
+            if not data.answers:
+                stats["no_rank"] += 1
+                continue
 
-    if team == "anonymous_1652":
-        # this team returned a list of answers instead of a dict
-        answer_list = submission['answer'].values()
-        question_list = submission['question'].values()
-    else:
-        answer_list = [a["answer"] for a in submission]
-        question_list = [a["question"] for a in submission]
+            predicted.gt_value = data.answers
+            predicted.gt_refs = data.reference_pools
+            predicted.debug = []
 
-    score = 0
-    ideal_score = 0
-    for answer, question, ex in zip(answer_list, question_list, expected):
+            # if we have multiple answers possible, pick the highest score
+            val_score = max([compare(data.kind, a, predicted.value) for a in data.answers])
 
-        # check if the question is the same. Use only first 20 letters, as some teams
-        # didn't handle unicode symbols correctly
-        if question[:20] != ex["question"][:20]:
-            # use red ANSI color
-            raise Exception(f"Question mismatch: {question} != {ex['question']}")
+            # convert answer refs to hash:page format
+            predicted_refs = [r.pdf_sha1 + ":" + str(r.page_index) for r in predicted.references]
 
-        valid_answers = ex["answer"]
-        schema = ex["schema"]
+            max_ref_score = 1.0
 
+            if len(data.reference_pools) == 0 and len(predicted_refs) == 0:
+                pass
+            else:
+                # flatten all pools to one array
+                expected_refs = []
+                for expected in data.reference_pools:
+                    expected_refs.extend(expected)
 
-        category, max_score = get_answer_category(valid_answers)
-        ideal_score += max_score
+                max_ref_score = 1.0
 
+                for p in predicted_refs:
+                    if p not in expected_refs:
+                        max_ref_score -= 0.1
 
-        if answer is None:
-            # no answer
-            continue
+                for proof_neded in data.reference_pools:
+                    found_proof = len(set(predicted_refs).intersection(proof_neded)) > 0
+                    if not found_proof:
+                        max_ref_score -= 0.25
 
-        # if multiple answers are valid, take the best grade
-        answer_grade = max(grade_answer(answer, schema, a) for a in valid_answers)
-        score += answer_grade * max_score
+            stats["val_score"] += val_score
 
+            ref_score = max(0.0, max_ref_score)
+            predicted.debug.append(f"Ref_score: {ref_score:.2f}")
 
-    print(f"Score: {score} / {ideal_score}")
-    # normalize score
-    score = 100.0 * score / ideal_score
-    if score < 0:
-        score = 0
+            stats["ref_score"] += ref_score
 
-    return TeamRank(team, int(score), answer_list)
+            predicted.debug.append(f"Score: {val_score}")
 
-import importlib.util
+        val_score = stats["val_score"]
+        ref_score = stats["ref_score"]
 
-@click.command()
-@click.argument("folder", type=click.Path(exists=True))
-def run(folder: str):
+        score = (val_score + ref_score / 2.0)
 
-    expected_file = Path(folder) / "answers.json"
+        time = datetime.strptime(submission.time, "%Y-%m-%d, %H:%M:%S")
 
-    with expected_file.open("r") as file:
-        expected = json.load(file)
+        # started =  — 27/02/2025, 13:29
+        started = datetime.strptime("2025-02-27, 12:30", "%Y-%m-%d, %H:%M")
+        elapsed_hours = (time - started).total_seconds() / 3600.0
 
-    # dynamically load file FOLDER/teams.py
-    # and get value of TEAMS variable (it is a list)
-    teams_file = Path(folder) / "teams.py"
-    spec = importlib.util.spec_from_file_location("teams", teams_file)
-    teams_module = importlib.util.module_from_spec(spec)
-    spec.loader.exec_module(teams_module)
-    teams = {t.file_name: t.__dict__ for t in teams_module.TEAMS}
+        rankings.append(Ranking(
+            submission=submission,
+            missing=stats["missing"],
+            missing_ref=stats["missing_refs"],
+            no_rank=stats["no_rank"],
+            score=score,
+            ref_score=ref_score,
+            val_score=val_score,
+            elapsed_hours=elapsed_hours
+        ))
 
+        # save submission to "ranked" folder
+        ranked_dir = DIR / "ranked"
 
+        # OPTIONAL: save ranked submissions
+        # ranked_dir.mkdir(exist_ok=True)
+        # ranked_dir.joinpath(submission.file_name).write_text(
+        #     submission.model_dump_json(indent=2), encoding="utf-8"
+        # )
 
+    # sort by score descending
+    rankings.sort(key=lambda x: x.score, reverse=True)
 
+    # rankings.sort(key=lambda x: x.submission.time)
 
+    # now render to table
+    table = Table(title="Ranking", row_styles=["dim", ""])
+    table.add_column("Rank", width=20)
+    # table.add_column("Email", width=5)
+    table.add_column("Team", width=40)
+    # table.add_column("Signature")
+    table.add_column("R score", width=20)
+    table.add_column("G score", width=20)
+    table.add_column("Score", width=20)
+    table.add_column("Missing", width=20)
+    table.add_column("Missing Ref", width=20)
+    table.add_column("No rank", width=20)
+    table.add_column("Val Accuracy", width=25)
 
+    df_records = []
 
+    for i, r in enumerate(rankings):
+        team = r.submission.submission_name
+        signature = r.submission.signature[:8]
 
+        accuracy = 100.0 * r.val_score / (100 - r.no_rank)
 
+        table.add_row(
+            str(i + 1),
+            # r.submission.team_email,
+            team.replace("\n", " "),
+            # signature,
+            f"{r.ref_score:.1f}",
+            f"{r.val_score:.1f}",
+            f"{r.score:.1f}",
+            str(r.missing),
+            str(r.missing_ref),
+            str(r.no_rank),
+            f"{accuracy:.2f} %"
+        )
 
-    files = Path(folder).glob("answers/*.json")
+        df_records.append({
+            "rank": i + 1,
+            "email": r.submission.team_email,
+            "team": team.replace("\n", " "),
+            "signature": signature,
+            "R": f"{r.ref_score:.1f}",
+            "G": f"{r.val_score:.1f}",
+            "Score": f"{r.score:.1f}",
+            "Missing": str(r.missing),
+            "Missing Ref": str(r.missing_ref),
+            "No rank": str(r.no_rank),
+            "Val Accuracy": f"{accuracy:.2f} %",
+            "Elapsed": f"{r.elapsed_hours:.2f}"
+        })
 
+    console.print(table)
+    df = pd.DataFrame(df_records)
+    df.to_csv(DIR / "ranking.csv", index=False)
 
-    answers = [{'real':x['answer']} for x in expected]
-
-    records = []
-
-
-    for f in sorted(files):
-
-        team_name = f.stem.replace("_", " ")
-
-        team_obj = teams[f.stem]
-
-
-        try:
-            team = rank_team(expected, f)
-
-            for a,t in zip(answers, team.answers):
-                a[team_name] = t
-
-            print(f"{team_name}: {team.score}")
-
-            learned_from_ai_research = team_obj['learned_from_ai_research']
-            affiliated = "TimeToAct" in team_obj['affiliation']
-
-            records.append({
-                'Team': team_obj['team_name'],
-                'Score': team.score,
-                'Model': team_obj['model_name'],
-                'Local': "⭐" if team_obj['is_local_model'] else "",
-                'Design': team_obj['architecture_short'] or "",
-                'Cost': team_obj['total_prefill_and_answer_costs'] or "",
-                'Source': team_obj['source_code'] or "",
-                'AIR': "Yes" if learned_from_ai_research else "",
-                'TTA': "Yes" if affiliated else "",
-            })
-
-        except Exception as e:
-            # ansi color red
-            raise e
-
-
-    df = pd.DataFrame(answers)
-    df.to_csv(Path(folder) / "answers.csv", index=False)
-
-
-    df_rec = pd.DataFrame(records)
-    # sort by score
-    df_rec = df_rec.sort_values(by='Score', ascending=False)
-
-    # print as table to console, no index
-    print(df_rec.to_string(index=False))
-    # save to scores.csv
-    df_rec.to_csv(Path(folder) / "scores.csv", index=False)
 
 if __name__ == "__main__":
-    run()
+    load_canonic_answers()
