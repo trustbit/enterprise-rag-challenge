@@ -5,6 +5,7 @@ BEFORE CLONING: Be aware that this repo has around 1,4GB (due to large PDFs cont
 ##  Round 1 - Sept. 2024
 You can find all infos on the first run in the folder [round1](round1). Make sure to check out the [README](round1/README.md) there. 
 
+<br>
 
 ## Round 2 - Feb 2025
 👉[Landing page with Results Video and Keynote by Stephan Gillich](https://www.timetoact-group.at/details/enterprise-rag-challenge)👈 
@@ -14,6 +15,7 @@ You can find an interactive leaderboard with detailed results [here](https://abd
 
 The data for the test run of the round 2 can be found in the [samples](round2/samples) folder.
 
+<br>
 
 ### Explanation
 
@@ -37,6 +39,7 @@ Participants can use any technology they wish to. It could be local, cloud-hoste
 
 If you are interested, below is the link for a sample subset of PDFs for development. Test dataset will obviously contain different PDFs.
 
+<br>
 
 ### Geeky Details
 
@@ -53,6 +56,7 @@ Anybody can run this code at the moment of competition. Everybody is guaranteed 
 
 As soon as we have a list of PDF files, TimeToAct will package them into a zip and share publicly. Everybody can verify sha1 hashes of these files to check that the files were not modified.
 
+<br>
 
 ### Test Run
 
@@ -138,6 +142,7 @@ The final seeds drawn with the new question generator for `round2` are:
 - sample dataset creation: 77040339 (verifiable via https://api.drand.sh/public/4840674) 
 - question generation: 96461695 (verifiable via https://api.drand.sh/public/4840954)
 
+<br>
 
 ### Schema
 
@@ -193,6 +198,7 @@ Submission was done via a provided API and user interface ([source code](https:/
 
 All submissions can be found in anonymized form in the [submissions](round2/submissions) folder.
 
+<br>
 
 ### Frequently Asked Questions
 
