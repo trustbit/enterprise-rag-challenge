@@ -1,7 +1,13 @@
-canonic.json contains our manually proofread answers to the RAG challenge.
+# Enterprise RAG Challenge with Annual Reports - Round 2
 
-They might not be perfect, but I tried to do my best to get them as correct and close to the perspective of enterprise customers, as possible.
+## Ground truth answers
+[answers.json](answers.json) contains our manually proofread answers to the RAG challenge.
 
-We'll add ranking algorythm and scoring tables to this folder later.
+They might not be perfect, but Rinat Abdullin tried his best to get them as correct and close to the perspective of enterprise customers, as possible.
 
-Meanwhile, check out: https://www.timetoact-group.at/en/insights/the-winner-of-the-enterprise-rag-challenge
+
+## Solutions & Insights
+- [Final Leaderboard](https://www.timetoact-group.at/insights/enterprise-rag-challenge/leaderboards/team-leaderboard#teamleaderboard)
+- [Winning Solution Overview](https://www.timetoact-group.at/en/insights/the-winner-of-the-enterprise-rag-challenge)
+- [Detailed blog post by Ilias Rice](https://www.timetoact-group.at/en/techblog/techblog/how-i-won-the-enterprise-rag-challenge)
+
