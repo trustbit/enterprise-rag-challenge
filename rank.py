@@ -228,8 +228,9 @@ def load_canonic_answers():
     # now render to table
     table = Table(title="Ranking", row_styles=["dim", ""])
 
-    table.add_column("Rank", width=20)
+    table.add_column("Rank", width=15)
     table.add_column("Submission", width=40)
+    table.add_column("Hash", width=20)
     table.add_column("R", width=20)
     table.add_column("G", width=20)
     table.add_column("Score", width=20)
@@ -244,8 +245,8 @@ def load_canonic_answers():
 
         table.add_row(
             str(i + 1),
-            # r.submission.team_email,
             team.replace("\n", " "),
+            r.submission.signature[:8],
             f"{r.ref_score:.1f}",
             f"{r.val_score:.1f}",
             f"{r.score:.1f}",
