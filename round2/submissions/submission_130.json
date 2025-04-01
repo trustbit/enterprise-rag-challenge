@@ -2,7 +2,7 @@
   "submission_name": "Qwen 2.5-72b + Multi-Query BM25 (top_k = 15) + Domain-Specific Information Extraction + Router",
   "team_email": "anon_130@anon.com",
   "time": "2025-03-06, 22:57:48",
-  "signature": "",
+  "signature": "d588b7a9",
   "tsp_signature": "",
   "submission_digest": "",
   "answers": [
